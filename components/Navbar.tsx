@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav
       className="
         fixed top-0 left-0 w-full z-50
-        bg-[rgba(247,247,249,0.1)]
+        bg-[rgba(36,36,119,0.0)]
         backdrop-blur-md
         py-2
       "

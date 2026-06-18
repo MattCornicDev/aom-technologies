@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowUp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Logo from "@/components/Logo";
 
 export default function Footer() {
@@ -27,34 +27,10 @@ export default function Footer() {
             </h4>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-6">
-              <Image
-                src="/images/logos/qualiopi.webp"
-                alt="Certification Qualiopi"
-                width={60}
-                height={60}
-                className="object-contain"
-              />
-              <Image
-                src="/images/logos/Logo-qualifelec.svg"
-                alt="Certification Qualifelec"
-                width={60}
-                height={60}
-                className="object-contain"
-              />
-              <Image
-                src="/images/logos/Logo-irve.webp"
-                alt="Certification IRVE"
-                width={60}
-                height={60}
-                className="object-contain"
-              />
-              <Image
-                src="/images/logos/artisan-reference-MAAF.webp"
-                alt="Artisan Référence MAAF"
-                width={60}
-                height={60}
-                className="object-contain"
-              />
+              <Image src="/images/logos/qualiopi.webp" alt="Certification Qualiopi" width={60} height={60} className="object-contain" />
+              <Image src="/images/logos/Logo-qualifelec.svg" alt="Certification Qualifelec" width={60} height={60} className="object-contain" />
+              <Image src="/images/logos/Logo-irve.webp" alt="Certification IRVE" width={60} height={60} className="object-contain" />
+              <Image src="/images/logos/artisan-reference-MAAF.webp" alt="Artisan Référence MAAF" width={60} height={60} className="object-contain" />
             </div>
           </div>
 
@@ -72,17 +48,33 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* COL 4 — CONTACT */}
+          {/* COL 4 — CONTACT AVEC ICONES */}
           <div className="flex flex-col items-center md:items-end text-center md:text-right">
             <h4 className="text-[14px] text-gray-700 font-semibold uppercase tracking-wide mb-4">
               Contact
             </h4>
 
-            <p className="text-[14px] text-gray-600 leading-relaxed">
-              03 27 43 64 18<br />
-              contact@aomtechnologies.com<br />
-              59124 Escaudain
-            </p>
+            <div className="space-y-3 text-[14px] text-gray-600 leading-relaxed">
+
+              {/* Téléphone */}
+              <div className="flex items-center md:justify-end gap-3">
+                <FaPhoneAlt className="text-[#007de4] text-lg" />
+                <span>03 27 43 64 18</span>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-center md:justify-end gap-3">
+                <FaEnvelope className="text-[#007de4] text-lg" />
+                <span>contact@aomtechnologies.com</span>
+              </div>
+
+              {/* Adresse */}
+              <div className="flex items-center md:justify-end gap-3">
+                <FaMapMarkerAlt className="text-[#007de4] text-lg" />
+                <span>59124 Escaudain</span>
+              </div>
+
+            </div>
           </div>
         </div>
 

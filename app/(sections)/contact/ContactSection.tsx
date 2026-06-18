@@ -5,66 +5,118 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-28 md:py-32 bg-white"
+      className="
+        relative py-28 md:py-32 
+        bg-cover bg-center bg-no-repeat
+      "
+      style={{ backgroundImage: "url('/images/subscribe.webp')" }}
     >
-      <div className="container mx-auto px-6 md:px-12">
+      {/* Overlay pour lisibilité */}
+      <div className="absolute inset-0"></div>
+
+      <div className="relative container mx-auto px-6 md:px-12">
 
         {/* Heading */}
-        <h3 className="text-[#007de4] text-2xl md:text-3xl font-extrabold uppercase mb-16">
+        <h3 className="text-[#007de4] text-2xl md:text-3xl font-extrabold uppercase mb-16 text-center">
           Contactez AOM Technologies & Services
         </h3>
 
-        {/* GRID CONTACT */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        {/* FORMULAIRE PREMIUM */}
+        <div className="max-w-2xl mx-auto bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
 
-          {/* Adresse */}
-          <div className="flex items-start gap-6">
-            <FaMapMarkerAlt className="text-[#007de4] text-4xl" />
-            <div>
-              <h4 className="text-[16px] font-semibold text-gray-800 mb-2">Adresse</h4>
-              <p className="text-[14px] text-gray-600 leading-relaxed">
-                Z.A des Six Mariannes<br />
-                9 Rue des Entrepreneurs<br />
-                59124 Escaudain
-              </p>
+          <h4 className="text-[18px] font-semibold text-gray-800 mb-6">
+            Envoyez-nous un message
+          </h4>
+
+          <form className="space-y-6">
+
+            {/* Champ Nom */}
+            <div className="relative">
+              <input
+                type="text"
+                id="name"
+                className="
+                  peer w-full px-4 py-3 text-[15px] border border-gray-300 rounded-lg 
+                  focus:outline-none focus:border-[#007de4] focus:ring-2 focus:ring-[#007de4]/30
+                  transition
+                "
+                placeholder=" "
+              />
+              <label
+                htmlFor="name"
+                className="
+                  absolute left-4 top-3 text-gray-500 text-[14px] pointer-events-none 
+                  transition-all duration-200 
+                  peer-placeholder-shown:top-3 peer-placeholder-shown:text-[14px]
+                  peer-focus:-top-3 peer-focus:text-[12px] peer-focus:text-[#007de4] bg-white px-1
+                "
+              >
+                Votre nom
+              </label>
             </div>
-          </div>
 
-          {/* Téléphone */}
-          <div className="flex items-start gap-6">
-            <FaPhoneAlt className="text-[#007de4] text-4xl" />
-            <div>
-              <h4 className="text-[16px] font-semibold text-gray-800 mb-2">Téléphone</h4>
-              <p className="text-[14px] text-gray-600 leading-relaxed">
-                Mobile : <a href="tel:0767859581" className="text-[#007de4] font-semibold">07 67 85 95 81</a><br />
-                Fixe : <a href="tel:0327436418" className="text-[#007de4] font-semibold">03 27 43 64 18</a>
-              </p>
+            {/* Champ Email */}
+            <div className="relative">
+              <input
+                type="email"
+                id="email"
+                className="
+                  peer w-full px-4 py-3 text-[15px] border border-gray-300 rounded-lg 
+                  focus:outline-none focus:border-[#007de4] focus:ring-2 focus:ring-[#007de4]/30
+                  transition
+                "
+                placeholder=" "
+              />
+              <label
+                htmlFor="email"
+                className="
+                  absolute left-4 top-3 text-gray-500 text-[14px] pointer-events-none 
+                  transition-all duration-200 
+                  peer-placeholder-shown:top-3 peer-placeholder-shown:text-[14px]
+                  peer-focus:-top-3 peer-focus:text-[12px] peer-focus:text-[#007de4] bg-white px-1
+                "
+              >
+                Votre email
+              </label>
             </div>
-          </div>
 
-          {/* Email */}
-          <div className="flex items-start gap-6">
-            <FaEnvelope className="text-[#007de4] text-4xl" />
-            <div>
-              <h4 className="text-[16px] font-semibold text-gray-800 mb-2">Email</h4>
-              <p className="text-[14px] text-gray-600 leading-relaxed">
-                <a href="mailto:contact@aomtechnologies.com" className="text-[#007de4] font-semibold">
-                  contact@aomtechnologies.com
-                </a>
-              </p>
+            {/* Champ Message */}
+            <div className="relative">
+              <textarea
+                id="message"
+                rows={4}
+                className="
+                  peer w-full px-4 py-3 text-[15px] border border-gray-300 rounded-lg 
+                  focus:outline-none focus:border-[#007de4] focus:ring-2 focus:ring-[#007de4]/30
+                  transition resize-none
+                "
+                placeholder=" "
+              ></textarea>
+              <label
+                htmlFor="message"
+                className="
+                  absolute left-4 top-3 text-gray-500 text-[14px] pointer-events-none 
+                  transition-all duration-200 
+                  peer-placeholder-shown:top-3 peer-placeholder-shown:text-[14px]
+                  peer-focus:-top-3 peer-focus:text-[12px] peer-focus:text-[#007de4] bg-white px-1
+                "
+              >
+                Votre message
+              </label>
             </div>
-          </div>
 
-        </div>
+            {/* Bouton */}
+            <button
+              type="submit"
+              className="
+                w-full bg-[#007de4] text-white py-3 rounded-lg text-[15px] font-semibold 
+                hover:bg-[#0066c7] transition shadow-md hover:shadow-lg
+              "
+            >
+              Envoyer
+            </button>
 
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <a
-            href="mailto:contact@aomtechnologies.com"
-            className="inline-block bg-[#007de4] text-white px-10 py-4 rounded-md text-[14px] font-semibold uppercase tracking-wide hover:bg-[#0066c7] transition"
-          >
-            Envoyer un message
-          </a>
+          </form>
         </div>
 
       </div>

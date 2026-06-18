@@ -23,7 +23,16 @@ export default function BlogSection() {
   return (
     <section
       id="blog"
-      className="section-news py-28 md:py-32 bg-gradient-to-br from-[#fa06db] via-[#a6ede3] to-[#0059ff]"
+      className="
+        section-news 
+        py-28 md:py-32 
+        bg-gradient-to-br 
+        from-[#fa06db] 
+        via-[#a6ede3] 
+        to-[#0059ff]
+        bg-[length:200%_200%]
+        animate-gradientFlow
+      "
     >
       <div className="container mx-auto px-6 md:px-12">
         <h3 className="uppercase text-white text-3xl md:text-4xl font-semibold text-center mb-20">
