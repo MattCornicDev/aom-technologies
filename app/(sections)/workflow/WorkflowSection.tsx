@@ -19,7 +19,7 @@ export default function WorkflowSection() {
         relative
         py-28 md:py-32
         bg-gradient-to-br
-        from-[#000814]
+        from-[#000816]
         via-[#001d3d]
         to-[#007ee5]
         bg-[length:200%_200%]
