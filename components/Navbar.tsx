@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import VantaNet from "./VantaNet";
+import Logo from "@/components/Logo";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -29,15 +30,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="#home" className="flex items-center">
-          <Image
-            src="/images/LOGO-AOM-CYMK-01.svg"
-            alt="AOM Logo"
-            width={75}
-            height={75}
-            className="ml-8 md:ml-4"
-          />
-        </Link>
+        <Logo />
 
         {/* Desktop menu */}
         <ul className="hidden md:flex items-center gap-8">

@@ -49,7 +49,7 @@ export default function ClientSection() {
           <div className="flex justify-center">
             <div className="p-4 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300">
               <Image
-                src="/images/edf-logo.png"
+                src="/images/logos/edf-logo.webp"
                 alt="EDF"
                 width={150}
                 height={80}
@@ -62,7 +62,7 @@ export default function ClientSection() {
           <div className="flex justify-center">
             <div className="p-4 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300">
               <Image
-                src="/images/Carglass_logo.svg"
+                src="/images/logos/Carglass_logo.svg"
                 alt="Carglass"
                 width={150}
                 height={80}
@@ -75,7 +75,7 @@ export default function ClientSection() {
           <div className="flex justify-center">
             <div className="p-4 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300">
               <Image
-                src="/images/Logo_zeborne.svg"
+                src="/images/logos/Logo_zeborne.svg"
                 alt="Zeborne"
                 width={150}
                 height={80}
