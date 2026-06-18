@@ -10,13 +10,14 @@ import ClientSection from "@/app/(sections)/clients/ClientSection";
 import BlogSection from "@/app/(sections)/blog/BlogSection";
 import ContactSection from "@/app/(sections)/contact/ContactSection";
 import Footer from "@/app/(sections)/footer/Footer";
+import HeroSection from "@/app/(sections)/hero/HeroSection";
 
 export default function Page() {
   return (
     <>
       <Preloader />
       <Navbar />
-      <HomeSection />
+      <HeroSection />
       <AboutSection />
       <FeatureSection />
       <TestimonialsSection />

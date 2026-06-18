@@ -14,12 +14,20 @@ export default function VantaNet() {
         NET({
   el: ref.current,
   THREE,
-  color: 0x007ee5,          // bleu électrique plus intense
-  backgroundColor: 0x0a0a0a, // fond sombre comme ton image
-  points: 13.0,             // GROS POINTS LUMINEUX
-  maxDistance: 20.0,        // LIGNES PLUS LONGUES
-  spacing: 11.0,            // RÉSEAU TRÈS DENSE
-  showDots: false,
+
+  // ⭐ Couleur du réseau (clé correcte pour ta version)
+  pointsColor: 0xffffff,
+
+  // ⭐ On laisse color au cas où
+  color: 0xffffff,
+
+  points: 13.0,
+  maxDistance: 20.0,
+  spacing: 11.0,
+  showDots: true,
+
+  backgroundColor: 0x000000,
+  backgroundAlpha: 0.0,
 })
 
       );
@@ -29,5 +37,5 @@ export default function VantaNet() {
     };
   }, [vanta]);
 
-  return <div ref={ref} className="w-full h-full"></div>;
+  return <div ref={ref} className="absolute inset-0 w-full h-full"></div>;
 }
