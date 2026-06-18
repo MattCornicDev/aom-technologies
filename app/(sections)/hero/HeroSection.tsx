@@ -1,16 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
 import VantaNet from "@/components/VantaNet";
 
 export default function HeroSection() {
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setOffset(window.scrollY * 0.6);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <section
       id="home"
@@ -23,10 +14,17 @@ export default function HeroSection() {
         bg-[length:200%_200%]
         animate-gradientFlow
       "
-      style={{
-        transform: `translateY(${offset}px)`,
-      }}
     >
+      {/* Glow électrique */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle at center, rgba(0,126,229,0.35), transparent 70%)",
+          filter: "blur(60px)",
+        }}
+      ></div>
+
       {/* Effet électrique */}
       <div className="absolute inset-0">
         <VantaNet />
