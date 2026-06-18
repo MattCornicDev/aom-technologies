@@ -10,46 +10,63 @@ export default function ContactSection() {
       <div className="container mx-auto px-6 md:px-12">
 
         {/* Heading */}
-        <h3 className="contact text-[#007de4] text-2xl md:text-3xl font-extrabold uppercase mb-16">
-          Contact
+        <h3 className="text-[#007de4] text-2xl md:text-3xl font-extrabold uppercase mb-16">
+          Contactez AOM Technologies & Services
         </h3>
 
-        {/* Contact items */}
-        <div className="space-y-10 contact-details">
+        {/* GRID CONTACT */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
           {/* Adresse */}
           <div className="flex items-start gap-6">
-            <div className="contact-media-left min-w-[100px]">
-              <FaMapMarkerAlt className="text-[#007de4] text-3xl" />
+            <FaMapMarkerAlt className="text-[#007de4] text-4xl" />
+            <div>
+              <h4 className="text-[16px] font-semibold text-gray-800 mb-2">Adresse</h4>
+              <p className="text-[14px] text-gray-600 leading-relaxed">
+                Z.A des Six Mariannes<br />
+                9 Rue des Entrepreneurs<br />
+                59124 Escaudain
+              </p>
             </div>
-            <p className="text-[14px] text-gray-600 leading-relaxed">
-              123 Rue de l’Innovation<br />
-              59220 Denain<br />
-              Hauts-de-France
-            </p>
           </div>
 
           {/* Téléphone */}
           <div className="flex items-start gap-6">
-            <div className="contact-media-left min-w-[100px]">
-              <FaPhoneAlt className="text-[#007de4] text-3xl" />
+            <FaPhoneAlt className="text-[#007de4] text-4xl" />
+            <div>
+              <h4 className="text-[16px] font-semibold text-gray-800 mb-2">Téléphone</h4>
+              <p className="text-[14px] text-gray-600 leading-relaxed">
+                Mobile : <a href="tel:0767859581" className="text-[#007de4] font-semibold">07 67 85 95 81</a><br />
+                Fixe : <a href="tel:0327436418" className="text-[#007de4] font-semibold">03 27 43 64 18</a>
+              </p>
             </div>
-            <p className="text-[14px] text-gray-600 leading-relaxed">
-              +33 6 12 34 56 78
-            </p>
           </div>
 
           {/* Email */}
           <div className="flex items-start gap-6">
-            <div className="contact-media-left min-w-[100px]">
-              <FaEnvelope className="text-[#007de4] text-3xl" />
+            <FaEnvelope className="text-[#007de4] text-4xl" />
+            <div>
+              <h4 className="text-[16px] font-semibold text-gray-800 mb-2">Email</h4>
+              <p className="text-[14px] text-gray-600 leading-relaxed">
+                <a href="mailto:contact@aomtechnologies.com" className="text-[#007de4] font-semibold">
+                  contact@aomtechnologies.com
+                </a>
+              </p>
             </div>
-            <p className="text-[14px] text-gray-600 leading-relaxed">
-              contact@aom-tech.fr
-            </p>
           </div>
 
         </div>
+
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <a
+            href="mailto:contact@aomtechnologies.com"
+            className="inline-block bg-[#007de4] text-white px-10 py-4 rounded-md text-[14px] font-semibold uppercase tracking-wide hover:bg-[#0066c7] transition"
+          >
+            Envoyer un message
+          </a>
+        </div>
+
       </div>
     </section>
   );
