@@ -2,13 +2,22 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+// 🔧 Typage des avis Google
+type Review = {
+  author_name: string;
+  profile_photo_url?: string;
+  rating: number;
+  text: string;
+};
+
 export default function TestimonialsSection() {
-  const [reviews, setReviews] = useState([]);
+  // 🔧 On typage correctement le state
+  const [reviews, setReviews] = useState<Review[]>([]);
 
   useEffect(() => {
     fetch("/api/google-reviews")
       .then((res) => res.json())
-      .then((data) => setReviews(data));
+      .then((data: Review[]) => setReviews(data));
   }, []);
 
   return (
