@@ -1,7 +1,16 @@
 "use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function TestimonialsSection() {
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/google-reviews")
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+  }, []);
+
   return (
     <section
       id="testimonials"
@@ -29,87 +38,50 @@ export default function TestimonialsSection() {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
           
-          {/* Témoignage 1 */}
-          <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-lg">
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/avatar1.png"
-                alt="client"
-                width={80}
-                height={80}
-                className="rounded-full mb-4"
-              />
-              <h5 className="client-name text-white uppercase tracking-widest text-xs">
-                Client satisfait
-              </h5>
-              <p className="testimonial-speech text-white italic mt-6 text-sm leading-relaxed">
-                <Image
-                  src="/images/quate.png"
-                  alt="quote"
-                  width={24}
-                  height={24}
-                  className="inline-block mr-2 align-top"
-                />
-                Je tiens à exprimer ma sincère gratitude envers l'équipe de AOM.
-                Leur dévouement, leur professionnalisme et leur esprit d'équipe
-                ont joué un rôle crucial dans notre réussite collective.
-              </p>
-            </div>
-          </div>
+          {reviews.length > 0 ? (
+            reviews.slice(0, 3).map((review, i) => (
+              <div
+                key={i}
+                className="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-lg"
+              >
+                <div className="flex flex-col items-center">
+                  
+                  {/* Avatar Google */}
+                  <Image
+                    src={review.profile_photo_url || "/images/avatar1.png"}
+                    alt={review.author_name}
+                    width={80}
+                    height={80}
+                    className="rounded-full mb-4"
+                  />
 
-          {/* Témoignage 2 */}
-          <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-lg">
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/avatar2.png"
-                alt="client"
-                width={80}
-                height={80}
-                className="rounded-full mb-4"
-              />
-              <h5 className="client-name text-white uppercase tracking-widest text-xs">
-                Clients satisfaits
-              </h5>
-              <p className="testimonial-speech text-white italic mt-6 text-sm leading-relaxed">
-                <Image
-                  src="/images/quate.png"
-                  alt="quote"
-                  width={24}
-                  height={24}
-                  className="inline-block mr-2 align-top"
-                />
-                Merci d'apporter votre excellence à chaque projet et de faire de
-                notre équipe un environnement positif et productif.
-              </p>
-            </div>
-          </div>
+                  {/* Nom */}
+                  <h5 className="client-name text-white uppercase tracking-widest text-xs">
+                    {review.author_name}
+                  </h5>
 
-          {/* Témoignage 3 */}
-          <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-lg">
-            <div className="flex flex-col items-center">
-              <Image
-                src="/images/avatar3.png"
-                alt="client"
-                width={80}
-                height={80}
-                className="rounded-full mb-4"
-              />
-              <h5 className="client-name text-white uppercase tracking-widest text-xs">
-                Client satisfait
-              </h5>
-              <p className="testimonial-speech text-white italic mt-6 text-sm leading-relaxed">
-                <Image
-                  src="/images/quate.png"
-                  alt="quote"
-                  width={24}
-                  height={24}
-                  className="inline-block mr-2 align-top"
-                />
-                I'm truly impressed with AOM team's dedication and expertise.
-                Their commitment to excellence shines through in every project.
-              </p>
-            </div>
-          </div>
+                  {/* Commentaire */}
+                  <p className="testimonial-speech text-white italic mt-6 text-sm leading-relaxed">
+                    <Image
+                      src="/images/quate.png"
+                      alt="quote"
+                      width={24}
+                      height={24}
+                      className="inline-block mr-2 align-top"
+                    />
+                    {review.text}
+                  </p>
+
+                  {/* Note */}
+                  <p className="text-yellow-300 mt-4">
+                    {"⭐".repeat(review.rating)}
+                  </p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p className="text-white text-lg">Chargement des avis...</p>
+          )}
 
         </div>
       </div>

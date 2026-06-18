@@ -1,71 +1,126 @@
 "use client";
+import { motion } from "framer-motion";
 import { FaTools, FaPlug, FaCheckCircle } from "react-icons/fa";
 
 export default function WorkflowSection() {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+  const pop = {
+    hidden: { scale: 0, opacity: 0 },
+    show: { scale: 1, opacity: 1, transition: { duration: 0.4 } },
+  };
+
   return (
     <section
-      id="workflow"
-      className="py-28 md:py-32 relative overflow-hidden"
+     className="
+  py-28 md:py-32
+  bg-gradient-to-br
+  from-[#000814]
+  via-[#001d3d]
+  to-[#007ee5]
+  bg-[length:200%_200%]
+  animate-gradientFlow
+"
+
     >
       <div className="container mx-auto px-6 md:px-12">
-        
+
         {/* Heading */}
-        <header className="mb-20">
-          <h3 className="uppercase text-[#007ee5] text-3xl md:text-4xl font-semibold">
+        <motion.header
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="mb-20 text-center"
+        >
+          <h3 className="uppercase text-[#007ee5] text-3xl md:text-4xl font-extrabold tracking-wide">
             Notre workflow
           </h3>
-        </header>
+          <p className="text-gray-500 text-sm md:text-base mt-4 max-w-xl mx-auto">
+            Un processus clair, structuré et maîtrisé pour garantir la qualité de chaque intervention.
+          </p>
+        </motion.header>
 
         {/* Steps */}
-        <div className="space-y-12">
-          
+        <div className="space-y-20">
+
           {/* Step 1 */}
-          <div className="flex items-start gap-6">
-            <div className="w-16 h-16 flex items-center justify-center border border-[#007ee5] rounded-full">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="flex items-start gap-6"
+          >
+            <motion.div
+              variants={pop}
+              className="w-20 h-20 flex items-center justify-center rounded-full bg-white shadow-lg border-2 border-[#007ee5]"
+            >
               <FaTools className="text-[#007ee5] text-4xl" />
-            </div>
+            </motion.div>
+
             <div>
               <h4 className="text-[#007ee5] text-xl font-semibold capitalize mb-2">
                 Analyse & préparation
               </h4>
               <p className="text-gray-700 text-[16px] leading-relaxed">
-                Étude complète du projet, analyse des besoins, faisabilité
-                technique et planification des étapes clés.
+                Étude complète du projet, analyse des besoins, faisabilité technique et planification des étapes clés.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Step 2 */}
-          <div className="flex items-start gap-6">
-            <div className="w-16 h-16 flex items-center justify-center border border-[#007ee5] rounded-full">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="flex items-start gap-6"
+          >
+            <motion.div
+              variants={pop}
+              className="w-20 h-20 flex items-center justify-center rounded-full bg-white shadow-lg border-2 border-[#007ee5]"
+            >
               <FaPlug className="text-[#007ee5] text-4xl" />
-            </div>
+            </motion.div>
+
             <div>
               <h4 className="text-[#007ee5] text-xl font-semibold capitalize mb-2">
                 Installation & déploiement
               </h4>
               <p className="text-gray-700 text-[16px] leading-relaxed">
-                Mise en place des équipements, raccordements, configuration et
-                tests de conformité.
+                Mise en place des équipements, raccordements, configuration et tests de conformité.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Step 3 */}
-          <div className="flex items-start gap-6">
-            <div className="w-16 h-16 flex items-center justify-center border border-[#007ee5] rounded-full">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="flex items-start gap-6"
+          >
+            <motion.div
+              variants={pop}
+              className="w-20 h-20 flex items-center justify-center rounded-full bg-white shadow-lg border-2 border-[#007ee5]"
+            >
               <FaCheckCircle className="text-[#007ee5] text-4xl" />
-            </div>
+            </motion.div>
+
             <div>
               <h4 className="text-[#007ee5] text-xl font-semibold capitalize mb-2">
                 Validation & maintenance
               </h4>
               <p className="text-gray-700 text-[16px] leading-relaxed">
-                Vérification finale, remise du projet, suivi, maintenance et
-                accompagnement personnalisé.
+                Vérification finale, remise du projet, suivi, maintenance et accompagnement personnalisé.
               </p>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
