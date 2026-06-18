@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
+import VantaBirds from "./VantaNet";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -96,6 +97,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+          <Vanta />
         </div>
       )}
     </nav>

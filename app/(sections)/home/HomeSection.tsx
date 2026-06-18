@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import VantaNet from "@/components/VantaNet";
 
 export default function HomeSection() {
   return (
@@ -9,12 +10,7 @@ export default function HomeSection() {
     >
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
-        <Image
-          src="/images/borne-recharge.jpg"
-          alt="arrière plan"
-          fill
-          className="object-cover"
-        />
+        <VantaNet />
       </div>
 
       {/* Content */}
