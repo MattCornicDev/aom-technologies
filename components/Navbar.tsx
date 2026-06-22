@@ -30,7 +30,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
 
         {/* Logo */}
-        <Logo />
+        <Logo size="md" />
 
         {/* Desktop menu */}
         <ul className="hidden md:flex items-center gap-8">

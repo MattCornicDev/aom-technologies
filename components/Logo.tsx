@@ -1,12 +1,17 @@
 import Image from "next/image";
 
-export default function Logo({ size = "md", className = "" }) {
-  const sizes = {
-    sm: 60,
-    md: 90,
-    lg: 110,
-  };
+type LogoProps = {
+  size: "sm" | "md" | "lg";
+  className?: string;
+};
 
+const sizes = {
+  sm: 40,
+  md: 60,
+  lg: 80,
+} as const;
+
+export default function Logo({ size, className = "" }: LogoProps) {
   return (
     <Image
       src="/images/logos/LOGO-AOM-CYMK-01.svg"

@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { FaArrowUp, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Logo from "@/components/Logo";
@@ -13,7 +14,7 @@ export default function Footer() {
 
           {/* COL 1 — LOGO + TEXTE */}
           <div>
-            <Logo />
+            <Logo size="md" />
             <p className="text-[14px] text-gray-600 mt-4 max-w-xs text-center md:text-left mx-auto md:mx-0">
               AOM Technologies & Services — votre partenaire en électricité,
               télécommunications, IRVE et énergies renouvelables.
