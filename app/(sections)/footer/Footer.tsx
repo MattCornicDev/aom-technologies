@@ -72,7 +72,10 @@ export default function Footer() {
               {/* Adresse */}
               <div className="flex items-center md:justify-end gap-3">
                 <FaMapMarkerAlt className="text-[#007de4] text-lg" />
-                <span>59124 Escaudain</span>
+                <span>	
+Z.A des six Mariannes
+9 rue des entrepreneurs
+59124 Escaudain</span>
               </div>
 
             </div>
