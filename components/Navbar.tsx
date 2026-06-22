@@ -38,7 +38,7 @@ export default function Navbar() {
               <a
                 href={item.href}
                 className="
-                  text-[#222020]
+                  text-[#ffffff]
                   uppercase
                   font-medium
                   text-[10px]
