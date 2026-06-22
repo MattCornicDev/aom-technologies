@@ -3,7 +3,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
-import VantaNet from "./VantaNet";
 import Logo from "@/components/Logo";
 
 export default function Navbar() {
@@ -90,7 +89,6 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <VantaNet />
         </div>
       )}
     </nav>
