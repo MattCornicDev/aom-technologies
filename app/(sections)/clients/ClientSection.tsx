@@ -36,7 +36,7 @@ export default function ClientSection() {
           <div className="flex justify-center">
             <div className="p-4 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300">
               <Image
-                src="/images/SFR_logo_2014.png"
+                src="/images/logos/SFR_logo.webp"
                 alt="SFR"
                 width={150}
                 height={80}
