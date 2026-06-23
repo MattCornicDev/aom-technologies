@@ -34,7 +34,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Contenu */}
-<div className="relative z-10 text-start text-white px-6">
+<div className="relative z-10 text-start text-[#007ee5] px-6">
   <h1 className="text-4xl md:text-6xl font-extrabold">
     AOM TECHNOLOGIES <br />
     & <br />
@@ -47,7 +47,7 @@ export default function HeroSection() {
 
   <a
     href="#contact"
-    className="inline-block mt-8 px-8 py-3 bg-[#007ee5] text-white rounded-lg font-semibold hover:bg-[#0090ff] transition"
+    className="inline-block mt-8 px-8 py-3 bg-[#e0720b] text-[#ffffff] rounded-lg font-semibold hover:bg-[#fc7a00] transition"
   >
     Nous contacter
   </a>

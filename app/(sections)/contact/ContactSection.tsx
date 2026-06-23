@@ -109,8 +109,8 @@ export default function ContactSection() {
             <button
               type="submit"
               className="
-                w-full bg-[#007de4] text-white py-3 rounded-lg text-[15px] font-semibold 
-                hover:bg-[#0066c7] transition shadow-md hover:shadow-lg
+                w-full bg-[#e0720b] text-white py-3 rounded-lg text-[15px] font-semibold 
+                hover:bg-[#f0933c] transition shadow-md hover:shadow-lg
               "
             >
               Envoyer
