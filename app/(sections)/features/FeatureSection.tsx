@@ -48,7 +48,7 @@ export default function FeatureSection() {
                 Télécommunications & Fibre
               </h6>
               <p className="text-gray-700 text-[16px] leading-relaxed">
-                Déploiement, raccordement et gestion de réseaux fibre optique
+                Déploiement, maintenance, raccordement et gestion de réseaux fibre optique
                 et télécom.
               </p>
             </div>
