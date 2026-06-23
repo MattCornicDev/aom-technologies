@@ -145,3 +145,15 @@ body {
 .animate-slideInRight {
   animation: slideInRight 0.8s ease forwards;
 }
+
+/* Contour blanc au text h1 */
+.text-neon {
+  color: #ffffff;
+  text-shadow:
+    0 0 4px #eef1f4,
+    0 0 8px #fdfdfd,
+    0 0 1px #ffffff,
+    0 0 1px rgba(255, 255, 255, 0.2),
+    0 0 8px rgba(255, 255, 255, 0.2);
+}
+

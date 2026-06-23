@@ -42,13 +42,17 @@ export default function HeroSection() {
 
       {/* Contenu */}
 <div className="relative z-10 text-start text-[#007ee5] px-6">
-  <h1 className="text-4xl md:text-6xl font-extrabold">
-    AOM TECHNOLOGIES <br />
-    & <br />
-    SERVICES
-  </h1>
+<h1 className="text-4xl md:text-6xl font-extrabold text-neon">
+  AOM TECHNOLOGIES <br />
+  & <br />
+  SERVICES
+</h1>
 
-  <p className="mt-4 text-lg md:text-xl max-w-2xl">
+
+
+
+
+  <p className="mt-4 text-lg md:text-xl max-w-2xl text-white">
     Solutions électriques professionnelles & installations de qualité.
   </p>
 
