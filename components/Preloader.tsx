@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import LogoWithRings from "@/components/LogoWithRings";
 
 export default function Preloader() {
   const [loading, setLoading] = useState(true);
@@ -13,25 +13,15 @@ export default function Preloader() {
   if (!loading) return null;
 
   return (
-    <div className="fixed inset-0 bg-white z-[9999] flex flex-col items-center justify-center">
-      
-      {/* Loader */}
-      <div className="relative w-14 h-14 animate-[spin_1s_linear_infinite] rotate-45">
-        <span className="absolute inset-0 rounded-full border-4 border-[#a9be51] animate-[pulse_0.5s_ease_infinite_alternate]"></span>
-        <span className="absolute inset-0 rounded-full border-4 border-black animate-[pulse_0.5s_ease_infinite_alternate] delay-200"></span>
+    <div className="fixed inset-0 bg-[#000814] z-[9999] flex flex-col items-center justify-center">
+
+      {/* Logo animé */}
+      <div className="scale-125 animate-[fadeIn_1s_ease_forwards]">
+        <LogoWithRings />
       </div>
 
-      {/* Logo optionnel */}
-      <Image
-        src="/images/logo.png"
-        alt="logo"
-        width={90}
-        height={90}
-        className="mt-6"
-      />
-
       {/* Texte animé */}
-      <p className="text-[#007ee5] text-xs tracking-widest mt-4 animate-[bounce_0.6s_ease_infinite_alternate]">
+      <p className="text-[#007ee5] text-xs tracking-widest mt-6 animate-[pulse_1s_ease_infinite]">
         Loading...
       </p>
     </div>
