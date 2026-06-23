@@ -14,16 +14,23 @@ export default function VantaNet() {
         NET({
   el: ref.current,
   THREE,
-
   // ⭐ Couleur du réseau (clé correcte pour ta version)
   pointsColor: 0xffffff,
+
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
 
   // ⭐ On laisse color au cas où
   color: 0xffffff,
 
-  points: 13.0,
-  maxDistance: 20.0,
-  spacing: 11.0,
+  points: 10.0,
+  maxDistance: 15.0,
+  spacing: 8.0,
   showDots: true,
 
   backgroundColor: 0x000000,

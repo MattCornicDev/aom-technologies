@@ -10,7 +10,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const navItems = [
-    { label: "Accueil", href: "#home" },
+    { label: "Accueil", href: "/" },
     { label: "À propos", href: "#about" },
     { label: "Services", href: "#features" },
     { label: "Workflow", href: "#workflow" },
@@ -36,7 +36,7 @@ export default function Navbar() {
               <a
                 href={item.href}
                 className="
-                  text-[#ffffff]
+                  text-[#787777]
                   uppercase
                   font-medium
                   text-[10px]
