@@ -97,7 +97,7 @@ body {
   transform: rotateY(65deg);
   animation: ring3d-spin 1.6s linear infinite reverse;
 
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 18px rgba(253, 253, 255, 0.4);
 }
 
 @keyframes ring3d-spin {
