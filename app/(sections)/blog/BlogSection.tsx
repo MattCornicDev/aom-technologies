@@ -35,7 +35,7 @@ export default function BlogSection() {
       "
     >
       <div className="container mx-auto px-6 md:px-12">
-        <h3 className="uppercase text-white text-3xl md:text-4xl font-semibold text-center mb-20">
+        <h3 className="uppercase text-[#0059ff] text-3xl md:text-4xl font-semibold text-center mb-20">
           Actualités
         </h3>
 

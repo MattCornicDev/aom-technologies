@@ -112,5 +112,36 @@ body {
 .logo-3d img {
   position: relative;
   z-index: 10;
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.934));
+  filter: drop-shadow(0 0 0 white) drop-shadow(0 0 3px white);
+}
+
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease forwards;
 }
