@@ -43,3 +43,68 @@ body {
   }
 }
 
+.logo-3d {
+  width: 140px;
+  height: 140px;
+  position: relative;
+
+  /* CENTRAGE PARFAIT */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  perspective: 1200px;
+}
+
+/* Le logo doit être au-dessus des anneaux */
+.logo-3d img {
+  position: relative;
+  z-index: 10;
+}
+
+/* Anneau 1 */
+.logo-3d::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  border: 3px solid rgba(169, 190, 81, 0.9);
+
+  transform: rotateX(65deg);
+  animation: ring3d-spin 1.6s linear infinite;
+
+  box-shadow: 0 0 18px rgba(169, 190, 81, 0.4);
+}
+
+/* Anneau 2 */
+.logo-3d::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.9);
+
+  transform: rotateY(65deg);
+  animation: ring3d-spin 1.6s linear infinite reverse;
+
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes ring3d-spin {
+  0% {
+    transform: rotateX(65deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(65deg) rotateY(360deg) rotateZ(360deg);
+  }
+}

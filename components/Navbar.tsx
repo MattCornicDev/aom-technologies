@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "@/components/Logo";
+import LogoWithRings from "@/components/LogoWithRings";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -29,7 +30,8 @@ export default function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
 
         {/* Logo */}
-        <Logo size="md" />
+        <LogoWithRings />
+
 
         {/* Desktop menu */}
         <ul className="hidden md:flex items-center gap-8">
