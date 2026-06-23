@@ -49,7 +49,7 @@ export default function HeroSection() {
 </h1>
 
   <p className="mt-4 text-lg md:text-xl max-w-2xl text-white">
-    Solutions électriques professionnelles & installations de qualité.
+    La technologies à votre service.
   </p>
 
   <a
