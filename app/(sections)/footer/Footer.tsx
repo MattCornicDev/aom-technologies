@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import LogoWithRings from "@/components/LogoWithRings";
 import {
   FaArrowUp,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -16,8 +16,8 @@ export default function Footer() {
         {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* COL 1 — LOGO + TEXTE */}
-          <div>
-            <Logo size="md" />
+          <div className="flex flex-col items-center md:items-start">
+            <LogoWithRings />
             <p className="text-[14px] text-gray-600 mt-4 max-w-xs text-center md:text-left mx-auto md:mx-0">
               AOM Technologies & Services — votre partenaire en électricité,
               télécommunications, IRVE et énergies renouvelables.

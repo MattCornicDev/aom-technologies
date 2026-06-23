@@ -1,5 +1,6 @@
 "use client";
 import VantaNet from "@/components/VantaNet";
+import LogoWithRings from "@/components/LogoWithRings";
 
 export default function HeroSection() {
   return (
@@ -15,6 +16,12 @@ export default function HeroSection() {
         animate-gradientFlow
       "
     >
+        {/* Logo */}
+        {/* Logo en haut à gauche */}
+<div className="absolute top-6 left-6 z-50">
+  <LogoWithRings />
+</div>
+
       {/* Glow électrique */}
       <div
         className="absolute inset-0"
