@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { FaMobileAlt } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -102,7 +103,9 @@ export default function Footer() {
               {/* Téléphone */}
               <div className="flex items-center md:justify-end gap-3">
                 <FaPhoneAlt className="text-[#007de4] text-lg" />
-                <span>03 27 43 64 18</span>
+                <span>03 27 43 64 18</span><br />
+                <FaMobileAlt className="text-[#007de4] text-xl" />
+                <span>07 67 85 95 81</span>
               </div>
 
               {/* Email */}
