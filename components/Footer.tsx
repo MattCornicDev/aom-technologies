@@ -27,6 +27,9 @@ export default function Footer() {
               AOM Technologies & Services — votre partenaire en électricité,
               télécommunications, IRVE et énergies renouvelables.
             </p>
+             <div className="text-[14px] text-gray-600 mt-4 max-w-xs text-center md:text-left">
+            <a href="/images/brochure.pdf">Récupérer la brochure</a>
+             </div>
           </div>
 
           {/* COL 2 — CERTIFICATIONS */}
