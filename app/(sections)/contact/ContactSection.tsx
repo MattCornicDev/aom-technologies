@@ -18,14 +18,14 @@ export default function ContactSection() {
 
         {/* Heading */}
         <h3 className="text-[#007de4] text-2xl md:text-3xl font-extrabold uppercase mb-16 text-center">
-          Contactez AOM Technologies & Services
+          Contact
         </h3>
 
         {/* FORMULAIRE PREMIUM */}
         <div className="max-w-2xl mx-auto bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
 
           <h4 className="text-[18px] font-semibold text-gray-800 mb-6">
-            Envoyez-nous un message
+            Votre message
           </h4>
 
           <form className="space-y-6">
