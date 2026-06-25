@@ -41,24 +41,31 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Contenu */}
-<div className="relative z-10 text-start text-[#007ee5] px-6">
-<h1 className="text-4xl md:text-6xl font-extrabold text-neon">
-  AOM TECHNOLOGIES <br />
-  & <br />
-  SERVICES
-</h1>
+{/* Contenu */}
+{/* Glow électrique */}
+<div
+  className="absolute inset-0"
+  style={{
+    background:
+      "radial-gradient(circle at center, rgba(0,126,229,0.35), transparent 70%)",
+    filter: "blur(60px)",
+  }}
+></div>
 
-  <p className="mt-4 text-lg md:text-xl max-w-2xl text-white">
-    La technologies à votre service.
-  </p>
-
-  <a
-    href="#contact"
-    className="inline-block mt-8 px-8 py-3 bg-[#e0720b] text-[#ffffff] rounded-lg font-semibold hover:bg-[#fc7a00] transition"
-  >
-    Nous contacter
-  </a>
+{/* Texte en arrière-plan derrière VantaNet */}
+<div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+  <h2 className="text-[40px] md:text-[150px] font-extrabold text-[#ffffff]/80 leading-tight text-center">
+    AOM<br/>TECHNOLOGIES<br/>&<br/>SERVICES
+  </h2>
 </div>
+
+{/* Effet électrique */}
+<div className="absolute inset-0">
+  <VantaNet />
+</div>
+
+{/* Overlay */}
+<div className="absolute inset-0 bg-black/40"></div>
 
     </section>
   );
