@@ -1,6 +1,16 @@
 "use client";
 import VantaNet from "@/components/VantaNet";
 import LogoWithRings from "@/components/LogoWithRings";
+import { Bungee_Shade } from "@next/font/google";
+
+const bungee = Bungee_Shade({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bungee",
+});
+
+
+
 
 export default function HeroSection() {
   return (
@@ -54,10 +64,30 @@ export default function HeroSection() {
 
 {/* Texte en arrière-plan derrière VantaNet */}
 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-  <h2 className="text-[40px] md:text-[150px] font-extrabold text-[#ffffff]/80 leading-tight text-center">
+  <h2 className={`
+    ${bungee.variable} 
+    text-[40px] 
+    md:text-[150px] 
+    font-extrabold 
+    text-white/80 
+    leading-tight 
+    text-center
+    `}
+    >
     AOM<br/>TECHNOLOGIES<br/>&<br/>SERVICES
   </h2>
 </div>
+
+<p className={`${bungee.variable} font-sans text-6xl text-white`}>
+  TEST POLICE EXTRAVAGANTE
+</p>
+
+
+
+<div className={`${bungee.variable}`}>
+  <p>La technologie à votre service</p>
+</div>
+
 
 {/* Effet électrique */}
 <div className="absolute inset-0">

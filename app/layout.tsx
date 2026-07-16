@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Inter } from "@next/font/google";
+
 
 
 const geistSans = Geist({
@@ -15,6 +17,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
 
 export const metadata: Metadata = {
   title: "AOM Technologies – Fibre, Électricité, Réseaux & Solutions Professionnelles",
@@ -52,14 +60,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}</body>
-        <Footer />
-    </html>
+   <html
+  lang="fr"
+  className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} h-full antialiased`}>
+  <body className={`min-h-full flex flex-col ${inter.variable}`}>
+    <Navbar />
+    {children}
+    <Footer />
+  </body>
+</html>
+
   );
 }
