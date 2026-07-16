@@ -1,8 +1,8 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-// 🔧 Typage des avis Google
 type Review = {
   author_name: string;
   profile_photo_url?: string;
@@ -11,7 +11,6 @@ type Review = {
 };
 
 export default function TestimonialsSection() {
-  // 🔧 On typage correctement le state
   const [reviews, setReviews] = useState<Review[]>([]);
 
   useEffect(() => {
@@ -21,77 +20,112 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section
-      id="testimonials"
-      className="
-        testimonial-bg 
-        py-28 
-        md:py-32 
-        bg-gradient-to-br 
-        from-[#a3bf3a] 
-        via-[#aeb78a] 
-        via-[#4696d6] 
-        to-[#007ee5]
-      "
-    >
-      <div className="container mx-auto px-6 md:px-12 text-center">
-        
-        {/* Titre */}
-        <p className="titre-temoignage text-white text-xl md:text-2xl font-semibold tracking-wide">
-          ILS VOUS LE DIRONT MIEUX QUE NOUS
+    <section id="testimonials" className="py-24 bg-[#f7f7f7]">
+      <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+
+        {/* TITLE */}
+        <h3 className="text-[#007de4] text-3xl font-extrabold uppercase text-center">
+          Témoignages clients
+        </h3>
+        <p className="text-gray-600 text-center mt-3 text-sm">
+          Ils nous font confiance pour leurs installations électriques, réseaux et bornes IRVE.
         </p>
 
-        {/* Séparateur */}
-        <hr className="section-devider border-t border-white w-24 mx-auto my-8" />
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
-          
-          {reviews.length > 0 ? (
+          {/* ================= AVIS FIXES (toujours visibles) ================= */}
+          {[
+            {
+              author_name: "Jean‑Marc D.",
+              text: "Installation IRVE impeccable, technicien très professionnel. Explications claires et travail propre.",
+              rating: 5,
+              profile_photo_url: "/images/avatars/avatar1.webp",
+            },
+            {
+              author_name: "Sophie L.",
+              text: "Travail rapide et soigné. AOM a su parfaitement répondre à nos besoins pour la fibre et le réseau.",
+              rating: 5,
+              profile_photo_url: "/images/avatars/avatar2.webp",
+            },
+            {
+              author_name: "Entreprise Dufour",
+              text: "Pose de bornes électriques pour notre parking salarié. Excellent accompagnement et suivi.",
+              rating: 5,
+              profile_photo_url: "/images/avatars/avatar3.webp",
+            },
+          ].map((review, i) => (
+            <div
+              key={`static-${i}`}
+              className="bg-white p-8 rounded-2xl shadow-xl border border-gray-200"
+            >
+              <div className="flex flex-col items-center text-center">
+
+                <Image
+                  src={review.profile_photo_url}
+                  alt={review.author_name}
+                  width={80}
+                  height={80}
+                  className="rounded-full mb-4 object-cover"
+                />
+
+                <h5 className="text-gray-800 font-semibold text-sm uppercase tracking-wide">
+                  {review.author_name}
+                </h5>
+
+                <p className="text-gray-600 italic mt-4 text-sm leading-relaxed">
+                  <span className="text-[#007de4] text-xl mr-2">“</span>
+                  {review.text}
+                  <span className="text-[#007de4] text-xl ml-2">”</span>
+                </p>
+
+                <p className="text-yellow-400 mt-4 text-lg">
+                  {"⭐".repeat(review.rating)}
+                </p>
+              </div>
+            </div>
+          ))}
+
+          {/* ================= AVIS GOOGLE (si disponibles) ================= */}
+          {reviews.length > 0 &&
             reviews.slice(0, 3).map((review, i) => (
               <div
-                key={i}
-                className="bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-lg"
+                key={`google-${i}`}
+                className="bg-white p-8 rounded-2xl shadow-xl border border-gray-200"
               >
-                <div className="flex flex-col items-center">
-                  
-                  {/* Avatar Google */}
+                <div className="flex flex-col items-center text-center">
+
                   <Image
-                    src={review.profile_photo_url || "/images/avatar1.png"}
+                    src={review.profile_photo_url || "/images/avatars/default.webp"}
                     alt={review.author_name}
                     width={80}
                     height={80}
-                    className="rounded-full mb-4"
+                    className="rounded-full mb-4 object-cover"
                   />
 
-                  {/* Nom */}
-                  <h5 className="client-name text-white uppercase tracking-widest text-xs">
+                  <h5 className="text-gray-800 font-semibold text-sm uppercase tracking-wide">
                     {review.author_name}
                   </h5>
 
-                  {/* Commentaire */}
-                  <p className="testimonial-speech text-white italic mt-6 text-sm leading-relaxed">
-                    <Image
-                      src="/images/quate.png"
-                      alt="quote"
-                      width={24}
-                      height={24}
-                      className="inline-block mr-2 align-top"
-                    />
+                  <p className="text-gray-600 italic mt-4 text-sm leading-relaxed">
+                    <span className="text-[#007de4] text-xl mr-2">“</span>
                     {review.text}
+                    <span className="text-[#007de4] text-xl ml-2">”</span>
                   </p>
 
-                  {/* Note */}
-                  <p className="text-yellow-300 mt-4">
+                  <p className="text-yellow-400 mt-4 text-lg">
                     {"⭐".repeat(review.rating)}
                   </p>
                 </div>
               </div>
-            ))
-          ) : (
-            <p className="text-white text-lg">Chargement des avis...</p>
-          )}
+            ))}
 
+          {/* Si aucun avis Google */}
+          {reviews.length === 0 && (
+            <p className="text-gray-500 text-center col-span-3">
+              Chargement des avis Google…
+            </p>
+          )}
         </div>
       </div>
     </section>

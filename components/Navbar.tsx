@@ -13,7 +13,7 @@ export default function Navbar() {
     { label: "Accueil", href: "/" },
     { label: "À propos", href: "#about" },
     { label: "Services", href: "#features" },
-    { label: "Workflow", href: "#workflow" },
+    { label: "irve", href: "/irve" },
     { label: "Clients", href: "#clients" },
     { label: "Contact", href: "#contact" },
   ];

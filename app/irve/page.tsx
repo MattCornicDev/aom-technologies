@@ -26,8 +26,7 @@ export default function IrvePage() {
             </h1>
             <p className="max-w-xl text-sm sm:text-base text-sky-100/90">
               AOM Technologies conçoit et installe des solutions de recharge
-              sur‑mesure, conformes aux normes NF C 15‑100, avec accompagnement
-              complet sur les aides financières (prime ADVENIR, crédit d&apos;impôt,
+              sur‑mesure, conformes aux normes NF C 15‑100, éligible sur les aides financières (prime ADVENIR, crédit d&apos;impôt,
               TVA réduite).
             </p>
 
@@ -47,7 +46,7 @@ export default function IrvePage() {
             </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-sky-100/80">
-              <span>⚡ Devis sous 24h</span>
+              <span>⚡ Devis sous 48h</span>
               <span>•</span>
               <span>Intervention rapide dans les Hauts‑de‑France</span>
               <span>•</span>
@@ -166,7 +165,7 @@ export default function IrvePage() {
               <li>• Aides locales et régionales</li>
             </ul>
             <p className="mt-3 text-xs text-slate-400">
-              Nous constituons vos dossiers et intégrons les aides directement
+              Nous conseillons sur les aides directement
               dans le devis pour une vision claire du coût final.
             </p>
             <Link
@@ -481,15 +480,15 @@ export default function IrvePage() {
 
             <div id="contact" className="mt-6 space-y-2 text-sm text-slate-700">
               <p className="font-semibold">Contact direct</p>
-              <p>Tél. : 06 00 00 00 00</p>
+              <p>Tél. : 07 67 85 95 81</p>
               <p>Email : contact@aomtechnologies.fr</p>
             </div>
           </aside>
         </div>
       </section>
 
-      {/* FOOTER IRVE */}
-      <footer className="border-t border-slate-200 bg-slate-900">
+      {/* section IRVE */}
+      <section className="border-t border-slate-200 bg-slate-900">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-6 text-xs text-slate-400">
           <div className="space-y-1">
             <p className="font-semibold text-slate-200">
@@ -505,7 +504,7 @@ export default function IrvePage() {
             <p>Mentions légales • Politique de confidentialité</p>
           </div>
         </div>
-      </footer>
+      </section>
     </main>
   );
 }
