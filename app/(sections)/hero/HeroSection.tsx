@@ -10,8 +10,6 @@ const bungee = Bungee_Shade({
 });
 
 
-
-
 export default function HeroSection() {
   return (
     <section
@@ -27,7 +25,7 @@ export default function HeroSection() {
       "
     >
         {/* Logo */}
-        {/* Logo en haut à gauche */}
+      
 <div className="absolute top-6 left-6 z-50">
   <LogoWithRings />
 </div>
@@ -77,10 +75,6 @@ export default function HeroSection() {
     AOM<br/>TECHNOLOGIES<br/>&<br/>SERVICES
   </h2>
 </div>
-
-<p className={`${bungee.variable} font-sans text-6xl text-white`}>
-  TEST POLICE EXTRAVAGANTE
-</p>
 
 
 

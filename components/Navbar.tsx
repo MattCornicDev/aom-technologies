@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 
@@ -36,7 +34,7 @@ export default function Navbar() {
               <a
                 href={item.href}
                 className="
-                  text-[#787777]
+                  text-[#ffffff]
                   uppercase
                   font-medium
                   text-[10px]

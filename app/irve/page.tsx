@@ -1,6 +1,7 @@
 // app/irve/page.tsx  (Next.js 13+ app router)
 import Image from "next/image";
 import Link from "next/link";
+import LogoWithRings from "@/components/LogoWithRings";
 
 export const metadata = {
   title: "Installation de bornes de recharge électriques IRVE | AOM Technologies",
@@ -12,6 +13,9 @@ export default function IrvePage() {
   return (
     <main className="bg-slate-50 text-slate-900">
       {/* HERO */}
+      <div className="absolute top-6 left-6 z-50">
+  <LogoWithRings />
+</div>
       <section className="relative overflow-hidden bg-gradient-to-br from-sky-700 via-sky-500 to-emerald-500 text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 lg:flex-row lg:items-center">
           <div className="flex-1 space-y-6">
@@ -38,7 +42,7 @@ export default function IrvePage() {
                 Demander un devis gratuit
               </Link>
               <Link
-                href="#contact"
+                href="#devis"
                 className="rounded-full border border-sky-100/60 px-6 py-3 text-sm font-semibold text-white/90 hover:bg-sky-600/40"
               >
                 Être rappelé par un expert

@@ -44,103 +44,105 @@ export default function IrveForm() {
 
   return (
     <div>
-      <h2 className="text-2xl font-semibold text-slate-900">
-        Demander un devis pour l'installation de votre borne de recharge
+      <h2 className="text-2xl font-semibold sm:text-3xl">
+        Demander un devis pour l&apos;installation de votre borne de recharge
       </h2>
 
-      <p className="text-slate-600 text-sm mt-2 max-w-xl">
+      <p className="mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
         Remplissez ce formulaire, un expert AOM Technologies vous recontacte rapidement
         pour une étude gratuite et un devis personnalisé, sans engagement.
       </p>
 
-      <form onSubmit={handleSubmit} className="mt-10 space-y-6">
+      <form onSubmit={handleSubmit} className="mt-8 space-y-4">
 
-        {/* Nom */}
-        <div>
-          <label className="text-xs font-semibold text-slate-700">Nom / Prénom</label>
-          <input
-            name="name"
-            required
-            className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
-                       outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-          />
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label className="text-xs font-semibold text-slate-700">Nom / Prénom</label>
+            <input
+              name="name"
+              type="text"
+              required
+              className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
+                         outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            />
+          </div>
+
+          <div>
+            <label className="text-xs font-semibold text-slate-700">Email</label>
+            <input
+              name="email"
+              type="email"
+              required
+              className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
+                         outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            />
+          </div>
         </div>
 
-        {/* Email */}
-        <div>
-          <label className="text-xs font-semibold text-slate-700">Email</label>
-          <input
-            name="email"
-            type="email"
-            required
-            className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
-                       outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-          />
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label className="text-xs font-semibold text-slate-700">Téléphone</label>
+            <input
+              name="phone"
+              type="tel"
+              required
+              className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
+                         outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            />
+          </div>
+
+          <div>
+            <label className="text-xs font-semibold text-slate-700">Adresse d&apos;installation</label>
+            <input
+              name="address"
+              type="text"
+              className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
+                         outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            />
+          </div>
         </div>
 
-        {/* Téléphone */}
-        <div>
-          <label className="text-xs font-semibold text-slate-700">Téléphone</label>
-          <input
-            name="phone"
-            required
-            className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
-                       outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-          />
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label className="text-xs font-semibold text-slate-700">Type de site</label>
+            <select
+              name="siteType"
+              className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
+                         outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            >
+              <option>Maison individuelle</option>
+              <option>Appartement / copropriété</option>
+              <option>Entreprise / parking salarié</option>
+              <option>Collectivité / site public</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="text-xs font-semibold text-slate-700">Puissance souhaitée</label>
+            <select
+              name="power"
+              className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
+                         outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            >
+              <option>Je ne sais pas encore</option>
+              <option>7,4 kW</option>
+              <option>11 kW</option>
+              <option>22 kW</option>
+            </select>
+          </div>
         </div>
 
-        {/* Adresse */}
-        <div>
-          <label className="text-xs font-semibold text-slate-700">Adresse d'installation</label>
-          <input
-            name="address"
-            className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
-                       outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-          />
-        </div>
-
-        {/* Type de site */}
-        <div>
-          <label className="text-xs font-semibold text-slate-700">Type de site</label>
-          <select
-            name="siteType"
-            className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
-                       outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-          >
-            <option>Maison individuelle</option>
-            <option>Appartement / copropriété</option>
-            <option>Entreprise / parking salarié</option>
-            <option>Collectivité / site public</option>
-          </select>
-        </div>
-
-        {/* Puissance */}
-        <div>
-          <label className="text-xs font-semibold text-slate-700">Puissance souhaitée</label>
-          <select
-            name="power"
-            className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
-                       outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-          >
-            <option>Je ne sais pas encore</option>
-            <option>7,4 kW</option>
-            <option>11 kW</option>
-            <option>22 kW</option>
-          </select>
-        </div>
-
-        {/* Message */}
         <div>
           <label className="text-xs font-semibold text-slate-700">Précisions sur votre projet</label>
           <textarea
             name="details"
             rows={4}
             className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm
-                       outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 resize-none"
-          ></textarea>
+                       outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+            placeholder="Ex : longueur de câble souhaitée, type de véhicule, contraintes particulières..."
+          />
         </div>
 
-        {/* Bouton */}
         <button
           type="submit"
           disabled={loading}
@@ -150,13 +152,16 @@ export default function IrveForm() {
           {loading ? "Envoi..." : "Envoyer ma demande de devis"}
         </button>
 
-        {/* Messages */}
         {status === "success" && (
-          <p className="text-green-600 text-sm mt-2">✔ Votre demande a bien été envoyée.</p>
+          <p className="mt-2 text-green-600 text-sm">✔ Votre demande a bien été envoyée.</p>
         )}
         {status === "error" && (
-          <p className="text-red-600 text-sm mt-2">✖ Une erreur est survenue.</p>
+          <p className="mt-2 text-red-600 text-sm">✖ Une erreur est survenue.</p>
         )}
+
+        <p className="mt-2 text-xs text-slate-500">
+          En envoyant ce formulaire, vous acceptez d&apos;être recontacté par AOM Technologies.
+        </p>
       </form>
     </div>
   );

@@ -131,43 +131,26 @@ export default function ContactSection() {
             </form>
           </div>
 
-          {/* CONTACT INFO */}
-          <aside className="rounded-2xl bg-white p-10 shadow-xl border border-gray-200">
-            <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
-              Contact direct
-            </p>
+         <aside className="rounded-2xl bg-white p-10 shadow-xl border border-gray-200">
+  <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
+    Localisation
+  </p>
 
-            <h4 className="text-xl font-semibold text-gray-800 mt-2">
-              AOM Technologies & Services
-            </h4>
+  <h4 className="text-xl font-semibold text-gray-800 mt-2">
+    AOM Technologies & Services
+  </h4>
 
-            <div className="mt-6 space-y-4 text-[15px] text-gray-700">
-              <div className="flex items-center gap-3">
-                <FaPhoneAlt className="text-[#007de4] text-lg" />
-                <span>03 27 43 64 18</span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <FaMobileAlt className="text-[#007de4] text-xl" />
-                <span>07 67 85 95 81</span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <FaEnvelope className="text-[#007de4] text-lg" />
-                <span>contact@aomtechnologies.com</span>
-              </div>
-
-              <div className="flex items-center gap-3 max-w-[260px]">
-                <FaMapMarkerAlt className="text-[#007de4] text-lg" />
-                <span>
-                  Z.A des six Mariannes<br />
-                  9 rue des entrepreneurs<br />
-                  59124 Escaudain
-                </span>
-              </div>
-            </div>
-          </aside>
-
+  <div className="mt-6 w-full h-[300px] rounded-xl overflow-hidden border border-gray-300">
+    <iframe
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      loading="lazy"
+      allowFullScreen
+      referrerPolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.6515268823828!2d3.3393252999999996!3d50.324812599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8a67a78d79f803df%3A0x47473cdb63fbae1!2sAOM%20TECHNOLOGIES%20%26%20SERVICES!5e1!3m2!1sfr!2sfr!4v1784220460855!5m2!1sfr!2sfr"></iframe>
+  </div>
+</aside>
         </div>
       </div>
     </section>
