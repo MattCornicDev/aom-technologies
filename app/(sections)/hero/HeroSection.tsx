@@ -1,12 +1,12 @@
 "use client";
+
 import VantaNet from "@/components/VantaNet";
 import LogoWithRings from "@/components/LogoWithRings";
-import { Bungee_Shade } from "@next/font/google";
+import { Orbitron } from "next/font/google";
 
-const bungee = Bungee_Shade({
-  weight: "400",
+const orbitron = Orbitron({
   subsets: ["latin"],
-  variable: "--font-bungee",
+  weight: ["400", "700"],
 });
 
 
@@ -24,11 +24,10 @@ export default function HeroSection() {
         animate-gradientFlow
       "
     >
-        {/* Logo */}
-      
-<div className="absolute top-6 left-6 z-50">
-  <LogoWithRings />
-</div>
+      {/* Logo */}
+      <div className="absolute top-6 left-6 z-50">
+        <LogoWithRings />
+      </div>
 
       {/* Glow électrique */}
       <div
@@ -40,6 +39,24 @@ export default function HeroSection() {
         }}
       ></div>
 
+      {/* Texte en arrière-plan derrière VantaNet */}
+      <div
+        className={`${orbitron.className} absolute inset-0 flex items-center justify-center pointer-events-none`}
+      >
+        <h2
+          className={`
+            text-[40px]
+            md:text-[150px]
+            font-extrabold
+            text-white/80
+            leading-tight
+            text-center
+          `}
+        >
+          AOM<br />TECHNOLOGIES<br />&<br />SERVICES
+        </h2>
+      </div>
+
       {/* Effet électrique */}
       <div className="absolute inset-0">
         <VantaNet />
@@ -47,50 +64,6 @@ export default function HeroSection() {
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
-
-      {/* Contenu */}
-{/* Contenu */}
-{/* Glow électrique */}
-<div
-  className="absolute inset-0"
-  style={{
-    background:
-      "radial-gradient(circle at center, rgba(0,126,229,0.35), transparent 70%)",
-    filter: "blur(60px)",
-  }}
-></div>
-
-{/* Texte en arrière-plan derrière VantaNet */}
-<div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-  <h2 className={`
-    ${bungee.variable} 
-    text-[40px] 
-    md:text-[150px] 
-    font-extrabold 
-    text-white/80 
-    leading-tight 
-    text-center
-    `}
-    >
-    AOM<br/>TECHNOLOGIES<br/>&<br/>SERVICES
-  </h2>
-</div>
-
-
-
-<div className={`${bungee.variable}`}>
-  <p>La technologie à votre service</p>
-</div>
-
-
-{/* Effet électrique */}
-<div className="absolute inset-0">
-  <VantaNet />
-</div>
-
-{/* Overlay */}
-<div className="absolute inset-0 bg-black/40"></div>
-
     </section>
   );
 }

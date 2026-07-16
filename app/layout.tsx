@@ -6,6 +6,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Inter } from "@next/font/google";
 
+import { Archivo_Narrow } from "next/font/google";
+
+const archivo = Archivo_Narrow({
+  subsets: ["latin"],
+  weight: ["400", "700"], // selon ce que tu veux
+});
+
 
 
 const geistSans = Geist({
