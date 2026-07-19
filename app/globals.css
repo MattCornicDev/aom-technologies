@@ -51,65 +51,66 @@ body {
   width: 110px;
   height: 110px;
   position: relative;
-
-  /* CENTRAGE PARFAIT */
   display: flex;
   align-items: center;
   justify-content: center;
-
   perspective: 1200px;
 }
 
-/* Le logo doit être au-dessus des anneaux */
 .logo-3d img {
   position: relative;
   z-index: 10;
 }
 
-/* Anneau 1 */
-.logo-3d::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  border-radius: 50%;
-  border: 3px solid rgba(169, 190, 81, 0.9);
-
-  transform: rotateX(65deg);
-  animation: ring3d-spin 1.6s linear infinite;
-
-  box-shadow: 0 0 18px rgba(169, 190, 81, 0.4);
-}
-
-/* Anneau 2 */
+.logo-3d::before,
 .logo-3d::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  border-radius: 50%;
-  border: 3px solid rgba(0, 0, 0, 0.9);
-
-  transform: rotateY(65deg);
-  animation: ring3d-spin 2.6s linear infinite reverse;
-
-  box-shadow: 0 0 18px rgba(253, 253, 255, 0.4);
+  top: 50%;
+  left: 50%;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
-@keyframes ring3d-spin {
+.logo-3d::before {
+  width: 96px;
+  height: 96px;
+  border: 2px solid rgba(169, 190, 81, 0.95);
+  box-shadow:
+    0 0 12px rgba(169, 190, 81, 0.35),
+    inset 0 0 8px rgba(169, 190, 81, 0.2);
+  animation: orbit-ring 3.2s linear infinite;
+}
+
+.logo-3d::after {
+  width: 124px;
+  height: 124px;
+  border: 1.5px dashed rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  animation: orbit-ring-reverse 4.4s linear infinite;
+}
+
+@keyframes orbit-ring {
   0% {
-    transform: rotateX(65deg) rotateY(0deg) rotateZ(0deg);
+    transform: translate(-50%, -50%) rotate(0deg) translateX(38px) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
   }
   100% {
-    transform: rotateX(65deg) rotateY(360deg) rotateZ(360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translateX(38px) rotate(-360deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes orbit-ring-reverse {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(47px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg) translateX(47px) rotate(360deg);
   }
 }
 
