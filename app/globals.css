@@ -48,116 +48,59 @@ body {
 }
 
 .logo-3d {
-  width: 110px;
-  height: 110px;
   position: relative;
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1200px;
-}
-
-.logo-3d img {
-  position: relative;
-  z-index: 10;
+  perspective: 1000px;
+  border-radius: 50%;
 }
 
 .logo-3d::before,
 .logo-3d::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 999px;
-  transform: translate(-50%, -50%);
   pointer-events: none;
+  box-sizing: border-box;
 }
 
 .logo-3d::before {
-  width: 96px;
-  height: 96px;
-  border: 2px solid rgba(169, 190, 81, 0.95);
-  box-shadow:
-    0 0 12px rgba(169, 190, 81, 0.35),
-    inset 0 0 8px rgba(169, 190, 81, 0.2);
-  animation: orbit-ring 3.2s linear infinite;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid rgba(169, 190, 81, 0.9);
+  box-shadow: 0 0 18px rgba(169, 190, 81, 0.3);
+  animation: ring-spin 4s linear infinite;
 }
 
 .logo-3d::after {
-  width: 124px;
-  height: 124px;
-  border: 1.5px dashed rgba(255, 255, 255, 0.85);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  animation: orbit-ring-reverse 4.4s linear infinite;
+  inset: 8px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.15);
+  animation: ring-spin-reverse 5s linear infinite;
 }
 
-@keyframes orbit-ring {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(38px) rotate(0deg);
-    opacity: 0.7;
+@keyframes ring-spin {
+  from {
+    transform: rotate(0deg);
   }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(38px) rotate(-360deg);
-    opacity: 0.7;
+  to {
+    transform: rotate(360deg);
   }
 }
 
-@keyframes orbit-ring-reverse {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(47px) rotate(0deg);
+@keyframes ring-spin-reverse {
+  from {
+    transform: rotate(360deg);
   }
-  100% {
-    transform: translate(-50%, -50%) rotate(-360deg) translateX(47px) rotate(360deg);
-  }
-}
-
-.logo-3d img {
-  position: relative;
-  z-index: 10;
-  filter: drop-shadow(0 0 0 white) drop-shadow(0 0 3px white);
-}
-
-
-@keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  to {
+    transform: rotate(0deg);
   }
 }
 
-@keyframes slideInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-slideInLeft {
-  animation: slideInLeft 0.8s ease forwards;
-}
-
-.animate-slideInRight {
-  animation: slideInRight 0.8s ease forwards;
-}
-
-/* Contour blanc au text h1 */
-.text-neon {
-  color: #ffffff;
-  text-shadow:
-    0 0 4px #eef1f4,
-    0 0 8px #fdfdfd,
-    0 0 1px #ffffff,
-    0 0 1px rgba(255, 255, 255, 0.2),
-    0 0 8px rgba(255, 255, 255, 0.2);
+.logo-svg {
+  width: 80px;
+  height: auto;
 }
