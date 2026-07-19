@@ -99,7 +99,7 @@ body {
   border: 3px solid rgba(0, 0, 0, 0.9);
 
   transform: rotateY(65deg);
-  animation: ring3d-spin 1.6s linear infinite reverse;
+  animation: ring3d-spin 2.6s linear infinite reverse;
 
   box-shadow: 0 0 18px rgba(253, 253, 255, 0.4);
 }
@@ -160,7 +160,3 @@ body {
     0 0 1px rgba(255, 255, 255, 0.2),
     0 0 8px rgba(255, 255, 255, 0.2);
 }
-
-
-
-
