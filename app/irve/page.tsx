@@ -129,7 +129,7 @@ export default function IrvePage() {
                 },
                 {
                   title: "Aides & subventions",
-                  desc: "Accompagnement sur les dossiers ADVENIR, crédit d’impôt, TVA réduite et aides locales.",
+                  desc: "Conseil sur les dossiers ADVENIR, crédit d’impôt, TVA réduite.",
                 },
                 {
                   title: "Intervention rapide",
@@ -159,11 +159,9 @@ export default function IrvePage() {
             <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
               Aides & financement
             </p>
-            <h3 className="text-lg font-semibold">
-              Jusqu&apos;à 960 € d&apos;aides selon votre profil
-            </h3>
+            
             <ul className="mt-3 space-y-2 text-sm text-slate-200">
-              <li>• Prime ADVENIR (résidentiel, copropriété, entreprise)</li>
+              <li>• Eligible à la Prime ADVENIR (résidentiel, copropriété, entreprise)</li>
               <li>• Crédit d&apos;impôt transition énergétique</li>
               <li>• TVA à 5,5 % selon les cas</li>
               <li>• Aides locales et régionales</li>
@@ -198,10 +196,11 @@ export default function IrvePage() {
               {
                 label: "Particuliers",
                 points: [
-                  "Wallbox 7 kW, 11 kW ou 22 kW",
+                  "3,4 kW, 7 kW, 11 kW ou 22 kW",
                   "Installation en maison ou garage",
                   "Mise en sécurité du tableau électrique",
                   "Pilotage de la charge et optimisation",
+                  "Délestage et suivi de consommation via application mobile",
                 ],
               },
               {
@@ -253,8 +252,7 @@ export default function IrvePage() {
       {/* PROCESS */}
       <section className="mx-auto max-w-6xl px-6 py-16">
         <h2 className="text-2xl font-semibold sm:text-3xl">
-          Un processus d&apos;installation clair, de la demande à la première
-          recharge
+          Un processus d&apos;installation clair.
         </h2>
         <p className="mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
           Nous gérons l&apos;ensemble du projet : étude, installation, mise en
@@ -484,6 +482,7 @@ export default function IrvePage() {
 
             <div id="contact" className="mt-6 space-y-2 text-sm text-slate-700">
               <p className="font-semibold">Contact direct</p>
+              <p>Tél. : 03 27 43 64 18s</p>
               <p>Tél. : 07 67 85 95 81</p>
               <p>Email : contact@aomtechnologies.fr</p>
             </div>
