@@ -32,6 +32,7 @@ export default function ContactSection() {
       form.reset();
     } else {
       setStatus("error");
+      console.error("Erreur de formulaire contact :", data.error);
     }
 
     setLoading(false);
@@ -124,7 +125,7 @@ export default function ContactSection() {
               )}
               {status === "error" && (
                 <p className="text-red-600 text-sm mt-2">
-                  ✖ Une erreur est survenue. Réessayez plus tard.
+                  ✖ Une erreur est survenue. Vérifiez la console ou les variables d’environnement.
                 </p>
               )}
 
