@@ -46,7 +46,7 @@ export default function ContactSection() {
           Contact
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.1fr,0.9fr] gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-[1.1fr,0.9fr] gap-8">
 
           {/* FORM */}
           <div className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
