@@ -39,34 +39,34 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-[#f7f7f7]">
-      <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+    <section id="contact" className="py-12 bg-[#f7f7f7]">
+      <div className="max-w-6xl mx-auto px-4">
 
-        <h3 className="text-[#007de4] text-3xl font-extrabold uppercase mb-16 text-left">
+        <h3 className="text-[#007de4] text-2xl md:text-3xl font-extrabold uppercase mb-10">
           Contact
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1.1fr,0.9fr] gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.1fr,0.9fr] gap-8">
 
           {/* FORM */}
-          <div className="bg-white p-10 rounded-2xl shadow-xl border border-gray-200">
-            <h4 className="text-[18px] font-semibold text-gray-800 mb-6">
+          <div className="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+            <h4 className="text-lg font-semibold text-gray-800 mb-4">
               Envoyez-nous un message
             </h4>
 
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-5" onSubmit={handleSubmit}>
               
               {/* Nom */}
               <div className="relative">
                 <input
                   type="text"
                   name="name"
-                  className="peer w-full px-4 py-3 text-[15px] border border-gray-300 rounded-lg 
+                  className="peer w-full px-3 py-3 text-[15px] border border-gray-300 rounded-lg 
                   focus:outline-none focus:border-[#007de4] focus:ring-2 focus:ring-[#007de4]/30 transition"
                   placeholder=" "
                   required
                 />
-                <label className="absolute left-4 top-3 text-gray-500 text-[14px] pointer-events-none 
+                <label className="absolute left-3 top-3 text-gray-500 text-[14px] pointer-events-none 
                   transition-all duration-200 bg-white px-1 peer-placeholder-shown:top-3 peer-placeholder-shown:text-[14px]
                   peer-focus:-top-3 peer-focus:text-[12px] peer-focus:text-[#007de4]">
                   Votre nom
@@ -78,12 +78,12 @@ export default function ContactSection() {
                 <input
                   type="email"
                   name="email"
-                  className="peer w-full px-4 py-3 text-[15px] border border-gray-300 rounded-lg 
+                  className="peer w-full px-3 py-3 text-[15px] border border-gray-300 rounded-lg 
                   focus:outline-none focus:border-[#007de4] focus:ring-2 focus:ring-[#007de4]/30 transition"
                   placeholder=" "
                   required
                 />
-                <label className="absolute left-4 top-3 text-gray-500 text-[14px] pointer-events-none 
+                <label className="absolute left-3 top-3 text-gray-500 text-[14px] pointer-events-none 
                   transition-all duration-200 bg-white px-1 peer-placeholder-shown:top-3 peer-placeholder-shown:text-[14px]
                   peer-focus:-top-3 peer-focus:text-[12px] peer-focus:text-[#007de4]">
                   Votre email
@@ -95,12 +95,12 @@ export default function ContactSection() {
                 <textarea
                   name="message"
                   rows={4}
-                  className="peer w-full px-4 py-3 text-[15px] border border-gray-300 rounded-lg 
+                  className="peer w-full px-3 py-3 text-[15px] border border-gray-300 rounded-lg 
                   focus:outline-none focus:border-[#007de4] focus:ring-2 focus:ring-[#007de4]/30 transition resize-none"
                   placeholder=" "
                   required
                 ></textarea>
-                <label className="absolute left-4 top-3 text-gray-500 text-[14px] pointer-events-none 
+                <label className="absolute left-3 top-3 text-gray-500 text-[14px] pointer-events-none 
                   transition-all duration-200 bg-white px-1 peer-placeholder-shown:top-3 peer-placeholder-shown:text-[14px]
                   peer-focus:-top-3 peer-focus:text-[12px] peer-focus:text-[#007de4]">
                   Votre message
@@ -125,33 +125,36 @@ export default function ContactSection() {
               )}
               {status === "error" && (
                 <p className="text-red-600 text-sm mt-2">
-                  ✖ Une erreur est survenue. Vérifiez la console ou les variables d’environnement.
+                  ✖ Une erreur est survenue.
                 </p>
               )}
 
             </form>
           </div>
 
-         <aside className="rounded-2xl bg-white p-10 shadow-xl border border-gray-200">
-  <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
-    Localisation
-  </p>
+          {/* ASIDE */}
+          <aside className="rounded-xl bg-white p-2 shadow-md border border-gray-200">
+            <p className="text-xs uppercase tracking-[0.2em] text-gray-500">
+              Localisation
+            </p>
 
-  <h4 className="text-xl font-semibold text-gray-800 mt-2">
-    AOM Technologies & Services
-  </h4>
+            <h4 className="text-xl font-semibold text-gray-800 mt-2">
+              AOM Technologies & Services
+            </h4>
 
-  <div className="mt-6 w-full h-[300px] rounded-xl overflow-hidden border border-gray-300">
-    <iframe
-      width="100%"
-      height="100%"
-      style={{ border: 0 }}
-      loading="lazy"
-      allowFullScreen
-      referrerPolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.6515268823828!2d3.3393252999999996!3d50.324812599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8a67a78d79f803df%3A0x47473cdb63fbae1!2sAOM%20TECHNOLOGIES%20%26%20SERVICES!5e1!3m2!1sfr!2sfr!4v1784220460855!5m2!1sfr!2sfr"></iframe>
-  </div>
-</aside>
+            <div className="mt-5 w-full h-[260px] rounded-lg overflow-hidden border border-gray-300">
+              <iframe
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3462.6515268823828!2d3.3393252999999996!3d50.324812599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8a67a78d79f803df%3A0x47473cdb63fbae1!2sAOM%20TECHNOLOGIES%20%26%20SERVICES!5e1!3m2!1sfr!2sfr!4v1784220460855!5m2!1sfr!2sfr"
+              ></iframe>
+            </div>
+          </aside>
+
         </div>
       </div>
     </section>
