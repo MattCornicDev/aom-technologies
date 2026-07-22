@@ -27,15 +27,14 @@ export default function HeroSection() {
       <div
         className="absolute inset-0"
         style={{
-          background:
-            "",
+          background: "",
           filter: "blur(60px)",
         }}
       ></div>
 
       {/* Texte */}
       <div
-        className={`${orbitron.className} absolute inset-0 flex items-center justify-center pointer-events-none`}
+        className={`${orbitron.className} absolute inset-0 flex items-center justify-center pointer-events-none z-40`}
       >
         <h2
           className="
@@ -52,7 +51,7 @@ export default function HeroSection() {
       </div>
 
       {/* Effet électrique */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 h-full pointer-events-none z-0">
         <VantaNet />
       </div>
 

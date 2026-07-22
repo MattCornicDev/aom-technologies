@@ -13,12 +13,6 @@ export default function VantaNet() {
         el: ref.current,
         THREE,
 
-        // Ces options sont ignorées mais on les laisse
-        pointsColor: "#007ee5",
-        lineColor: "#007ee5",
-        dotColor: "#007ee5",
-        color: "#007ee5",
-
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
@@ -36,10 +30,15 @@ export default function VantaNet() {
         backgroundAlpha: 0.0,
       });
 
-      // ⭐ Hack THREE.js : on force la couleur des traits
+      // Patch couleur + vertexColors
       effect.scene.traverse((obj: any) => {
-        if (obj.material && obj.material.color) {
-          obj.material.color.set("#007ee5"); // bleu électrique
+        if (obj.material) {
+          if (obj.material.vertexColors === undefined) {
+            obj.material.vertexColors = false;
+          }
+          if (obj.material.color) {
+            obj.material.color.set("#007ee5"); // bleu électrique
+          }
         }
       });
 
@@ -51,5 +50,5 @@ export default function VantaNet() {
     };
   }, [vanta]);
 
-  return <div ref={ref} className="absolute inset-0 w-full h-full"></div>;
+  return <div ref={ref} className="w-full h-full"></div>;
 }
