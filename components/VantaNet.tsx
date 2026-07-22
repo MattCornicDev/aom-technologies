@@ -3,42 +3,49 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import NET from "vanta/dist/vanta.net.min";
 
-
 export default function VantaNet() {
   const ref = useRef(null);
   const [vanta, setVanta] = useState<any>(null);
 
   useEffect(() => {
     if (!vanta) {
-      setVanta(
-        NET({
-  el: ref.current,
-  THREE,
-  // ⭐ Couleur du réseau (clé correcte pour ta version)
-  pointsColor: 0xffffff,
+      const effect = NET({
+        el: ref.current,
+        THREE,
 
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
+        // Ces options sont ignorées mais on les laisse
+        pointsColor: "#007ee5",
+        lineColor: "#007ee5",
+        dotColor: "#007ee5",
+        color: "#007ee5",
 
-  // ⭐ On laisse color au cas où
-  color: 0xffffff,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
 
-  points: 10.0,
-  maxDistance: 15.0,
-  spacing: 8.0,
-  showDots: true,
+        points: 10.0,
+        maxDistance: 15.0,
+        spacing: 8.0,
+        showDots: true,
 
-  backgroundColor: 0x000000,
-  backgroundAlpha: 0.0,
-})
+        backgroundColor: 0x000000,
+        backgroundAlpha: 0.0,
+      });
 
-      );
+      // ⭐ Hack THREE.js : on force la couleur des traits
+      effect.scene.traverse((obj: any) => {
+        if (obj.material && obj.material.color) {
+          obj.material.color.set("#007ee5"); // bleu électrique
+        }
+      });
+
+      setVanta(effect);
     }
+
     return () => {
       if (vanta) vanta.destroy();
     };
