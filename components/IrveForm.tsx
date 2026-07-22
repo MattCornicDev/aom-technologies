@@ -37,6 +37,7 @@ export default function IrveForm() {
       form.reset();
     } else {
       setStatus("error");
+      console.error("Erreur de formulaire IRVE :", data.error);
     }
 
     setLoading(false);
@@ -156,7 +157,9 @@ export default function IrveForm() {
           <p className="mt-2 text-green-600 text-sm">✔ Votre demande a bien été envoyée.</p>
         )}
         {status === "error" && (
-          <p className="mt-2 text-red-600 text-sm">✖ Une erreur est survenue.</p>
+          <p className="mt-2 text-red-600 text-sm">
+            ✖ Une erreur est survenue. Vérifiez la console ou les variables d’environnement.
+          </p>
         )}
 
         <p className="mt-2 text-xs text-slate-500">

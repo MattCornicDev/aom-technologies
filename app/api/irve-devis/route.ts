@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const fromEmail = process.env.RESEND_FROM_EMAIL || "contact@aomtechnologies.com";
+const toEmail = process.env.RESEND_TO_EMAIL || process.env.CONTACT_EMAIL || "contact@aomtechnologies.com";
 
 export async function POST(req: Request) {
   try {
@@ -22,9 +24,16 @@ export async function POST(req: Request) {
       );
     }
 
-    await resend.emails.send({
-      from: "AOM Technologies <contact@aomtechnologies.com>",
-      to: "contact@aomtechnologies.com",
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json(
+        { success: false, error: "Clé Resend non configurée" },
+        { status: 500 }
+      );
+    }
+
+    const result = await resend.emails.send({
+      from: `AOM Technologies <${fromEmail}>`,
+      to: toEmail,
       subject: "Nouvelle demande de devis IRVE",
       html: `
         <h2>Nouvelle demande de devis IRVE</h2>
@@ -37,6 +46,14 @@ export async function POST(req: Request) {
         <p><strong>Détails :</strong><br/>${details}</p>
       `,
     });
+
+    if (result.error) {
+      console.error("Erreur Resend IRVE :", result.error);
+      return NextResponse.json(
+        { success: false, error: result.error.message || "Échec de l’envoi" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

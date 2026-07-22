@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* COL 1 — LOGO + TEXTE */}
           <div className="flex flex-col items-center md:items-start">
-            <LogoWithRings />
+             <div className="scale-[1.6] md:scale-100 mb-4"> <LogoWithRings /></div>
             <p className="text-[14px] text-gray-600 mt-4 max-w-xs text-center md:text-left">
               AOM Technologies & Services — votre partenaire en électricité,
               télécommunications, IRVE et énergies renouvelables.

@@ -20,21 +20,21 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section id="testimonials" className="py-24 bg-[#f7f7f7]">
-      <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+    <section id="testimonials" className="py-12 bg-[#f7f7f7]">
+      <div className="max-w-6xl mx-auto px-4">
 
         {/* TITLE */}
-        <h3 className="text-[#007de4] text-3xl font-extrabold uppercase text-center">
+        <h3 className="text-[#007de4] text-2xl md:text-3xl font-extrabold uppercase text-center">
           Témoignages clients
         </h3>
-        <p className="text-gray-600 text-center mt-3 text-sm">
+        <p className="text-gray-600 text-center mt-2 text-sm md:text-base">
           Ils nous font confiance pour leurs installations électriques, réseaux et bornes IRVE.
         </p>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
 
-          {/* ================= AVIS FIXES (toujours visibles) ================= */}
+          {/* AVIS FIXES */}
           {[
             {
               author_name: "Jean‑Marc D.",
@@ -57,72 +57,72 @@ export default function TestimonialsSection() {
           ].map((review, i) => (
             <div
               key={`static-${i}`}
-              className="bg-white p-8 rounded-2xl shadow-xl border border-gray-200"
+              className="bg-white p-6 rounded-xl shadow-md border border-gray-200"
             >
               <div className="flex flex-col items-center text-center">
 
                 <Image
                   src={review.profile_photo_url}
                   alt={review.author_name}
-                  width={80}
-                  height={80}
-                  className="rounded-full mb-4 object-cover"
+                  width={70}
+                  height={70}
+                  className="rounded-full mb-3 object-cover"
                 />
 
                 <h5 className="text-gray-800 font-semibold text-sm uppercase tracking-wide">
                   {review.author_name}
                 </h5>
 
-                <p className="text-gray-600 italic mt-4 text-sm leading-relaxed">
-                  <span className="text-[#007de4] text-xl mr-2">“</span>
+                <p className="text-gray-600 italic mt-3 text-sm leading-relaxed">
+                  <span className="text-[#007de4] text-xl mr-1">“</span>
                   {review.text}
-                  <span className="text-[#007de4] text-xl ml-2">”</span>
+                  <span className="text-[#007de4] text-xl ml-1">”</span>
                 </p>
 
-                <p className="text-yellow-400 mt-4 text-lg">
+                <p className="text-yellow-400 mt-3 text-lg">
                   {"⭐".repeat(review.rating)}
                 </p>
               </div>
             </div>
           ))}
 
-          {/* ================= AVIS GOOGLE (si disponibles) ================= */}
+          {/* AVIS GOOGLE */}
           {reviews.length > 0 &&
             reviews.slice(0, 3).map((review, i) => (
               <div
                 key={`google-${i}`}
-                className="bg-white p-8 rounded-2xl shadow-xl border border-gray-200"
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-200"
               >
                 <div className="flex flex-col items-center text-center">
 
                   <Image
                     src={review.profile_photo_url || "/images/avatars/default.webp"}
                     alt={review.author_name}
-                    width={80}
-                    height={80}
-                    className="rounded-full mb-4 object-cover"
+                    width={70}
+                    height={70}
+                    className="rounded-full mb-3 object-cover"
                   />
 
                   <h5 className="text-gray-800 font-semibold text-sm uppercase tracking-wide">
                     {review.author_name}
                   </h5>
 
-                  <p className="text-gray-600 italic mt-4 text-sm leading-relaxed">
-                    <span className="text-[#007de4] text-xl mr-2">“</span>
+                  <p className="text-gray-600 italic mt-3 text-sm leading-relaxed">
+                    <span className="text-[#007de4] text-xl mr-1">“</span>
                     {review.text}
-                    <span className="text-[#007de4] text-xl ml-2">”</span>
+                    <span className="text-[#007de4] text-xl ml-1">”</span>
                   </p>
 
-                  <p className="text-yellow-400 mt-4 text-lg">
+                  <p className="text-yellow-400 mt-3 text-lg">
                     {"⭐".repeat(review.rating)}
                   </p>
                 </div>
               </div>
             ))}
 
-          {/* Si aucun avis Google */}
+          {/* Aucun avis Google */}
           {reviews.length === 0 && (
-            <p className="text-gray-500 text-center col-span-3">
+            <p className="text-gray-500 text-center col-span-full">
               Chargement des avis Google…
             </p>
           )}
