@@ -21,9 +21,10 @@ export default function VantaNet() {
         scale: 1.0,
         scaleMobile: 1.0,
 
-        points: 10.0,
-        maxDistance: 15.0,
-        spacing: 8.0,
+        points: 8.0,        // ↓ moins de points = réseau plus aéré
+        maxDistance: 20.0,  // ↑ lignes plus longues
+        spacing: 10.0,      // ↑ espace entre les lignes
+
         showDots: true,
 
         backgroundColor: 0x000000,
@@ -37,7 +38,7 @@ export default function VantaNet() {
             obj.material.vertexColors = false;
           }
           if (obj.material.color) {
-            obj.material.color.set("#007ee5"); // bleu électrique
+            obj.material.color.set("#0099ff"); // bleu électrique
           }
         }
       });
