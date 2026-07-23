@@ -10,7 +10,7 @@ import { Archivo_Narrow } from "next/font/google";
 
 const archivo = Archivo_Narrow({
   subsets: ["latin"],
-  weight: ["400", "700"], // selon ce que tu veux
+  weight: ["400", "700"], 
 });
 
 

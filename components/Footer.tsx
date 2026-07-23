@@ -11,25 +11,28 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
-
 export default function Footer() {
   return (
     <footer className="bg-[#f4f4f4] pt-20 pb-10">
       <div className="container mx-auto px-6 md:px-12">
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
 
           {/* COL 1 — LOGO + TEXTE */}
           <div className="flex flex-col items-center md:items-start">
-             <div className="scale-[1.6] md:scale-100 mb-4"> <LogoWithRings /></div>
-            <p className="text-[14px] text-gray-600 mt-4 max-w-xs text-center md:text-left">
+            <div className="scale-[1.6] md:scale-100 mb-4">
+              <LogoWithRings />
+            </div>
+
+            <p className="text-[14px] text-gray-600 mt-4 max-w-xs">
               AOM Technologies & Services — votre partenaire en électricité,
               télécommunications, IRVE et énergies renouvelables.
             </p>
-             <div className="text-[14px] text-gray-600 mt-4 max-w-xs text-center md:text-left">
-            <a href="/images/brochure.pdf">Récupérer la brochure</a>
-             </div>
+
+            <div className="text-[14px] text-gray-600 mt-4 max-w-xs">
+              <a href="/images/brochure.pdf">Récupérer la brochure</a>
+            </div>
           </div>
 
           {/* COL 2 — CERTIFICATIONS */}
@@ -98,17 +101,18 @@ export default function Footer() {
               </div>
 
               {/* LINKEDIN */}
-              <div className="flex items-center md:justify-end gap-3">
-                <a
-                  href="https://fr.linkedin.com/in/camel-tiboura-8ba352ab" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:text-[#007de4] transition"
-                >
-                  <FaLinkedin className="text-[#007de4] text-xl" />
-                  <span className="text-[14px]">LinkedIn</span>
-                </a>
-              </div>
+<div className="flex items-center justify-center md:justify-end gap-3">
+  <a
+    href="https://fr.linkedin.com/in/camel-tiboura-8ba352ab"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 hover:text-[#007de4] transition"
+  >
+    <FaLinkedin className="text-[#007de4] text-xl" />
+    <span className="text-[14px]">LinkedIn</span>
+  </a>
+</div>
+
 
             </div>
           </div>
@@ -118,7 +122,7 @@ export default function Footer() {
         <div className="border-t border-[#e5e5e5] my-8"></div>
 
         {/* BOTTOM */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="text-[#9a9a9a] text-[12px] tracking-wide">
             © {new Date().getFullYear()} AOM Technologies & Services — Tous droits réservés.
           </p>
