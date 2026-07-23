@@ -1,19 +1,15 @@
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Inter } from "@next/font/google";
-
 import { Archivo_Narrow } from "next/font/google";
 
 const archivo = Archivo_Narrow({
   subsets: ["latin"],
   weight: ["400", "700"], 
 });
-
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +25,6 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
-
 
 export const metadata: Metadata = {
   title: "AOM Technologies – Fibre, Électricité, Réseaux & Solutions Professionnelles",
@@ -60,22 +55,23 @@ export const metadata: Metadata = {
   },
 };
 
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-   <html
-  lang="fr"
-  className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} h-full antialiased`}>
-  <body className={`min-h-full flex flex-col ${inter.variable}`}>
-    <Navbar />
-    {children}
-    <Footer />
-  </body>
-</html>
+    <html
+      lang="fr"
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} h-full antialiased`}
+    >
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="/icon.png" />
+        <link rel="apple-touch-icon" href="/icon.png" />
+      </head>
 
+      <body className={`min-h-full flex flex-col ${inter.variable}`}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
   );
 }
