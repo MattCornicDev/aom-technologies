@@ -331,20 +331,20 @@ export default function IrvePage() {
             <div className="flex flex-wrap items-center gap-4">
               {/* Remplace par tes logos réels */}
               <Image
-                src="/images/logo-zeborne.svg"
+                src="/images/logos/Logo_zeborne.svg"
                 alt="ZEBorne"
                 width={90}
                 height={40}
               />
               <Image
-                src="/images/logo-edf.png"
+                src="/images/logos/edf-logo.webp"
                 alt="EDF"
                 width={70}
                 height={40}
               />
               <Image
-                src="/images/logo-aom.png"
-                alt="AOM Technologies"
+                src="/images/logos/SFR_logo.webp"
+                alt="SFR"
                 width={90}
                 height={40}
               />
