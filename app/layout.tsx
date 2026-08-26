@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Inter } from "@next/font/google";
+import { Inter } from "next/font/google";
 import { Archivo_Narrow } from "next/font/google";
 
 const archivo = Archivo_Narrow({
