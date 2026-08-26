@@ -117,6 +117,13 @@ export default function ContactSection() {
                 {loading ? "Envoi..." : "Envoyer"}
               </button>
 
+              <a
+                href="/irve#devis"
+                className="block w-full rounded-lg border border-[#007de4] py-3 text-center text-[15px] font-semibold text-[#007de4] transition hover:bg-[#007de4] hover:text-white"
+              >
+                Demander un devis
+              </a>
+
               {/* Messages */}
               {status === "success" && (
                 <p className="text-green-600 text-sm mt-2">

@@ -7,8 +7,10 @@ export default function AboutSection() {
       id="about"
       className="
         relative 
-        py-28 
-        md:py-32 
+        pt-12
+        pb-28
+        md:pt-16
+        md:pb-32
         overflow-hidden
       "
     >

@@ -57,18 +57,18 @@ export default function HeroSection() {
 
       <div className="md:hidden relative z-10 flex min-h-screen w-full items-center px-6 pt-24 pb-12">
         <div className="w-full max-w-sm">
-          <h1 className="text-center text-4xl font-bold leading-tight text-[#111827]">
+          <h1 className="-translate-y-8 text-center text-4xl font-bold leading-tight text-[#111827]">
             AOM
             <br />
-            <span className="block whitespace-nowrap text-2xl">
-              Technologies & Services
+            <span className="mt-6 block whitespace-nowrap text-2xl">
+              TECHNOLOGIES & SERVICES
             </span>
           </h1>
-          <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#007ee5]">
+          <p className="mt-4 mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-[#007ee5]">
             La technologies à votre service.
           </p>
           
-          <p className="mt-5 text-base leading-relaxed text-gray-600">
+          <p className="mt-5 mb-6 text-base leading-relaxed text-gray-600">
             
           </p>
 
@@ -86,12 +86,6 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <a
-            href="#contact"
-            className="mt-8 inline-block bg-[#007ee5] px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#006ac2]"
-          >
-            Demander un devis
-          </a>
         </div>
       </div>
 
