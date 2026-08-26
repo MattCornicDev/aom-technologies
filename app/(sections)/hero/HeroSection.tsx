@@ -57,8 +57,12 @@ export default function HeroSection() {
 
       <div className="md:hidden relative z-10 flex min-h-screen w-full items-center px-6 pt-24 pb-12">
         <div className="w-full max-w-sm">
-          <h1 className="text-4xl font-bold leading-tight text-[#111827]">
-           AOM Technologies & Services 
+          <h1 className="text-center text-4xl font-bold leading-tight text-[#111827]">
+            AOM
+            <br />
+            <span className="block whitespace-nowrap text-2xl">
+              Technologies & Services
+            </span>
           </h1>
           <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#007ee5]">
             La technologies à votre service.
