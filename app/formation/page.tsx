@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import LogoWithRings from "@/components/LogoWithRings";
 import {
   FaCode,
   FaGithub,
@@ -80,6 +81,10 @@ export const metadata = {
 export default function FormationPage() {
   return (
     <main className="bg-slate-950 text-slate-100">
+      <div className="absolute left-6 top-6 z-50">
+        <LogoWithRings />
+      </div>
+
       <section className="relative overflow-hidden border-b border-slate-800">
         <div className="absolute inset-0 opacity-30">
           <Image
