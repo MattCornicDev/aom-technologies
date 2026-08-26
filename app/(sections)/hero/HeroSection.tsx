@@ -57,15 +57,15 @@ export default function HeroSection() {
 
       <div className="md:hidden relative z-10 flex min-h-screen w-full items-center px-6 pt-24 pb-12">
         <div className="w-full max-w-sm">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#007ee5]">
-            AOM Technologies & Services
-          </p>
           <h1 className="text-4xl font-bold leading-tight text-[#111827]">
-            Des solutions techniques pour vos projets.
+           AOM Technologies & Services 
           </h1>
+          <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#007ee5]">
+            La technologies à votre service.
+          </p>
+          
           <p className="mt-5 text-base leading-relaxed text-gray-600">
-            Des solutions techniques fiables pour vos projets, de l’installation
-            au raccordement.
+            
           </p>
 
           <div className="mt-8 border-l-2 border-[#007ee5] pl-4">
@@ -73,7 +73,7 @@ export default function HeroSection() {
               Nos expertises
             </p>
             <p className="mt-3 text-sm leading-7 text-gray-600">
-              IRVE <span className="text-[#007ee5]">•</span> Électricité générale
+              Électricité générale <span className="text-[#007ee5]">•</span> IRVE
               <br />
               Fibre optique <span className="text-[#007ee5]">•</span> Énergies renouvelables
             </p>
