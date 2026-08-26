@@ -61,7 +61,7 @@ export default function ContactSection() {
                 <input
                   type="text"
                   name="name"
-                  className="peer w-full px-3 py-3 text-[15px] border border-gray-300 rounded-lg 
+                  className="peer w-full px-3 py-3 text-[15px] text-gray-900 border border-gray-300 rounded-lg 
                   focus:outline-none focus:border-[#007de4] focus:ring-2 focus:ring-[#007de4]/30 transition"
                   placeholder=" "
                   required
@@ -78,7 +78,7 @@ export default function ContactSection() {
                 <input
                   type="email"
                   name="email"
-                  className="peer w-full px-3 py-3 text-[15px] border border-gray-300 rounded-lg 
+                  className="peer w-full px-3 py-3 text-[15px] text-gray-900 border border-gray-300 rounded-lg 
                   focus:outline-none focus:border-[#007de4] focus:ring-2 focus:ring-[#007de4]/30 transition"
                   placeholder=" "
                   required
@@ -95,7 +95,7 @@ export default function ContactSection() {
                 <textarea
                   name="message"
                   rows={4}
-                  className="peer w-full px-3 py-3 text-[15px] border border-gray-300 rounded-lg 
+                  className="peer w-full px-3 py-3 text-[15px] text-gray-900 border border-gray-300 rounded-lg 
                   focus:outline-none focus:border-[#007de4] focus:ring-2 focus:ring-[#007de4]/30 transition resize-none"
                   placeholder=" "
                   required
