@@ -7,7 +7,6 @@ import {
   FaDocker,
   FaShieldAlt,
   FaMobileAlt,
-  FaBrain,
   FaArrowRight,
   FaCheck,
 } from "react-icons/fa";
@@ -53,14 +52,6 @@ const modules = [
       "Adopter les bons réflexes pour protéger les applications, les comptes et les données.",
     technologies: ["Mots de passe", "Phishing", "OWASP", "Données", "Veille"],
   },
-  {
-    icon: FaBrain,
-    number: "06",
-    title: "Intelligence artificielle",
-    description:
-      "Découvrir les usages de l'IA pour concevoir, développer et améliorer des projets web de manière responsable.",
-    technologies: ["LLM", "Prompt engineering", "APIs IA", "Automatisation", "Éthique"],
-  },
 ];
 
 const outcomes = [
@@ -68,13 +59,12 @@ const outcomes = [
   "Publier et documenter ses projets sur GitHub",
   "Utiliser Docker pour reproduire un environnement",
   "Identifier les principales vulnérabilités web",
-  "Intégrer des outils d'IA dans un projet web",
 ];
 
 export const metadata = {
   title: "Formation web, mobile & cybersécurité | AOM Technologies",
   description:
-    "Formations pratiques en développement web, web mobile, Git, GitHub, Docker, IA et cybersécurité.",
+    "Formations pratiques en développement web, web mobile, Git, GitHub, Docker et cybersécurité.",
 };
 
 export default function FormationPage() {
