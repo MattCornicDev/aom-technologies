@@ -27,7 +27,7 @@ export default function BlogSection() {
         section-news 
         py-28 md:py-32 
         bg-gradient-to-br 
-        from-[#fa06db] 
+        from-[#ffffff] 
         via-[#a6ede3] 
         to-[#0059ff]
         bg-[length:200%_200%]
