@@ -6,17 +6,17 @@ export default function BlogSection() {
     {
       image: "/images/borne.webp",
       title: "Nouvelle borne installée à Valenciennes",
-      date: "12 Juin 2024",
+      date: "",
     },
     {
       image: "/images/office.webp",
       title: "Formation IRVE niveau 2 — session complète",
-      date: "3 Mai 2024",
+      date: "",
     },
     {
       image: "/images/fibre.webp",
       title: "Déploiement fibre optique — nouveau chantier",
-      date: "28 Avril 2024",
+      date: "",
     },
   ];
 
