@@ -14,6 +14,7 @@ const animatedPhrase = "La technologie à votre service";
 
 export default function HeroSection() {
   const [typedPhrase, setTypedPhrase] = useState("");
+  const [cursorVisible, setCursorVisible] = useState(true);
 
   useEffect(() => {
     let characterIndex = 0;
@@ -34,6 +35,14 @@ export default function HeroSection() {
     timeoutId = setTimeout(tick, 400);
 
     return () => clearTimeout(timeoutId);
+  }, []);
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setCursorVisible((visible) => !visible);
+    }, 500);
+
+    return () => clearInterval(cursorInterval);
   }, []);
 
   return (
@@ -76,7 +85,7 @@ export default function HeroSection() {
         </h2>
         <p className="absolute bottom-16 left-6 min-h-6 text-left text-xs font-semibold uppercase tracking-[0.16em] text-[#007ee5] sm:left-10 lg:left-16 lg:text-base">
           {typedPhrase}
-          <span className="ml-1 inline-block animate-pulse">|</span>
+          {cursorVisible && <span className="ml-1 inline-block">|</span>}
         </p>
       </div>
 
@@ -96,7 +105,7 @@ export default function HeroSection() {
           </h1>
           <p className="mt-4 mb-6 min-h-5 text-sm font-semibold uppercase tracking-[0.2em] text-[#007ee5] md:text-base">
             {typedPhrase}
-            <span className="ml-1 inline-block animate-pulse">|</span>
+            {cursorVisible && <span className="ml-1 inline-block">|</span>}
           </p>
           
           <p className="mt-5 mb-6 text-base leading-relaxed text-gray-600">
