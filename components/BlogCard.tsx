@@ -8,8 +8,9 @@ type BlogCardProps = {
 
 export default function BlogCard({ image, title, date }: BlogCardProps) {
   return (
-   <div className="
-  relative h-[600px] rounded-xl overflow-hidden group
+  <div className="
+  group relative h-[360px] overflow-hidden rounded-xl
+  md:h-[420px] lg:h-[600px]
   border border-transparent
   hover:border-[#ffffff]
   hover:shadow-[20px_0_20px_#000000]

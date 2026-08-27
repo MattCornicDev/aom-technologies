@@ -23,9 +23,9 @@ export default function FeatureSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           
           {/* Feature 1 */}
-          <div className="flex items-start gap-6 feature-with-icon">
-            <div className="w-16 h-16 flex items-center justify-center border border-[#007ee5] rounded-full">
-              <FaBolt className="text-[#007ee5] text-4xl" />
+          <div className="flex items-start gap-4 feature-with-icon">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#007ee5]">
+              <FaBolt className="text-lg text-[#007ee5]" />
             </div>
             <div>
               <h6 className="text-[#007ee5] text-xl font-semibold mb-2">
@@ -39,9 +39,9 @@ export default function FeatureSection() {
           </div>
 
           {/* Feature 2 */}
-          <div className="flex items-start gap-6 feature-with-icon">
-            <div className="w-16 h-16 flex items-center justify-center border border-[#007ee5] rounded-full">
-              <FaWifi className="text-[#007ee5] text-4xl" />
+          <div className="flex items-start gap-4 feature-with-icon">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#007ee5]">
+              <FaWifi className="text-lg text-[#007ee5]" />
             </div>
             <div>
               <h6 className="text-[#007ee5] text-xl font-semibold mb-2">
@@ -55,9 +55,9 @@ export default function FeatureSection() {
           </div>
 
           {/* Feature 3 */}
-          <div className="flex items-start gap-6 feature-with-icon">
-            <div className="w-16 h-16 flex items-center justify-center border border-[#007ee5] rounded-full">
-              <FaLeaf className="text-[#007ee5] text-4xl" />
+          <div className="flex items-start gap-4 feature-with-icon">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#007ee5]">
+              <FaLeaf className="text-lg text-[#007ee5]" />
             </div>
             <div>
               <h6 className="text-[#007ee5] text-xl font-semibold mb-2">

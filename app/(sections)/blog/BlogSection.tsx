@@ -25,7 +25,7 @@ export default function BlogSection() {
       id="blog"
       className="
         section-news 
-        py-28 md:py-32 
+        py-20 md:py-24 lg:py-32
         bg-gradient-to-br 
         from-[#ffffff] 
         via-[#a6ede3] 
@@ -35,11 +35,11 @@ export default function BlogSection() {
       "
     >
       <div className="container mx-auto px-6 md:px-12">
-        <h3 className="uppercase text-[#0059ff] text-3xl md:text-4xl font-semibold text-center mb-20">
+        <h3 className="mb-12 text-center text-3xl font-semibold uppercase text-[#0059ff] md:mb-14 md:text-4xl lg:mb-20">
           Actualités
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-12">
           {posts.map((post, i) => (
             <BlogCard key={i} {...post} />
           ))}
