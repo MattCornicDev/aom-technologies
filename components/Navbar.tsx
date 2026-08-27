@@ -1,4 +1,5 @@
 "use client";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -6,6 +7,8 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const lightTextPages = pathname === "/irve" || pathname === "/formation";
 
   const navItems = [
     { label: "Accueil", href: "/" },
@@ -27,13 +30,13 @@ export default function Navbar() {
       <div className="container mx-auto flex min-h-20 items-center justify-end px-6 md:min-h-0 md:px-12">
 
         {/* Desktop menu */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                className="
-                  text-[#ffffff]
+                className={`
+                  ${lightTextPages ? "text-white" : "text-[#111827]"}
                   uppercase
                   font-medium
                   text-[10px]
@@ -42,7 +45,7 @@ export default function Navbar() {
                   hover:font-bold
                   hover:text-[#007ee5]
                   hover:text-[11px]
-                "
+                `}
               >
                 {item.label}
               </a>
