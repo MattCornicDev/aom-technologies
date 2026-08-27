@@ -60,12 +60,12 @@ export default function HeroSection() {
 
       {/* Texte */}
       <div
-        className={`${orbitron.className} absolute inset-0 z-40 hidden flex-col items-center justify-center pointer-events-none md:flex`}
+        className={`${orbitron.className} absolute inset-0 z-40 hidden flex-col items-center justify-center pointer-events-none lg:flex`}
       >
         <h2
           className="
             text-[40px]
-            md:text-[110px]
+            lg:text-[110px]
             font-extrabold
             text-blue-500
             leading-tight
@@ -74,27 +74,27 @@ export default function HeroSection() {
         >
           AOM<br />TECHNOLOGIES<br />&<br />SERVICES
         </h2>
-        <p className="absolute bottom-26 left-6 min-h-6 text-left text-xs font-semibold uppercase tracking-[0.16em] text-[#007ee5] sm:left-10 md:text-sm lg:left-16 lg:text-base">
+        <p className="absolute bottom-16 left-6 min-h-6 text-left text-xs font-semibold uppercase tracking-[0.16em] text-[#007ee5] sm:left-10 lg:left-16 lg:text-base">
           {typedPhrase}
           <span className="ml-1 inline-block animate-pulse">|</span>
         </p>
       </div>
 
       {/* Effet électrique */}
-      <div className="hidden md:block absolute inset-0 h-full pointer-events-none z-0">
+      <div className="absolute inset-0 hidden h-full pointer-events-none z-0 lg:block">
         <VantaNet />
       </div>
 
-      <div className="md:hidden relative z-10 flex min-h-screen w-full items-center px-6 pt-24 pb-12">
-        <div className="w-full max-w-sm">
-          <h1 className="-translate-y-8 text-center text-4xl font-bold leading-tight text-[#111827]">
+      <div className="relative z-10 flex min-h-screen w-full items-center px-6 pt-24 pb-12 md:px-12 lg:hidden">
+        <div className="w-full max-w-sm md:max-w-2xl">
+          <h1 className="-translate-y-8 text-center text-4xl font-bold leading-tight text-[#111827] md:text-5xl">
             AOM
             <br />
-            <span className="mt-6 block whitespace-nowrap text-2xl">
+            <span className="mt-6 block whitespace-nowrap text-2xl md:text-3xl">
               TECHNOLOGIES & SERVICES
             </span>
           </h1>
-          <p className="mt-4 mb-6 min-h-5 text-sm font-semibold uppercase tracking-[0.2em] text-[#007ee5]">
+          <p className="mt-4 mb-6 min-h-5 text-sm font-semibold uppercase tracking-[0.2em] text-[#007ee5] md:text-base">
             {typedPhrase}
             <span className="ml-1 inline-block animate-pulse">|</span>
           </p>
