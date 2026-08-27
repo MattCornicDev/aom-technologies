@@ -12,7 +12,6 @@ export default function Navbar() {
     { label: "À propos", href: "#about" },
     { label: "Services", href: "#features" },
     { label: "irve", href: "/irve" },
-    { label: "Formation", href: "/formation" },
     { label: "Clients", href: "#clients" },
     { label: "Contact", href: "#contact" },
   ];
