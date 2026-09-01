@@ -16,8 +16,7 @@ export default function ClientSection() {
 
         {/* Subtitle */}
         <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto mb-16">
-          Nous accompagnons des entreprises nationales et régionales dans leurs projets
-          d’électricité, télécommunications, IRVE et solutions techniques.
+          Nous développons des partenariats avec des entreprises nationales et régionales pour la réalisation de leurs projets d’électricité, télécommunications, IRVE et solutions techniques.
         </p>
 
         {/* Logos grid */}
