@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import VantaNet from "@/components/VantaNet";
 import LogoWithRings from "@/components/LogoWithRings";
 import { Orbitron } from "next/font/google";
 
@@ -100,7 +99,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <p className="absolute bottom-16 left-6 min-h-6 text-left text-xs font-semibold uppercase tracking-[0.16em] text-[#007ee5] sm:left-10 lg:left-16 lg:text-base">
+        <p className="absolute bottom-16 left-6 min-h-6 text-left text-xs font-semibold uppercase tracking-[0.16em] text-[#000000] sm:left-10 lg:left-16 lg:text-base">
           {typedPhrase}
           {cursorVisible && <span className="ml-1 inline-block">|</span>}
         </p>

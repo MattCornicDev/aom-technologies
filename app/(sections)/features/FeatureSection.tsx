@@ -38,6 +38,22 @@ export default function FeatureSection() {
             </div>
           </div>
 
+           {/* Feature 3 */}
+          <div className="flex items-start gap-4 feature-with-icon">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#007ee5]">
+              <FaLeaf className="text-lg text-[#007ee5]" />
+            </div>
+            <div>
+              <h6 className="text-[#007ee5] text-xl font-semibold mb-2">
+                Énergies renouvelables
+              </h6>
+              <p className="text-gray-700 text-[16px] leading-relaxed">
+                Solutions durables : IRVE, bornes de recharge, nouvelles energies renouvelable, photovoltaïque. 
+                .
+              </p>
+            </div>
+          </div>
+
           {/* Feature 2 */}
           <div className="flex items-start gap-4 feature-with-icon">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#007ee5]">
@@ -54,21 +70,7 @@ export default function FeatureSection() {
             </div>
           </div>
 
-          {/* Feature 3 */}
-          <div className="flex items-start gap-4 feature-with-icon">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#007ee5]">
-              <FaLeaf className="text-lg text-[#007ee5]" />
-            </div>
-            <div>
-              <h6 className="text-[#007ee5] text-xl font-semibold mb-2">
-                Énergies renouvelables
-              </h6>
-              <p className="text-gray-700 text-[16px] leading-relaxed">
-                Solutions durables : IRVE, photovoltaïque, bornes de recharge
-                et infrastructures vertes.
-              </p>
-            </div>
-          </div>
+         
 
         </div>
       </div>

@@ -21,24 +21,27 @@ export default function ClientSection() {
         </p>
 
         {/* Logos grid */}
-        <div
-          className="
-            grid 
-            grid-cols-2 
-            sm:grid-cols-3 
-            md:grid-cols-4 
-            gap-12 
-            md:gap-16 
-            items-center 
-            justify-center
-          "
-        >
+        <div className="flex justify-center">
+          <div
+            className="
+              grid 
+              grid-cols-2 
+              sm:grid-cols-3 
+              md:grid-cols-5 
+              gap-12 
+              md:gap-16 
+              items-center 
+              justify-items-center
+              mx-auto
+            "
+          >
 
           {[
-            { src: "/images/logos/SFR_logo.webp", alt: "SFR" },
-            { src: "/images/logos/edf-logo.webp", alt: "EDF" },
-            { src: "/images/logos/Carglass_logo.svg", alt: "Carglass" },
-            { src: "/images/logos/Logo_zeborne.svg", alt: "Zeborne" },
+            { src: "/images/logos/SFR_logo.webp", alt: "SFR", href: "https://www.sfr.fr" },
+            { src: "/images/logos/edf-logo.webp", alt: "EDF", href: "https://www.edf.fr" },
+            { src: "/images/logos/Carglass_logo.svg", alt: "Carglass", href: "https://www.carglass.com" },
+            { src: "/images/logos/Logo_zeborne.svg", alt: "Zeborne", href: "https://www.zeborne.com" },
+            { src: "/images/logos/ores-contact.png", alt: "Ores", href: "https://www.ores.be/particulier" },
           ].map((logo, i) => (
             <div
               key={i}
@@ -48,9 +51,13 @@ export default function ClientSection() {
               `}
               style={{ animationDelay: `${i * 0.2}s` }}
             >
-              <div
+              <a
+                href={logo.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Visiter le site de ${logo.alt}`}
                 className="
-                  p-6 rounded-2xl bg-white/10 backdrop-blur-md
+                  block p-6 rounded-2xl bg-white/10 backdrop-blur-md
                   shadow-[0_4px_20px_rgba(0,0,0,0.15)]
                   border border-white/20
                   hover:border-[#007ee5]/60
@@ -71,10 +78,10 @@ export default function ClientSection() {
                     drop-shadow-[0_0_6px_rgba(0,0,0,0.4)]
                   "
                 />
-              </div>
+              </a>
             </div>
           ))}
-
+          </div>
         </div>
       </div>
     </section>
