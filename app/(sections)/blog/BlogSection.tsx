@@ -10,12 +10,12 @@ export default function BlogSection() {
     },
     {
       image: "/images/office.webp",
-      title: "Formation IRVE niveau 2 — session complète",
+      title: "Formation IRVE: P1/P2/P3",
       date: "",
     },
     {
       image: "/images/fibre.webp",
-      title: "Déploiement fibre optique — nouveau chantier",
+      title: "Déploiement Raccordement et maintenance telecom fibre optique dans le denaisis",
       date: "",
     },
   ];

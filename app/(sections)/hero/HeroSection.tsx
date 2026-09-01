@@ -117,13 +117,11 @@ export default function HeroSection() {
               Nos expertises
             </p>
             <p className="mt-3 text-sm leading-7 text-gray-600">
-              Électricité générale <span className="text-[#007ee5]">•</span> IRVE
+              Électricité générale <br /> IRVE (Bornes de recharge pour véhicules électriques)
               <br />
-              Fibre optique <span className="text-[#007ee5]">•</span> Énergies renouvelables
+              Fibre optique <br /> Énergies renouvelables
             </p>
-            <p className="mt-4 text-sm text-gray-600">
-              Intervention dans les Hauts-de-France
-            </p>
+            
           </div>
 
         </div>
