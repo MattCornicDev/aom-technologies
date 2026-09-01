@@ -10,7 +10,7 @@ export default function BlogSection() {
     },
     {
       image: "/images/office.webp",
-      title: "Formation IRVE: P1/P2/P3",
+      title: "Centre de formation : IRVE P1/P2/P3...",
       date: "",
     },
     {
