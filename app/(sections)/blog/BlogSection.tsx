@@ -15,7 +15,7 @@ export default function BlogSection() {
     },
     {
       image: "/images/fibre.webp",
-      title: "Déploiement Raccordement et maintenance telecom fibre optique dans les hauts de France / Valenciennois / Amandinois / denaisis",
+      title: "Déploiement Raccordement et maintenance dans les hauts de France / Valenciennois / Amandinois / denaisis...",
       date: "",
     },
   ];
