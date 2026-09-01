@@ -71,18 +71,35 @@ export default function HeroSection() {
       <div
         className={`${orbitron.className} absolute inset-0 z-40 hidden flex-col items-center justify-center pointer-events-none lg:flex`}
       >
-        <h2
-          className="
-            text-[40px]
-            lg:text-[110px]
-            font-extrabold
-            text-blue-500
-            leading-tight
-            text-center
-          "
-        >
-          AOM<br />TECHNOLOGIES<br />&<br />SERVICES
-        </h2>
+        <div className="w-full max-w-6xl px-10">
+          <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+            <h2
+              className="
+                text-[40px]
+                lg:text-[110px]
+                font-extrabold
+                text-black
+                leading-tight
+                text-center
+              "
+            >
+              AOM
+              <span className="block whitespace-nowrap lg:text-[70px]">TECHNOLOGIES &amp; SERVICES</span>
+            </h2>
+
+            <div className="mt-8 max-w-xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-gray-800">
+                Nos expertises
+              </p>
+              <p className="mt-3 text-sm leading-7 text-gray-600">
+                Électricité générale <br /> IRVE (Bornes de recharge pour véhicules électriques)
+                <br />
+                Fibre optique <br /> Énergies renouvelables
+              </p>
+            </div>
+          </div>
+        </div>
+
         <p className="absolute bottom-16 left-6 min-h-6 text-left text-xs font-semibold uppercase tracking-[0.16em] text-[#007ee5] sm:left-10 lg:left-16 lg:text-base">
           {typedPhrase}
           {cursorVisible && <span className="ml-1 inline-block">|</span>}
@@ -91,7 +108,7 @@ export default function HeroSection() {
 
       {/* Effet électrique */}
       <div className="absolute inset-0 hidden h-full pointer-events-none z-0 lg:block">
-        <VantaNet />
+       
       </div>
 
       <div className="relative z-10 flex min-h-screen w-full items-center px-6 pt-24 pb-12 md:px-12 lg:hidden">
