@@ -5,7 +5,7 @@ export default function BlogSection() {
   const posts = [
     {
       image: "/images/borne.webp",
-      title: "Nouvelle borne installée à Valenciennes",
+      title: "Nouvelle pause de borne chaque jour",
       date: "",
     },
     {
