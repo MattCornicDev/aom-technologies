@@ -39,8 +39,8 @@ export default function ClientSection() {
           {[
             { src: "/images/logos/SFR_logo.webp", alt: "SFR", href: "https://www.sfr.fr" },
             { src: "/images/logos/edf-logo.webp", alt: "EDF", href: "https://www.edf.fr" },
-            { src: "/images/logos/Carglass_logo.svg", alt: "Carglass", href: "https://www.carglass.com" },
-            { src: "/images/logos/Logo_zeborne.svg", alt: "Zeborne", href: "https://www.zeborne.com" },
+            { src: "/images/logos/Carglass_logo.svg", alt: "Carglass", href: "https://www.carglass.fr" },
+            { src: "/images/logos/Logo_zeborne.svg", alt: "Zeborne", href: "https://www.zeborne.com/fr/" },
             { src: "/images/logos/ores-contact.png", alt: "Ores", href: "https://www.ores.be/particulier" },
           ].map((logo, i) => (
             <div
