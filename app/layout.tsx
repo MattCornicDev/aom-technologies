@@ -27,33 +27,41 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AOM Technologies – Fibre, Électricité, Réseaux & Solutions Professionnelles",
+  title: "AOM Technologies – Fibre, Électricité, IRVE & Réseaux Professionnels",
   description:
-    "AOM Technologies accompagne particuliers et entreprises dans l'installation fibre, l'électricité, les réseaux, la domotique et les solutions professionnelles.",
+    "AOM Technologies installe fibre optique, électricité, réseaux informatiques, domotique et bornes de recharge IRVE certifiées Qualifelec dans les Hauts-de-France.",
   keywords: [
     "AOM Technologies",
-    "installation fibre",
-    "réseaux",
-    "électricité",
-    "domotique",
-    "borne de recharge",
+    "installation fibre optique",
     "technicien fibre",
-    "réseau informatique",
+    "réseaux informatiques",
     "installation électrique",
+    "domotique",
+    "IRVE",
+    "borne de recharge électrique",
+    "installateur IRVE certifié",
+    "Qualifelec",
+    "NF C 15-100",
+    "borne 7kW 11kW 22kW",
+    "installation borne électrique",
+    "Hauts-de-France",
+    "Nord 59",
+    "Pas-de-Calais 62"
   ],
   authors: [{ name: "AOM Technologies" }],
-  creator: "AOM Technologies",
+  creator: "Codexium",
   publisher: "AOM Technologies",
   openGraph: {
-    title: "AOM Technologies – Fibre, Électricité & Réseaux",
+    title: "AOM Technologies – Fibre, Électricité, IRVE & Réseaux",
     description:
-      "Experts en fibre optique, électricité, réseaux et solutions professionnelles.",
+      "Experts en fibre optique, électricité, réseaux informatiques, domotique et bornes de recharge IRVE certifiées Qualifelec.",
     url: "https://aomtechnologies.com",
     siteName: "AOM Technologies",
     locale: "fr_FR",
     type: "website",
   },
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
