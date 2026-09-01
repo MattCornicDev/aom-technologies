@@ -12,35 +12,40 @@ export default function IrveForm() {
     setStatus(null);
 
     const form = e.currentTarget;
-    const formData = new FormData(form);
 
-    const payload = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      address: formData.get("address"),
-      siteType: formData.get("siteType"),
-      power: formData.get("power"),
-      details: formData.get("details"),
-    };
+    try {
+      const formData = new FormData(form);
 
-    const res = await fetch("/api/irve-devis", {
-      method: "POST",
-      body: JSON.stringify(payload),
-      headers: { "Content-Type": "application/json" },
-    });
+      const payload = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        address: formData.get("address"),
+        siteType: formData.get("siteType"),
+        power: formData.get("power"),
+        details: formData.get("details"),
+      };
 
-    const data = await res.json();
+      const res = await fetch("/api/irve-devis", {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json" },
+      });
 
-    if (data.success) {
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Erreur serveur");
+      }
+
       setStatus("success");
       form.reset();
-    } else {
+    } catch (error) {
       setStatus("error");
-      console.error("Erreur de formulaire IRVE :", data.error);
+      console.error("Erreur de formulaire IRVE :", error);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   }
 
   return (
