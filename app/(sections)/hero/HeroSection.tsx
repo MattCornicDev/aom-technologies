@@ -18,13 +18,18 @@ export default function HeroSection() {
   useEffect(() => {
     let characterIndex = 0;
     let timeoutId: ReturnType<typeof setTimeout>;
+    let cycleTimeoutId: ReturnType<typeof setTimeout>;
 
     const tick = () => {
       characterIndex += 1;
-
       setTypedPhrase(animatedPhrase.slice(0, characterIndex));
 
       if (characterIndex === animatedPhrase.length) {
+        cycleTimeoutId = setTimeout(() => {
+          setTypedPhrase("");
+          characterIndex = 0;
+          timeoutId = setTimeout(tick, 250);
+        }, 5000);
         return;
       }
 
@@ -33,7 +38,10 @@ export default function HeroSection() {
 
     timeoutId = setTimeout(tick, 400);
 
-    return () => clearTimeout(timeoutId);
+    return () => {
+      clearTimeout(timeoutId);
+      clearTimeout(cycleTimeoutId);
+    };
   }, []);
 
   useEffect(() => {
@@ -93,7 +101,7 @@ export default function HeroSection() {
               <p className="mt-3 text-sm leading-7 text-gray-600">
                 Électricité générale <br /> IRVE (Bornes de recharge pour véhicules électriques)
                 <br />
-                Fibre optique <br /> Énergies renouvelables
+                 Énergies renouvelables <br />Résaux de télcommunications / Fibre optique
               </p>
             </div>
           </div>
