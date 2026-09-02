@@ -83,7 +83,7 @@ export default function IrvePage() {
                   <Image
                     src="/images/logos/qualifelec-irve.png"
                     alt="Logo IRVE"
-                    width={100}
+                    width={150}
                     height={90}
                   />
 
