@@ -357,6 +357,12 @@ export default function IrvePage() {
                 height={40}
                 className="rounded bg-white p-1 object-contain"
               />
+              <Image
+                src="/images/logos/Carglass_logo.svg"
+                alt="Carglass"
+                width={90}
+                height={40}
+                />
             </div>
           </div>
         </div>
