@@ -7,6 +7,12 @@ export default function AboutSection() {
       id="about"
       className="
         relative 
+        bg-gradient-to-br
+        from-[#000816]
+        via-[#001d3d]
+        to-[#007ee5]
+        bg-[length:200%_200%]
+        animate-gradientFlow
         pt-12
         pb-28
         md:pt-16
@@ -43,7 +49,7 @@ export default function AboutSection() {
             </h3>
           </header>
 
-          <p className="text-[21px] leading-relaxed text-gray-700 mb-6">
+          <p className="text-[21px] leading-relaxed text-white mb-6">
             Implantée dans les Hauts-de-France, AOM Technologies & Services est
             une entreprise d’électricité générale spécialisée dans la conception,
             le déploiement, la gestion et les raccordements de technologies,
@@ -52,14 +58,14 @@ export default function AboutSection() {
             optique et des télécommunications.
           </p>
 
-          <p className="text-[21px] leading-relaxed text-gray-700 mb-6">
+          <p className="text-[21px] leading-relaxed text-white mb-6">
             Soucieuse de transmettre son savoir-faire et de former les
             professionnels de demain, AOM a également créé son propre centre de
             formation, dédié au développement des compétences dans ces secteurs
             d’avenir.
           </p>
 
-          <p className="text-[21px] leading-relaxed text-gray-700">
+          <p className="text-[21px] leading-relaxed text-white">
             Avec notre expertise pointue et nos compétences reconnues, nous vous
             assurons le succès de vos initiatives !
           </p>

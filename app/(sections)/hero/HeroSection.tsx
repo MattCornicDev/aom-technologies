@@ -99,9 +99,9 @@ export default function HeroSection() {
                 Nos expertises
               </p>
               <p className="mt-3 text-sm leading-7 text-gray-600">
-                Électricité générale <br /> IRVE (Bornes de recharge pour véhicules électriques)
+                Électricité Générale <br /> IRVE (Infrastructure de Recharge pour Véhicules Électriques)
                 <br />
-                 Énergies renouvelables <br />Résaux de télcommunications / Fibre optique
+                 E.N.R. Énergies Nouvelles Renouvelables <br />Résaux de Télcommunications / Fibre Optique
               </p>
             </div>
           </div>
@@ -141,9 +141,10 @@ export default function HeroSection() {
               Nos expertises
             </p>
             <p className="mt-3 text-sm leading-7 text-gray-600">
-              Électricité générale <br /> IRVE (Bornes de recharge pour véhicules électriques)
-              <br />
-              Fibre optique <br /> Énergies renouvelables
+              Électricité Générale <br /> IRVE (Infrastructure de Recharge pour Véhicules Électriques)
+
+              
+               <br /> E.N.R. Énergies Nouvelles Renouvelables <br />Résaux de Télcommunications / Fibre Optique
             </p>
             
           </div>
