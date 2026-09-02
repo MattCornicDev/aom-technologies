@@ -350,6 +350,13 @@ export default function IrvePage() {
                 width={90}
                 height={40}
               />
+              <Image
+                src="/images/logos/ores-contact.png"
+                alt="Ores"
+                width={90}
+                height={40}
+                className="rounded bg-white p-1 object-contain"
+              />
             </div>
           </div>
         </div>
