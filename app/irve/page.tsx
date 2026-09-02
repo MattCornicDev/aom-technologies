@@ -81,17 +81,12 @@ export default function IrvePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Image
-                    src="/images/logos/logo-irve.webp"
+                    src="/images/logos/qualifelec-irve.png"
                     alt="Logo IRVE"
-                    width={80}
-                    height={60}
+                    width={100}
+                    height={90}
                   />
-                  <Image
-                    src="/images/logos/Logo-qualifelec.svg"
-                    alt="Logo Qualifelec"
-                    width={60}
-                    height={40}
-                  />
+
                 </div>
               </div>
             </div>

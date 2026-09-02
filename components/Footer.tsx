@@ -43,8 +43,7 @@ export default function Footer() {
 
             <div className="flex flex-wrap justify-center md:justify-start gap-6">
               <Image src="/images/logos/qualiopi.webp" alt="Certification Qualiopi" width={60} height={60} className="object-contain" />
-              <Image src="/images/logos/Logo-qualifelec.svg" alt="Certification Qualifelec" width={60} height={60} className="object-contain" />
-              <Image src="/images/logos/logo-irve.webp" alt="Certification IRVE" width={60} height={60} className="object-contain" />
+              <Image src="/images/logos/qualifelec-irve.png" alt="Certification Qualifelec" width={60} height={60} className="object-contain" />
               <Image src="/images/logos/artisan-reference-MAAF.webp" alt="Artisan Référence MAAF" width={60} height={60} className="object-contain" />
             </div>
           </div>
