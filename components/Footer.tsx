@@ -42,8 +42,22 @@ export default function Footer() {
             </h4>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-6">
-              <Image src="/images/logos/qualiopi.webp" alt="Certification Qualiopi" width={150} height={100} className="object-contain" />
-              <Image src="/images/logos/qualifelec-irve.png" alt="Certification Qualifelec" width={150} height={150} className="object-contain" />
+              <a
+                href="https://travail-emploi.gouv.fr/qualiopi-marque-de-certification-qualite-des-prestataires-de-formation"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="En savoir plus sur la certification Qualiopi"
+              >
+                <Image src="/images/logos/qualiopi.webp" alt="Certification Qualiopi" width={150} height={100} className="object-contain" />
+              </a>
+              <a
+                href="https://www.qualifelec.fr"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visiter le site de Qualifelec"
+              >
+                <Image src="/images/logos/qualifelec-irve.png" alt="Certification Qualifelec" width={150} height={150} className="object-contain" />
+              </a>
               <Image src="/images/logos/artisan-reference-MAAF.webp" alt="Artisan Référence MAAF" width={100} height={60} className="object-contain" />
             </div>
           </div>
@@ -86,7 +100,12 @@ export default function Footer() {
               {/* Email */}
               <div className="flex items-center md:justify-end gap-3">
                 <FaEnvelope className="text-[#007de4] text-lg" />
-                <span>contact@aomtechnologies.com</span>
+                <a
+                  href="mailto:contact@aomtechnologies.com"
+                  className="hover:text-[#007de4] transition"
+                >
+                  contact@aomtechnologies.com
+                </a>
               </div>
 
               {/* Adresse */}

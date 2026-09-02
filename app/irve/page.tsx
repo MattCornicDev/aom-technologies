@@ -80,12 +80,19 @@ export default function IrvePage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Image
-                    src="/images/logos/qualifelec-irve.png"
-                    alt="Logo IRVE"
-                    width={150}
-                    height={90}
-                  />
+                  <a
+                    href="https://www.qualifelec.fr"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Visiter le site de Qualifelec"
+                  >
+                    <Image
+                      src="/images/logos/qualifelec-irve.png"
+                      alt="Logo IRVE Qualifelec"
+                      width={150}
+                      height={90}
+                    />
+                  </a>
 
                 </div>
               </div>
