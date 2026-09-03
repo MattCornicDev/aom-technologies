@@ -11,6 +11,28 @@ const orbitron = Orbitron({
 
 const animatedPhrase = "La technologie à votre service";
 
+function StyledAom() {
+  return (
+    <span aria-label="AOM">
+      A
+      <span className="aom-letter-o" aria-hidden="true">
+        <svg className="aom-wifi" viewBox="0 0 640 512" role="img" aria-label="Wi-Fi">
+          <path
+            className="aom-wifi-part aom-wifi-arc aom-wifi-arc-large"
+            d="M634.91 154.88C457.74-8.99 182.19-8.93 5.09 154.88c-6.66 6.16-6.79 16.59-.35 22.98l34.24 33.97c6.14 6.1 16.02 6.23 22.4.38 145.92-133.68 371.3-133.71 517.25 0 6.38 5.85 16.26 5.71 22.4-.38l34.24-33.97c6.43-6.39 6.3-16.82-.36-22.98z"
+          />
+          <circle className="aom-wifi-part aom-wifi-dot" cx="320" cy="416" r="64" />
+          <path
+            className="aom-wifi-part aom-wifi-arc aom-wifi-arc-small"
+            d="M522.67 268.41c-115.26-101.93-290.21-101.82-405.34 0-6.9 6.1-7.12 16.69-.57 23.15l34.44 33.99c6 5.92 15.66 6.32 22.05.8 83.95-72.57 209.74-72.41 293.49 0 6.39 5.52 16.05 5.13 22.05-.8l34.44-33.99c6.56-6.46 6.33-17.06-.56-23.15z"
+          />
+        </svg>
+      </span>
+      M
+    </span>
+  );
+}
+
 export default function HeroSection() {
   const [typedPhrase, setTypedPhrase] = useState("");
   const [cursorVisible, setCursorVisible] = useState(true);
@@ -90,7 +112,7 @@ export default function HeroSection() {
                 text-center
               "
             >
-              AOM
+              <StyledAom />
               <span className="block whitespace-nowrap lg:text-[70px]">TECHNOLOGIES &amp; SERVICES</span>
             </h2>
 
@@ -121,7 +143,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex min-h-screen w-full items-center px-6 pt-24 pb-12 md:px-12 lg:hidden">
         <div className="w-full max-w-sm md:max-w-2xl">
           <h1 className="-translate-y-8 text-center text-4xl font-bold leading-tight text-[#111827] md:text-5xl">
-            AOM
+            <StyledAom />
             <br />
             <span className="mt-6 block whitespace-nowrap text-2xl md:text-3xl">
               TECHNOLOGIES & SERVICES
