@@ -9,6 +9,7 @@ import {
   FaMapMarkerAlt,
   FaMobileAlt,
   FaLinkedin,
+  FaDownload,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -26,12 +27,17 @@ export default function Footer() {
             </div>
 
             <p className="text-[14px] text-gray-600 mt-4 max-w-xs">
-              AOM Technologies & Services — votre partenaire en électricité,
-              télécommunications, IRVE et énergies renouvelables.
+              AOM Technologies & Services. <br />
+              Votre partenaire agrée. 
+              
             </p>
 
-            <div className="text-[14px] text-gray-600 mt-4 max-w-xs">
-              <a href="/images/brochure.pdf">Récupérer la brochure</a>
+            <div className="text-[14px] text-[#007ee5] mt-4 max-w-xs font-bold">
+              <a href="/images/brochure.pdf" className="inline-flex items-center gap-2">
+               
+                <span>Récupérer la brochure</span>
+                 <FaDownload aria-hidden="true" />
+              </a>
             </div>
           </div>
 
