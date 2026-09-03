@@ -28,7 +28,7 @@ export default function Footer() {
 
             <p className="text-[14px] text-gray-600 mt-4 max-w-xs">
               AOM Technologies & Services. <br />
-              Votre partenaire agrée. 
+              Votre partenaire agréé. 
               
             </p>
 
