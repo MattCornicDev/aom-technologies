@@ -43,9 +43,7 @@ export default function Navbar() {
                   text-[10px]
                   tracking-wide
                   transition-all
-                  hover:font-bold
-                  hover:text-[#007ee5]
-                  hover:text-[11px]
+                  hover:text-[#007ee5] 
                 `}
               >
                 {item.label}
