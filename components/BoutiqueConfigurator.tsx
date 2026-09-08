@@ -10,6 +10,7 @@ type Product = {
   eyebrow: string;
   description: string;
   price: number;
+  priceLabel: string;
   power: string;
   image: string;
   features: string[];
@@ -22,19 +23,21 @@ const products: Product[] = [
     eyebrow: "Maison individuelle",
     description: "La borne compacte et connectee pour recharger chaque soir a domicile.",
     price: 699,
+    priceLabel: "699 €",
     power: "7,4 kW",
     image: "/images/borne-recharge.jpg",
     features: ["Pilotage par application", "Cable T2 inclus", "Installation murale"],
   },
   {
-    id: "connect-11",
-    name: "AOM Connect 11",
-    eyebrow: "Le choix confort",
-    description: "Une recharge rapide, intelligente et adaptee aux installations triphasees.",
-    price: 949,
-    power: "11 kW",
-    image: "/images/borne.webp",
-    features: ["Equilibrage de charge", "Compatible solaire", "Suivi de consommation"],
+    id: "schneider-93857572",
+    name: "Schneider Charge Pro",
+    eyebrow: "Borne de recharge 7,4 a 22 kW",
+    description: "La borne Schneider Electric de la fiche produit Leroy Merlin, configuree selon la puissance de votre installation.",
+    price: 899,
+    priceLabel: "899 €",
+    power: "7,4 a 22 kW",
+    image: "/images/boutique/borne_schneider.webp",
+    features: ["Puissance de 7,4 a 22 kW", "Marque Schneider Electric", "Installation IRVE sur demande"],
   },
   {
     id: "pro-22",
@@ -42,8 +45,9 @@ const products: Product[] = [
     eyebrow: "Entreprise & flotte",
     description: "Une solution robuste pour les parkings qui veulent rester evolutifs.",
     price: 1290,
+    priceLabel: "1 290 €",
     power: "22 kW",
-    image: "/images/borne-recharge.jpg",
+    image: "/images/boutique/schneider-charge-pro-borne-de-recharge-parametrable-jusqu-a-22kw-1p3p-t2s-4g-ref-evb4s22n40mg.jpg",
     features: ["Acces RFID", "Supervision a distance", "Usage intensif"],
   },
 ];
@@ -59,7 +63,7 @@ function formatPrice(value: number) {
 }
 
 export default function BoutiqueConfigurator() {
-  const [selectedProductId, setSelectedProductId] = useState(products[1].id);
+  const [selectedProductId, setSelectedProductId] = useState("schneider-93857572");
   const [selectedInstallationId, setSelectedInstallationId] = useState("standard");
   const [showRequest, setShowRequest] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -139,13 +143,13 @@ export default function BoutiqueConfigurator() {
                 aria-pressed={selected}
               >
                 <div className={`overflow-hidden border bg-white ${selected ? "border-[#102d35] shadow-xl shadow-[#102d35]/10" : "border-[#d8d8ce]"}`}>
-                  <div className="relative h-52 overflow-hidden bg-[#e4e9e4]">
-                    <Image src={item.image} alt={item.name} fill className="object-cover transition duration-500 group-hover:scale-105" />
+                  <div className="relative h-60 overflow-hidden border-b border-[#e7e5dd] bg-white">
+                    <Image src={item.image} alt={item.name} fill className="object-contain p-2 transition duration-300" />
                     {selected && <span className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-[#d7e85b] text-[#102d35]"><FaCheck size={12} /></span>}
                   </div>
                   <div className="p-6">
                     <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#66828a]">{item.eyebrow}</p>
-                    <div className="mt-2 flex items-baseline justify-between gap-3"><h3 className="text-xl font-semibold">{item.name}</h3><span className="text-sm font-bold">{formatPrice(item.price)}</span></div>
+                    <div className="mt-2 flex items-baseline justify-between gap-3"><h3 className="text-xl font-semibold">{item.name}</h3><span className="text-sm font-bold">{item.priceLabel}</span></div>
                     <p className="mt-3 min-h-12 text-sm leading-6 text-[#66828a]">{item.description}</p>
                     <ul className="mt-5 space-y-2 border-t border-[#e7e5dd] pt-5 text-sm text-[#34484e]">{item.features.map((feature) => <li key={feature} className="flex items-center gap-2"><FaCheck className="text-[#7d9c34]" size={11} /> {feature}</li>)}</ul>
                   </div>
@@ -170,7 +174,7 @@ export default function BoutiqueConfigurator() {
           <aside className="h-fit bg-white p-7 shadow-lg shadow-[#102d35]/5 lg:sticky lg:top-24">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#66828a]">Votre selection</p>
             <div className="mt-5 border-b border-[#e7e5dd] pb-5"><p className="font-semibold">{product.name}</p><p className="mt-1 text-sm text-[#66828a]">{product.power} · {installation.label}</p></div>
-            <div className="flex items-center justify-between py-5"><span className="text-sm text-[#66828a]">Total indicatif</span><strong className="text-2xl">{formatPrice(total)}</strong></div>
+            <div className="flex items-center justify-between py-5"><span className="text-sm text-[#66828a]">Total indicatif</span><strong className="text-right text-2xl">{formatPrice(total)}</strong></div>
             <button type="button" onClick={() => { setShowRequest(true); setTimeout(() => document.getElementById("request")?.scrollIntoView({ behavior: "smooth" }), 0); }} className="flex w-full items-center justify-center gap-3 bg-[#d7e85b] px-5 py-4 text-sm font-bold text-[#102d35] transition hover:bg-[#c8dc4b]">Demander cette configuration <FaChevronRight size={12} /></button>
             <p className="mt-4 text-center text-xs leading-5 text-[#66828a]">Le prix final est confirme apres validation de votre installation electrique.</p>
           </aside>
