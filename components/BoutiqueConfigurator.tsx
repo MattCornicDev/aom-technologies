@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { FaCheck, FaChevronRight, FaShieldAlt, FaTools, FaTruck } from "react-icons/fa";
+import { FaCheck, FaChevronRight, FaPlay, FaShieldAlt, FaTools, FaTruck } from "react-icons/fa";
 
 type Product = {
   id: string;
@@ -157,6 +157,24 @@ export default function BoutiqueConfigurator() {
               </button>
             );
           })}
+        </div>
+
+        <div className="mt-10 flex flex-col gap-6 bg-[#102d35] p-7 text-white sm:flex-row sm:items-center sm:justify-between sm:p-9">
+          <div className="max-w-2xl">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d7e85b]">Accessoire recommande</p>
+            <h2 className="mt-2 text-2xl font-semibold">Câble de recharge Type 2 GONEO</h2>
+            <p className="mt-3 text-sm leading-6 text-slate-300">
+              Découvrez en vidéo ce câble compatible avec les recharges jusqu&apos;à 22 kW, pratique à conserver dans le coffre avec votre borne.
+            </p>
+          </div>
+          <a
+            href="https://www.amazon.fr/vdp/1e1dc45611dd47c88dea4271e7e90cad?aci=amzn1.ive.seller.video.1e1dc45611dd47c88dea4271e7e90cad&product=B0CN2Q246Y&ref=cm_sw_cp_r_ib_dt_EzGgnzHfzxKFf"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex shrink-0 items-center justify-center gap-3 bg-[#d7e85b] px-5 py-4 text-sm font-bold text-[#102d35] transition hover:bg-[#c8dc4b]"
+          >
+            <FaPlay size={11} /> Voir la vidéo
+          </a>
         </div>
 
         <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_360px]">
