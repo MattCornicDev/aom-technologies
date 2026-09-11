@@ -52,7 +52,7 @@ export default function AboutSection() {
           </header>
 
           <p className="text-base sm:text-lg md:text-[21px] leading-relaxed text-white mb-6">
-            Implantée dans les Hauts-de-France,<br /> la maison AOM <span className="font-bold text-[#ffffff]">Technologies & Services</span> est
+            Implantée dans les Hauts-de-France,<br /> la maison AOM <span className="font-bold uppercase">Technologies & Services</span> est
             une entreprise, <br />d’électricité générale spécialisée dans la conception,
             le déploiement, la gestion et les raccordements de technologies,
             notamment dans le domaine de l'IRVE (Infrastructure de Recharge pour
