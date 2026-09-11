@@ -52,17 +52,17 @@ export default function AboutSection() {
           </header>
 
           <p className="text-base sm:text-lg md:text-[21px] leading-relaxed text-white mb-6">
-            Implantée dans les Hauts-de-France,<br /> la maison AOM <span className="font-bold uppercase">Technologies & Services</span> est
-            une entreprise, <br />d’électricité générale spécialisée dans la conception,
-            le déploiement, la gestion et les raccordements de technologies,
-            notamment dans le domaine de l'IRVE (Infrastructure de Recharge pour
+            Implantée dans les Hauts-de-France,<br /> la maison <span className="font-bold uppercase">AOM Technologies & Services</span> est
+            une entreprise <br />d’électricité générale spécialisée dans la conception,
+            le déploiement, la gestion et les raccordements de technologies.
+            Notamment dans le domaine de l'IRVE (Infrastructure de Recharge pour
             Véhicules Electriques), des E.N.R. (Energies Nouvelles Renouvelables), des télécommunications et de la fibre optique.
           </p>
 
           <p className="text-base sm:text-lg md:text-[21px] leading-relaxed text-white mb-6">
             Soucieuse de transmettre son savoir-faire et de former les
             professionnels de demain, nous avons également créé notre propre centre de
-            formation agrée et certifié, dédié au développement des compétences dans ces secteurs
+            formation agréé et certifié, dédié au développement des compétences dans ces secteurs
             d’avenir.
           </p>
 
