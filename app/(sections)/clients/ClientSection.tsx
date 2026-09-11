@@ -57,27 +57,29 @@ export default function ClientSection() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Visiter le site de ${logo.alt}`}
-                className="
-                  block p-6 rounded-2xl bg-white/10 backdrop-blur-md
+                className={`
+                  block p-6 rounded-2xl
+                  bg-white/10 backdrop-blur-md
                   shadow-[0_4px_20px_rgba(0,0,0,0.15)]
                   border border-white/20
                   hover:border-[#007ee5]/60
                   hover:shadow-[0_8px_30px_rgba(0,126,229,0.35)]
                   transition-all duration-500
                   group
-                "
+                `}
               >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
                   width={150}
                   height={80}
-                  className="
+                  className={`
+                    h-20 w-[150px] ${logo.alt === "Maersk" ? "object-cover" : "object-contain"}
                     opacity-90 group-hover:opacity-100
                     transition-all duration-500
                     group-hover:scale-110
                     drop-shadow-[0_0_6px_rgba(0,0,0,0.4)]
-                  "
+                  `}
                 />
               </a>
             </div>
