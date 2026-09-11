@@ -16,7 +16,7 @@ export default function ClientSection() {
 
         {/* Subtitle */}
         <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto mb-16">
-          Nous développons des partenariats avec des entreprises nationales et régionales pour la réalisation de leurs projets d’électricité, télécommunications, IRVE et solutions techniques.
+          Nous développons des partenariats avec des entreprises nationales et régionales pour la réalisation de leurs projets. 
         </p>
 
         {/* Logos grid */}
@@ -26,7 +26,8 @@ export default function ClientSection() {
               grid 
               grid-cols-2 
               sm:grid-cols-3 
-              md:grid-cols-5 
+              md:grid-cols-3 
+              lg:grid-cols-6 
               gap-12 
               md:gap-16 
               items-center 
@@ -41,6 +42,7 @@ export default function ClientSection() {
             { src: "/images/logos/Carglass_logo.svg", alt: "Carglass", href: "https://www.carglass.fr" },
             { src: "/images/logos/Logo_zeborne.svg", alt: "Zeborne", href: "https://www.zeborne.com/fr/" },
             { src: "/images/logos/ores-contact.png", alt: "Ores", href: "https://www.ores.be/particulier" },
+            { src: "/images/logos/Maersk-Logo.png", alt: "Maersk", href: "https://www.maersk.com" },
           ].map((logo, i) => (
             <div
               key={i}
