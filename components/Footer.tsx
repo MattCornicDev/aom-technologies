@@ -94,12 +94,16 @@ export default function Footer() {
               <div className="flex flex-col items-center md:items-end gap-2">
                 <div className="flex items-center gap-3">
                   <FaPhoneAlt className="text-[#007de4] text-lg" />
-                  <span>03 27 43 64 18</span>
+                  <a href="tel:+33627436418" className="hover:text-[#007de4] transition">
+                    +33 6 27 43 64 18
+                  </a>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <FaMobileAlt className="text-[#007de4] text-xl" />
-                  <span>07 67 85 95 81</span>
+                  <a href="tel:+33767859581" className="hover:text-[#007de4] transition">
+                    +33 7 67 85 95 81
+                  </a>
                 </div>
               </div>
 
@@ -117,11 +121,17 @@ export default function Footer() {
               {/* Adresse */}
               <div className="flex items-center md:justify-end gap-3 max-w-[220px] md:max-w-[260px]">
                 <FaMapMarkerAlt className="text-[#007de4] text-lg" />
-                <span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Z.A%20des%20six%20Mariannes%2C%209%20rue%20des%20entrepreneurs%2C%2059124%20Escaudain"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#007de4] transition"
+                  aria-label="Ouvrir l'adresse dans Google Maps"
+                >
                   Z.A des six Mariannes<br />
                   9 rue des entrepreneurs<br />
                   59124 Escaudain
-                </span>
+                </a>
               </div>
 
               {/* LINKEDIN */}
