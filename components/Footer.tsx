@@ -210,13 +210,13 @@ export default function Footer() {
                 Waze
               </a>
               <a
-                href="https://www.plan.com/ul?q=Z.A%20des%20six%20Mariannes%2C%209%20rue%20des%20entrepreneurs%2C%2059124%20Escaudain&navigate=yes"
+                href="https://maps.apple.com/?address=Z.A%20des%20six%20Mariannes%2C%209%20rue%20des%20entrepreneurs%2C%2059124%20Escaudain"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMapChoiceOpen(false)}
                 className="bg-[#33ccff] px-4 py-2 text-sm text-white hover:bg-[#20afd9] transition"
               >
-                Waze
+                Plan
               </a>
             </div>
             <button
