@@ -11,12 +11,12 @@ export default function ClientSection() {
 
         {/* Heading */}
         <h4 className="uppercase text-[#007ee5] text-2xl md:text-3xl font-semibold tracking-wide mb-6">
-          Ils nous font confiance
+          Ils nous font confiance !
         </h4>
 
         {/* Subtitle */}
         <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto mb-16">
-          Nous développons des partenariats avec des entreprises nationales et régionales pour la réalisation de leurs projets. 
+          Nous développons des partenariats pour la réalisation de vos projets. 
         </p>
 
         {/* Logos grid */}
