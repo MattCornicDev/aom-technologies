@@ -5,8 +5,8 @@ export default function TestimonialsSection() {
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#007de4]">
           Votre avis compte
         </p>
-        <h3 className="mt-3 text-2xl font-extrabold text-gray-800 md:text-3xl">
-          Partagez votre expérience avec AOM
+        <h3 className="mt-3 text-2xl font-extrabold text-gray-800 md:text-3xl uppercase">
+          Partagez votre expérience !
         </h3>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-gray-600 md:text-base">
           Vous avez fait appel à nos équipes ? Laissez-nous un avis sur Google
