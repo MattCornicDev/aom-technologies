@@ -98,14 +98,14 @@ export default function Footer() {
                 <div className="flex items-center gap-3">
                   <FaPhoneAlt className="text-[#007de4] text-lg" />
                   <a href="tel:+33627436418" className="hover:text-[#007de4] transition">
-                    +33 6 27 43 64 18
+                    +33 (0)3 27 43 64 18
                   </a>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <FaMobileAlt className="text-[#007de4] text-xl" />
                   <a href="tel:+33767859581" className="hover:text-[#007de4] transition">
-                    +33 7 67 85 95 81
+                    +33 (0)7 67 85 95 81
                   </a>
                 </div>
               </div>
@@ -202,6 +202,15 @@ export default function Footer() {
               </a>
               <a
                 href="https://www.waze.com/ul?q=Z.A%20des%20six%20Mariannes%2C%209%20rue%20des%20entrepreneurs%2C%2059124%20Escaudain&navigate=yes"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMapChoiceOpen(false)}
+                className="bg-[#33ccff] px-4 py-2 text-sm text-white hover:bg-[#20afd9] transition"
+              >
+                Waze
+              </a>
+              <a
+                href="https://www.plan.com/ul?q=Z.A%20des%20six%20Mariannes%2C%209%20rue%20des%20entrepreneurs%2C%2059124%20Escaudain&navigate=yes"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMapChoiceOpen(false)}
