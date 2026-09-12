@@ -13,29 +13,33 @@ export default function ContactSection() {
     setStatus(null);
 
     const form = e.currentTarget;
-    const formData = new FormData(form);
+    try {
+      const formData = new FormData(form);
 
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const message = formData.get("message");
+      const name = formData.get("name");
+      const email = formData.get("email");
+      const message = formData.get("message");
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify({ name, email, message }),
-      headers: { "Content-Type": "application/json" },
-    });
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify({ name, email, message }),
+        headers: { "Content-Type": "application/json" },
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (data.success) {
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Erreur serveur");
+      }
+
       setStatus("success");
       form.reset();
-    } else {
+    } catch (error) {
       setStatus("error");
-      console.error("Erreur de formulaire contact :", data.error);
+      console.error("Erreur de formulaire contact :", error);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   }
 
   return (
