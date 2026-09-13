@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+export const dynamic = "force-dynamic";
+
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "ssl0.ovh.net",
@@ -11,8 +13,13 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const fromEmail = process.env.SMTP_FROM || process.env.SMTP_USER || "secretariat@aomtechnologies.com";
-const toEmail = process.env.CONTACT_EMAIL || "secretariat@aomtechnologies.com";
+const fromEmail =
+  process.env.SMTP_FROM ||
+  process.env.SMTP_USER ||
+  "secretariat@aomtechnologies.com";
+
+const toEmail =
+  process.env.CONTACT_EMAIL || "secretariat@aomtechnologies.com";
 
 export async function POST(req: Request) {
   try {
@@ -32,6 +39,24 @@ export async function POST(req: Request) {
       );
     }
 
+    // 🔍 TEST SMTP — C’est ici que tu vois si OVH bloque le port
+    try {
+      console.log("🔎 Vérification SMTP en cours...");
+      await transporter.verify();
+      console.log("✅ SMTP OK — connexion possible");
+    } catch (smtpError) {
+      console.error("❌ SMTP ERROR — impossible de se connecter :", smtpError);
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Impossible de se connecter au serveur SMTP",
+          details: smtpError instanceof Error ? smtpError.message : smtpError,
+        },
+        { status: 500 }
+      );
+    }
+
+    // 📩 Envoi du mail
     await transporter.sendMail({
       from: `AOM Technologies <${fromEmail}>`,
       to: toEmail,
