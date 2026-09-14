@@ -37,12 +37,12 @@ export default function ClientSection() {
           >
 
           {[
-            { src: "/images/logos/SFR_logo.webp", alt: "SFR", href: "https://www.sfr.fr" },
-            { src: "/images/logos/edf-logo.webp", alt: "EDF", href: "https://www.edf.fr" },
-            { src: "/images/logos/Carglass_logo.svg", alt: "Carglass", href: "https://www.carglass.fr" },
-            { src: "/images/logos/Logo_zeborne.svg", alt: "Zeborne", href: "https://www.zeborne.com/fr/" },
-            { src: "/images/logos/ores-contact.png", alt: "Ores", href: "https://www.ores.be/particulier" },
-            { src: "/images/logos/Maersk-Logo.png", alt: "Maersk", href: "https://www.maersk.com" },
+            { src: "/images/logos/SFR_logo.webp", alt: "SFR"},
+            { src: "/images/logos/edf-logo.webp", alt: "EDF" },
+            { src: "/images/logos/Carglass_logo.svg", alt: "Carglass" },
+            { src: "/images/logos/Logo_zeborne.svg", alt: "Zeborne" },
+            { src: "/images/logos/ores-contact.png", alt: "Ores" },
+            { src: "/images/logos/Maersk-Logo.png", alt: "Maersk"},
           ].map((logo, i) => (
             <div
               key={i}
@@ -53,7 +53,7 @@ export default function ClientSection() {
               style={{ animationDelay: `${i * 0.2}s` }}
             >
               <a
-                href={logo.href}
+              
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Visiter le site de ${logo.alt}`}
