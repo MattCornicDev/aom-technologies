@@ -18,8 +18,7 @@ const fromEmail =
   process.env.SMTP_USER ||
   "secretariat@aomtechnologies.com";
 
-const toEmail =
-  process.env.CONTACT_EMAIL || "secretariat@aomtechnologies.com";
+const toEmail = "contact@aomtechnologies.com";
 
 export async function POST(req: Request) {
   try {
