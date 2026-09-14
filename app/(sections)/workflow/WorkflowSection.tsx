@@ -121,7 +121,7 @@ export default function WorkflowSection() {
                   Validation & maintenance
                 </h4>
                 <p className="text-gray-300 text-[16px] leading-relaxed">
-                  Vérification finale, test de conformité, remise du projet, suivi, maintenance et accompagnement personnalisé.
+                  Vérification finale, remise du projet, maintenance et accompagnement personnalisé.
                 </p>
               </div>
             </motion.div>
