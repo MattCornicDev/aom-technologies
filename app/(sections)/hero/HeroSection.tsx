@@ -152,7 +152,7 @@ export default function HeroSection() {
               Électricité Générale <br /> IRVE (Infrastructure de Recharge pour Véhicules Électriques)
 
               
-               <br /> E.N.R. Énergies Nouvelles Renouvelables <br />Résaux de Télcommunications / Fibre Optique
+               <br /> E.N.R. Énergies Nouvelles Renouvelables <br />Résaux de Télcommunications / Fibre Optique <br />Centre de Formations Agréé
             </p>
             
           </div>
