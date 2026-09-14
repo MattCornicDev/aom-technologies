@@ -22,9 +22,9 @@ const toEmail = "contact@aomtechnologies.com";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, phone, motif, message } = await req.json();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !phone || !motif || !message) {
       return NextResponse.json(
         { success: false, error: "Champs manquants" },
         { status: 400 }
@@ -65,6 +65,8 @@ export async function POST(req: Request) {
         <h2>Nouveau message reçu</h2>
         <p><strong>Nom :</strong> ${name}</p>
         <p><strong>Email :</strong> ${email}</p>
+        <p><strong>Téléphone :</strong> ${phone}</p>
+        <p><strong>Motif :</strong> ${motif}</p>
         <p><strong>Message :</strong><br/>${message}</p>
       `,
     });

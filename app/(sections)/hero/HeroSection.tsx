@@ -109,7 +109,7 @@ export default function HeroSection() {
               <p className="mt-3 text-sm leading-7 text-gray-600">
                 Électricité Générale <br /> IRVE (Infrastructure de Recharge pour Véhicules Électriques)
                 <br />
-                 E.N.R. Énergies Nouvelles Renouvelables <br />Résaux de Télcommunications / Fibre Optique
+                 E.N.R. Énergies Nouvelles Renouvelables <br />Résaux de Télcommunications / Fibre Optique <br />Centre de Formations Agréé
               </p>
             </div>
           </div>
