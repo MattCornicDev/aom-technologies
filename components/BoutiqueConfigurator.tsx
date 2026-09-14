@@ -19,13 +19,13 @@ type Product = {
 const products: Product[] = [
   {
     id: "home-7",
-    name: "AOM Home 7",
+    name: "Cable de recharge GONEO",
     eyebrow: "Maison individuelle",
-    description: "La borne compacte et connectee pour recharger chaque soir a domicile.",
+    description: "Câble de recharge connecté GONEO pour prise renforcée – 3,7 kW ",
     price: 699,
-    priceLabel: "699 €",
+    priceLabel: "69,99 €",
     power: "7,4 kW",
-    image: "/images/borne-recharge.jpg",
+    image: "/images/boutique/cable-recharge-goneo-prise-domestique-connecte.webp",
     features: ["Pilotage par application", "Cable T2 inclus", "Installation murale"],
   },
   {
@@ -41,11 +41,11 @@ const products: Product[] = [
   },
   {
     id: "pro-22",
-    name: "AOM Pro 22",
+    name: "AOM Pro",
     eyebrow: "Entreprise & flotte",
     description: "Une solution robuste pour les parkings qui veulent rester evolutifs.",
     price: 1290,
-    priceLabel: "1 290 €",
+    priceLabel: "790 €",
     power: "22 kW",
     image: "/images/boutique/schneider-charge-pro-borne-de-recharge-parametrable-jusqu-a-22kw-1p3p-t2s-4g-ref-evb4s22n40mg.jpg",
     features: ["Acces RFID", "Supervision a distance", "Usage intensif"],
@@ -63,7 +63,7 @@ function formatPrice(value: number) {
 }
 
 export default function BoutiqueConfigurator() {
-  const [selectedProductId, setSelectedProductId] = useState("schneider-93857572");
+  const [selectedProductId, setSelectedProductId] = useState("home-7");
   const [selectedInstallationId, setSelectedInstallationId] = useState("standard");
   const [showRequest, setShowRequest] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");

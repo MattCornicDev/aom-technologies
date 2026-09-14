@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Logo from "@/components/Logo";
 
 
 
@@ -29,7 +30,11 @@ export default function Navbar() {
         py-2
       "
     >
-      <div className="container mx-auto flex min-h-20 items-center justify-end px-6 md:min-h-0 md:px-12">
+      <div className="container mx-auto flex min-h-20 items-center justify-between px-6 md:min-h-0 md:px-12">
+
+        <a href="/" aria-label="AOM Technologies - Accueil" className="shrink-0">
+          <Logo size="md" className="h-14 w-14" />
+        </a>
 
         {/* Desktop menu */}
         <ul className="hidden items-center gap-8 md:flex">
