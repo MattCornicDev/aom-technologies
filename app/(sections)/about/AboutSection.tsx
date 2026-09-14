@@ -47,7 +47,7 @@ export default function AboutSection() {
                 md:mb-10
               "
             >
-              Qui sommes‑nous
+              Qui sommes‑nous ?
             </h3>
           </header>
 

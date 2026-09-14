@@ -96,7 +96,7 @@ export default function WorkflowSection() {
                   Installation & déploiement
                 </h4>
                 <p className="text-gray-300 text-[16px] leading-relaxed">
-                  Mise en place des équipements, raccordements, configuration et tests de conformité.
+                  Mise en place des équipements, raccordements, mise en service, configuration et tests de conformité.
                 </p>
               </div>
             </motion.div>
@@ -121,7 +121,7 @@ export default function WorkflowSection() {
                   Validation & maintenance
                 </h4>
                 <p className="text-gray-300 text-[16px] leading-relaxed">
-                  Vérification finale, remise du projet, suivi, maintenance et accompagnement personnalisé.
+                  Vérification finale, test de conformité, remise du projet, suivi, maintenance et accompagnement personnalisé.
                 </p>
               </div>
             </motion.div>
