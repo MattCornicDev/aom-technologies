@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const fromEmail = process.env.SMTP_FROM || process.env.SMTP_USER || "secretariat@aomtechnologies.com";
-const toEmail = process.env.CONTACT_EMAIL || "secretariat@aomtechnologies.com";
+const toEmail = "secretariat@aomtechnologies.com";
 
 export async function POST(req: Request) {
   try {

@@ -159,12 +159,10 @@ export default function IrveForm() {
         </button>
 
         {status === "success" && (
-          <p className="mt-2 text-green-600 text-sm">✔ Votre demande a bien été envoyée.</p>
+          <p className="text-green-600 text-sm mt-2">✔ Votre message a bien été envoyé.</p>
         )}
         {status === "error" && (
-          <p className="mt-2 text-red-600 text-sm">
-            ✖ Une erreur est survenue. Vérifiez la console ou les variables d’environnement.
-          </p>
+          <p className="text-red-600 text-sm mt-2">✖ Une erreur est survenue.</p>
         )}
 
         <p className="mt-2 text-xs text-slate-500">

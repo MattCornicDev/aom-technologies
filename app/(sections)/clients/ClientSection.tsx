@@ -11,12 +11,12 @@ export default function ClientSection() {
 
         {/* Heading */}
         <h4 className="uppercase text-[#007ee5] text-2xl md:text-3xl font-semibold tracking-wide mb-6">
-          Ils nous font confiance
+          Ils nous font confiance !
         </h4>
 
         {/* Subtitle */}
         <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto mb-16">
-          Nous développons des partenariats avec des entreprises nationales et régionales pour la réalisation de leurs projets d’électricité, télécommunications, IRVE et solutions techniques.
+          Nous développons des partenariats pour la réalisation de vos projets. 
         </p>
 
         {/* Logos grid */}
@@ -26,7 +26,8 @@ export default function ClientSection() {
               grid 
               grid-cols-2 
               sm:grid-cols-3 
-              md:grid-cols-5 
+              md:grid-cols-3 
+              lg:grid-cols-6 
               gap-12 
               md:gap-16 
               items-center 
@@ -36,11 +37,12 @@ export default function ClientSection() {
           >
 
           {[
-            { src: "/images/logos/SFR_logo.webp", alt: "SFR", href: "https://www.sfr.fr" },
-            { src: "/images/logos/edf-logo.webp", alt: "EDF", href: "https://www.edf.fr" },
-            { src: "/images/logos/Carglass_logo.svg", alt: "Carglass", href: "https://www.carglass.fr" },
-            { src: "/images/logos/Logo_zeborne.svg", alt: "Zeborne", href: "https://www.zeborne.com/fr/" },
-            { src: "/images/logos/ores-contact.png", alt: "Ores", href: "https://www.ores.be/particulier" },
+            { src: "/images/logos/SFR_logo.webp", alt: "SFR"},
+            { src: "/images/logos/edf-logo.webp", alt: "EDF" },
+            { src: "/images/logos/Carglass_logo.svg", alt: "Carglass" },
+            { src: "/images/logos/Logo_zeborne.svg", alt: "Zeborne" },
+            { src: "/images/logos/ores-contact.png", alt: "Ores" },
+            { src: "/images/logos/Maersk-Logo.png", alt: "Maersk"},
           ].map((logo, i) => (
             <div
               key={i}
@@ -51,31 +53,33 @@ export default function ClientSection() {
               style={{ animationDelay: `${i * 0.2}s` }}
             >
               <a
-                href={logo.href}
+              
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Visiter le site de ${logo.alt}`}
-                className="
-                  block p-6 rounded-2xl bg-white/10 backdrop-blur-md
+                className={`
+                  block p-6 rounded-2xl
+                  bg-white/10 backdrop-blur-md
                   shadow-[0_4px_20px_rgba(0,0,0,0.15)]
                   border border-white/20
                   hover:border-[#007ee5]/60
                   hover:shadow-[0_8px_30px_rgba(0,126,229,0.35)]
                   transition-all duration-500
                   group
-                "
+                `}
               >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
                   width={150}
                   height={80}
-                  className="
+                  className={`
+                    h-20 w-[150px] ${logo.alt === "Maersk" ? "object-cover" : "object-contain"}
                     opacity-90 group-hover:opacity-100
                     transition-all duration-500
                     group-hover:scale-110
                     drop-shadow-[0_0_6px_rgba(0,0,0,0.4)]
-                  "
+                  `}
                 />
               </a>
             </div>

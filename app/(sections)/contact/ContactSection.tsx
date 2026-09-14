@@ -13,29 +13,35 @@ export default function ContactSection() {
     setStatus(null);
 
     const form = e.currentTarget;
-    const formData = new FormData(form);
+    try {
+      const formData = new FormData(form);
 
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const message = formData.get("message");
+      const name = formData.get("name");
+      const email = formData.get("email");
+      const phone = formData.get("phone");
+      const motif = formData.get("motif");
+      const message = formData.get("message");
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify({ name, email, message }),
-      headers: { "Content-Type": "application/json" },
-    });
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify({ name, email, phone, motif, message }),
+        headers: { "Content-Type": "application/json" },
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (data.success) {
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Erreur serveur");
+      }
+
       setStatus("success");
       form.reset();
-    } else {
+    } catch (error) {
       setStatus("error");
-      console.error("Erreur de formulaire contact :", data.error);
+      console.error("Erreur de formulaire contact :", error);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   }
 
   return (
@@ -88,6 +94,50 @@ export default function ContactSection() {
                   peer-focus:-top-3 peer-focus:text-[12px] peer-focus:text-[#007de4]">
                   Votre email
                 </label>
+              </div>
+
+              {/* Téléphone */}
+              <div className="relative">
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  className="peer w-full px-3 py-3 text-[15px] text-gray-900 border border-gray-300 rounded-lg 
+                  focus:outline-none focus:border-[#007de4] focus:ring-2 focus:ring-[#007de4]/30 transition"
+                  placeholder=" "
+                />
+                <label className="absolute left-3 top-3 text-gray-500 text-[14px] pointer-events-none 
+                  transition-all duration-200 bg-white px-1 peer-placeholder-shown:top-3 peer-placeholder-shown:text-[14px]
+                  peer-focus:-top-3 peer-focus:text-[12px] peer-focus:text-[#007de4]">
+                  Votre numéro de téléphone
+                </label>
+              </div>
+
+              {/* Motif */}
+              <div>
+                <label
+                  htmlFor="motif"
+                  className="mb-1 block text-gray-500 text-[14px]"
+                >
+                  Motif de votre demande
+                </label>
+                <select
+                  id="motif"
+                  name="motif"
+                  required
+                  defaultValue=""
+                  className="w-full px-3 py-3 text-[15px] text-gray-900 border border-gray-300 rounded-lg
+                  focus:outline-none focus:border-[#007de4] focus:ring-2 focus:ring-[#007de4]/30 transition"
+                >
+                  <option value="" disabled>
+                    Sélectionnez un motif
+                  </option>
+                  <option>Électricité Générale</option>
+                  <option>IRVE</option>
+                  <option>E.N.R.</option>
+                  <option>Réseaux Télécom / Fibre Optique</option>
+                  <option>Formations</option>
+                </select>
               </div>
 
               {/* Message */}

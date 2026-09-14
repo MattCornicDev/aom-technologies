@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+export const dynamic = "force-dynamic";
+
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "ssl0.ovh.net",
@@ -11,14 +13,18 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const fromEmail = process.env.SMTP_FROM || process.env.SMTP_USER || "secretariat@aomtechnologies.com";
-const toEmail = process.env.CONTACT_EMAIL || "secretariat@aomtechnologies.com";
+const fromEmail =
+  process.env.SMTP_FROM ||
+  process.env.SMTP_USER ||
+  "secretariat@aomtechnologies.com";
+
+const toEmail = "contact@aomtechnologies.com";
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, phone, motif, message } = await req.json();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !phone || !motif || !message) {
       return NextResponse.json(
         { success: false, error: "Champs manquants" },
         { status: 400 }
@@ -32,6 +38,24 @@ export async function POST(req: Request) {
       );
     }
 
+    // 🔍 TEST SMTP — C’est ici que tu vois si OVH bloque le port
+    try {
+      console.log("🔎 Vérification SMTP en cours...");
+      await transporter.verify();
+      console.log("✅ SMTP OK — connexion possible");
+    } catch (smtpError) {
+      console.error("❌ SMTP ERROR — impossible de se connecter :", smtpError);
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Impossible de se connecter au serveur SMTP",
+          details: smtpError instanceof Error ? smtpError.message : smtpError,
+        },
+        { status: 500 }
+      );
+    }
+
+    // 📩 Envoi du mail
     await transporter.sendMail({
       from: `AOM Technologies <${fromEmail}>`,
       to: toEmail,
@@ -41,6 +65,8 @@ export async function POST(req: Request) {
         <h2>Nouveau message reçu</h2>
         <p><strong>Nom :</strong> ${name}</p>
         <p><strong>Email :</strong> ${email}</p>
+        <p><strong>Téléphone :</strong> ${phone}</p>
+        <p><strong>Motif :</strong> ${motif}</p>
         <p><strong>Message :</strong><br/>${message}</p>
       `,
     });

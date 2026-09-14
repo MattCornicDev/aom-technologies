@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import Preloader from "@/components/Preloader";
 import AboutSection from "@/app/(sections)/about/AboutSection";
 import FeatureSection from "@/app/(sections)/features/FeatureSection";
 import TestimonialsSection from "@/app/(sections)/testimonials/TestimonialsSection";
@@ -13,7 +12,6 @@ import HeroSection from "@/app/(sections)/hero/HeroSection";
 export default function Page() {
   return (
     <>
-      <Preloader />
       <Navbar />
       <HeroSection />
       <AboutSection />

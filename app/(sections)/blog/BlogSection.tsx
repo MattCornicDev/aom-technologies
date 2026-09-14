@@ -5,7 +5,7 @@ export default function BlogSection() {
   const posts = [
     {
       image: "/images/borne.webp",
-      title: "Nouvelle pause de borne chaque jour",
+      title: "Nouvelle pause de borne chaque jour.",
       date: "",
     },
     {
@@ -15,7 +15,7 @@ export default function BlogSection() {
     },
     {
       image: "/images/fibre.webp",
-      title: "Déploiement Raccordement et maintenance dans les hauts de France / Valenciennois / Amandinois / denaisis...",
+      title: "Déploiement, Raccordement et Maintenance.",
       date: "",
     },
   ];

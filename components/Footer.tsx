@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import LogoWithRings from "@/components/LogoWithRings";
 import {
@@ -13,6 +14,8 @@ import {
 } from "react-icons/fa";
 
 export default function Footer() {
+  const [isMapChoiceOpen, setIsMapChoiceOpen] = useState(false);
+
   return (
     <footer className="bg-[#f4f4f4] pt-20 pb-10">
       <div className="container mx-auto px-6 md:px-12">
@@ -94,12 +97,16 @@ export default function Footer() {
               <div className="flex flex-col items-center md:items-end gap-2">
                 <div className="flex items-center gap-3">
                   <FaPhoneAlt className="text-[#007de4] text-lg" />
-                  <span>03 27 43 64 18</span>
+                  <a href="tel:+33627436418" className="hover:text-[#007de4] transition">
+                    +33 (0)3 27 43 64 18
+                  </a>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <FaMobileAlt className="text-[#007de4] text-xl" />
-                  <span>07 67 85 95 81</span>
+                  <a href="tel:+33767859581" className="hover:text-[#007de4] transition">
+                    +33 (0)7 67 85 95 81
+                  </a>
                 </div>
               </div>
 
@@ -115,13 +122,19 @@ export default function Footer() {
               </div>
 
               {/* Adresse */}
-              <div className="flex items-center md:justify-end gap-3 max-w-[220px] md:max-w-[260px]">
+              <div className="flex items-start md:justify-end gap-3 max-w-[220px] md:max-w-[260px]">
                 <FaMapMarkerAlt className="text-[#007de4] text-lg" />
-                <span>
-                  Z.A des six Mariannes<br />
+                <button
+                  type="button"
+                  onClick={() => setIsMapChoiceOpen(true)}
+                  className="text-left hover:text-[#007de4] transition"
+                  aria-haspopup="dialog"
+                  aria-label="Choisir une application pour ouvrir l'adresse"
+                >
+                  Zone d'activité des six Mariannes<br />
                   9 rue des entrepreneurs<br />
                   59124 Escaudain
-                </span>
+                </button>
               </div>
 
               {/* LINKEDIN */}
@@ -160,6 +173,62 @@ export default function Footer() {
           </button>
         </div>
       </div>
+
+      {isMapChoiceOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-6"
+          role="presentation"
+          onClick={() => setIsMapChoiceOpen(false)}
+        >
+          <div
+            className="w-full max-w-sm bg-white p-6 text-center shadow-xl"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="map-choice-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <h2 id="map-choice-title" className="text-lg font-semibold text-gray-800">
+              Ouvrir l'adresse avec
+            </h2>
+            <div className="mt-5 flex justify-center gap-3">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Z.A%20des%20six%20Mariannes%2C%209%20rue%20des%20entrepreneurs%2C%2059124%20Escaudain"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMapChoiceOpen(false)}
+                className="bg-[#007de4] px-4 py-2 text-sm text-white hover:bg-[#006abd] transition"
+              >
+                Google Maps
+              </a>
+              <a
+                href="https://www.waze.com/ul?q=Z.A%20des%20six%20Mariannes%2C%209%20rue%20des%20entrepreneurs%2C%2059124%20Escaudain&navigate=yes"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMapChoiceOpen(false)}
+                className="bg-[#33ccff] px-4 py-2 text-sm text-white hover:bg-[#20afd9] transition"
+              >
+                Waze
+              </a>
+              <a
+                href="https://maps.apple.com/?address=Z.A%20des%20six%20Mariannes%2C%209%20rue%20des%20entrepreneurs%2C%2059124%20Escaudain"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMapChoiceOpen(false)}
+                className="bg-[#33ccff] px-4 py-2 text-sm text-white hover:bg-[#20afd9] transition"
+              >
+                Plan
+              </a>
+            </div>
+            <button
+              type="button"
+              onClick={() => setIsMapChoiceOpen(false)}
+              className="mt-4 text-sm text-gray-500 hover:text-gray-800 transition"
+            >
+              Fermer
+            </button>
+          </div>
+        </div>
+      )}
     </footer>
   );
 }
