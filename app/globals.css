@@ -45,6 +45,58 @@ body {
   .animate-gradientFlow {
     animation: gradientFlow 12s ease infinite;
   }
+
+  @keyframes timelinePulse {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+  .animate-timelinePulse {
+    animation: timelinePulse 4s ease-in-out infinite;
+  }
+
+  @keyframes workflowStepGlow {
+    0%,
+    28%,
+    100% {
+      background-color: #ffffff;
+      box-shadow: 0 0 0 rgba(125, 211, 252, 0);
+      transform: scale(1);
+    }
+    10% {
+      background-color: #dff5ff;
+      box-shadow: 0 0 12px rgba(125, 211, 252, 0.9), 0 0 28px rgba(0, 126, 229, 0.65);
+      transform: scale(1.08);
+    }
+  }
+
+  .animate-workflowStepGlow {
+    animation: workflowStepGlow 6s ease-in-out infinite;
+  }
+
+  @keyframes workflowIconGlow {
+    0%,
+    28%,
+    100% {
+      filter: drop-shadow(0 0 0 rgba(125, 211, 252, 0));
+      transform: scale(1);
+    }
+    10% {
+      filter: drop-shadow(0 0 7px rgba(125, 211, 252, 1));
+      transform: scale(1.15);
+    }
+  }
+
+  .animate-workflowIconGlow {
+    animation: workflowIconGlow 6s ease-in-out infinite;
+  }
 }
 @keyframes slideInLeft {
   0% {
