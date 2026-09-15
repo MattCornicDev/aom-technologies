@@ -142,7 +142,7 @@ export default function BoutiqueConfigurator() {
       </header>
 
       <section className="relative overflow-hidden bg-[#102d35] px-4 pb-16 pt-32 text-white sm:px-10 lg:px-16">
-        <div className="pointer-events-none absolute right-[4rem] top-1/2 z-0 -translate-y-1/2 opacity-[0.16] scale-[14] blur-[1px]">
+        <div className="pointer-events-none absolute right-[4rem] top-1/2 z-0 -translate-y-1/2 opacity-[0.56] scale-[14] blur-[1px]">
           <LogoWithRings />
         </div>
         <div className="absolute -right-24 -top-32 h-80 w-80 rounded-full border-[48px] border-[#d7e85b]/20" />
