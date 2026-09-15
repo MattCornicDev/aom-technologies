@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import ConditionalFooter from "@/components/ConditionalFooter";
 import { Inter } from "next/font/google";
 import { Archivo_Narrow } from "next/font/google";
 
@@ -78,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`min-h-full flex flex-col ${inter.variable}`}>
         <Navbar />
         {children}
-        <Footer />
+        <ConditionalFooter />
       </body>
     </html>
   );

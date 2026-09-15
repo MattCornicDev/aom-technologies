@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import BoutiqueFooter from "@/components/BoutiqueFooter";
+import Logo from "@/components/Logo";
+import LogoWithRings from "@/components/LogoWithRings";
 import { FaCheck, FaChevronRight, FaPlay, FaShieldAlt, FaTools, FaTruck } from "react-icons/fa";
 
 type Product = {
@@ -102,9 +105,20 @@ export default function BoutiqueConfigurator() {
 
   return (
     <main className="min-h-screen bg-[#f5f2ec] text-[#18242b]">
+      <header className="bg-[#102d35] px-6 py-5 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-7xl">
+          <a href="/" aria-label="Retour à l'accueil" className="inline-flex rounded bg-white px-3 py-2">
+            <Logo size="lg" />
+          </a>
+        </div>
+      </header>
+
       <section className="relative overflow-hidden bg-[#102d35] px-6 pb-16 pt-32 text-white sm:px-10 lg:px-16">
+        <div className="pointer-events-none absolute right-[4rem] top-1/2 z-0 -translate-y-1/2 opacity-[0.16] scale-[14] blur-[1px]">
+          <LogoWithRings />
+        </div>
         <div className="absolute -right-24 -top-32 h-80 w-80 rounded-full border-[48px] border-[#d7e85b]/20" />
-        <div className="relative mx-auto max-w-7xl">
+        <div className="relative z-10 mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-[#d7e85b]">La boutique AOM</p>
             <h1 className="max-w-2xl font-[var(--font-geist-sans)] text-4xl font-semibold leading-tight sm:text-6xl">
@@ -200,6 +214,8 @@ export default function BoutiqueConfigurator() {
 
         {showRequest && <section id="request" className="mt-16 border-t border-[#d8d8ce] pt-14"><div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]"><div><p className="text-xs font-bold uppercase tracking-[0.2em] text-[#66828a]">03 / Finaliser</p><h2 className="mt-2 text-3xl font-semibold">Recevoir mon devis personnalise</h2><p className="mt-4 text-sm leading-6 text-[#66828a]">Un technicien AOM vous rappelle pour confirmer la faisabilite, les aides possibles et le prix de l&apos;installation.</p><div className="mt-7 space-y-3 text-sm text-[#34484e]"><p className="flex gap-3"><FaCheck className="mt-1 text-[#7d9c34]" /> Pas de paiement avant validation</p><p className="flex gap-3"><FaCheck className="mt-1 text-[#7d9c34]" /> Etude gratuite et sans engagement</p><p className="flex gap-3"><FaCheck className="mt-1 text-[#7d9c34]" /> Reponse sous 48 heures</p></div></div><form onSubmit={handleSubmit} className="bg-white p-6 shadow-lg shadow-[#102d35]/5 sm:p-8"><div className="grid gap-4 sm:grid-cols-2"><input name="name" required placeholder="Nom / Prenom" className="border border-[#d8d8ce] px-4 py-3 text-sm outline-none focus:border-[#102d35]" /><input name="email" type="email" required placeholder="Email" className="border border-[#d8d8ce] px-4 py-3 text-sm outline-none focus:border-[#102d35]" /><input name="phone" required placeholder="Telephone" className="border border-[#d8d8ce] px-4 py-3 text-sm outline-none focus:border-[#102d35]" /><input name="address" required placeholder="Adresse d&apos;installation" className="border border-[#d8d8ce] px-4 py-3 text-sm outline-none focus:border-[#102d35]" /></div><select name="siteType" className="mt-4 w-full border border-[#d8d8ce] bg-white px-4 py-3 text-sm outline-none focus:border-[#102d35]"><option>Maison individuelle</option><option>Appartement / copropriete</option><option>Entreprise / parking</option></select><textarea name="details" rows={4} placeholder="Une precision sur votre projet ?" className="mt-4 w-full border border-[#d8d8ce] px-4 py-3 text-sm outline-none focus:border-[#102d35]" /><button disabled={status === "loading"} type="submit" className="mt-4 w-full bg-[#102d35] px-5 py-4 text-sm font-bold text-white transition hover:bg-[#1c4650] disabled:opacity-60">{status === "loading" ? "Envoi en cours..." : "Recevoir mon devis"}</button>{status === "success" && <p className="mt-4 text-sm font-semibold text-[#527a27]">Votre demande est bien partie. Nous revenons vers vous rapidement.</p>}{status === "error" && <p className="mt-4 text-sm font-semibold text-red-700">Une erreur est survenue. Vous pouvez nous appeler directement au 03 27 43 64 18.</p>}</form></div></section>}
       </section>
+
+      <BoutiqueFooter />
     </main>
   );
 }

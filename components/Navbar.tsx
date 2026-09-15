@@ -2,7 +2,6 @@
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from "@/components/Logo";
 
 
 
@@ -15,11 +14,11 @@ export default function Navbar() {
     { label: "Accueil", href: "/" },
     { label: "À propos", href: "#about" },
     { label: "Services", href: "#features" },
-    { label: "irve", href: "/irve" },
-    { label: "Boutique", href: "/boutique" },
-    { label: "Formation", href: "/formation" },
     { label: "Clients", href: "#clients" },
     { label: "Contact", href: "#contact" },
+     { label: "irve", href: "/irve" },
+     { label: "Formation", href: "/formation" },
+     { label: "Boutique", href: "/boutique" },
   ];
 
   return (
@@ -30,11 +29,7 @@ export default function Navbar() {
         py-2
       "
     >
-      <div className="container mx-auto flex min-h-20 items-center justify-between px-6 md:min-h-0 md:px-12">
-
-        <a href="/" aria-label="AOM Technologies - Accueil" className="shrink-0">
-          <Logo size="md" className="h-14 w-14" />
-        </a>
+      <div className="container mx-auto flex min-h-20 items-center justify-end px-6 md:min-h-0 md:px-12">
 
         {/* Desktop menu */}
         <ul className="hidden items-center gap-8 md:flex">
