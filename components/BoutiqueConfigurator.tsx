@@ -13,7 +13,6 @@ type Product = {
   eyebrow: string;
   description: string;
   price: number;
-  priceLabel: string;
   power: string;
   image: string;
   features: string[];
@@ -25,8 +24,7 @@ const products: Product[] = [
     name: "Cable de recharge GONEO",
     eyebrow: "Maison individuelle",
     description: "Câble de recharge connecté GONEO pour prise renforcée – 3,7 kW ",
-    price: 699,
-    priceLabel: "69,99 €",
+    price: 69.99,
     power: "7,4 kW",
     image: "/images/boutique/cable-recharge-goneo-prise-domestique-connecte.webp",
     features: ["Pilotage par application", "Cable T2 inclus", "Installation murale"],
@@ -37,7 +35,6 @@ const products: Product[] = [
     eyebrow: "Borne de recharge 7,4 a 22 kW",
     description: "La borne Schneider Electric de la fiche produit Leroy Merlin, configuree selon la puissance de votre installation.",
     price: 899,
-    priceLabel: "899 €",
     power: "7,4 a 22 kW",
     image: "/images/boutique/aom-link.png",
     features: ["Puissance de 7,4 a 22 kW", "Marque Schneider Electric", "Installation IRVE sur demande"],
@@ -48,9 +45,8 @@ const products: Product[] = [
     eyebrow: "Entreprise & flotte",
     description: "Une solution robuste pour les parkings qui veulent rester evolutifs.",
     price: 1290,
-    priceLabel: "790 €",
     power: "22 kW",
-    image: "/images/boutique/borne-aom.png",
+    image: "/images/boutique/borne-aom-pro.png",
     features: ["Acces RFID", "Supervision a distance", "Usage intensif"],
   },
 ];
@@ -62,18 +58,50 @@ const installationOptions = [
 ];
 
 function formatPrice(value: number) {
-  return new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(value);
+  return new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR", maximumFractionDigits: 2 }).format(value);
 }
 
 export default function BoutiqueConfigurator() {
   const [selectedProductId, setSelectedProductId] = useState("home-7");
   const [selectedInstallationId, setSelectedInstallationId] = useState("standard");
+  const [quantity, setQuantity] = useState(1);
   const [showRequest, setShowRequest] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const product = products.find((item) => item.id === selectedProductId) ?? products[1];
   const installation = installationOptions.find((item) => item.id === selectedInstallationId) ?? installationOptions[1];
-  const total = product.price + installation.price;
+  const productSubtotal = product.price * quantity;
+  const total = product.price * quantity + installation.price;
+
+  async function handleCheckout() {
+    setStatus("loading");
+
+    try {
+      const response = await fetch("/api/stripe/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          productId: product.id,
+          productName: product.name,
+          productPrice: product.price,
+          quantity,
+          power: product.power,
+          installationName: installation.label,
+          installationPrice: installation.price,
+        }),
+      });
+      const data = await response.json();
+
+      if (!response.ok || !data.url) {
+        throw new Error(data.error || "Impossible de créer le paiement");
+      }
+
+      window.location.href = data.url;
+    } catch (error) {
+      setStatus("error");
+      console.error("Erreur Stripe Checkout :", error);
+    }
+  }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -91,7 +119,7 @@ export default function BoutiqueConfigurator() {
           address: formData.get("address"),
           siteType: formData.get("siteType"),
           power: product.power,
-          details: `Boutique - ${product.name} (${formatPrice(product.price)}) / ${installation.label} (${formatPrice(installation.price)}). Total indicatif : ${formatPrice(total)}. ${formData.get("details") || ""}`,
+          details: `Boutique - ${product.name}, quantité : ${quantity} (${formatPrice(product.price)} l'unité) / ${installation.label} (${formatPrice(installation.price)}). Total indicatif : ${formatPrice(total)}. ${formData.get("details") || ""}`,
         }),
       });
 
@@ -107,7 +135,7 @@ export default function BoutiqueConfigurator() {
     <main className="min-h-screen bg-[#f5f2ec] text-[#18242b]">
       <header className="bg-[#102d35] px-4 py-5 sm:px-10 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <a href="/" aria-label="Retour à l'accueil" className="inline-flex rounded bg-white px-3 py-2">
+          <a href="/" aria-label="Retour à l'accueil" className="inline-flex">
             <Logo size="lg" />
           </a>
         </div>
@@ -131,7 +159,7 @@ export default function BoutiqueConfigurator() {
           <div className="mt-10 grid max-w-3xl grid-cols-1 gap-5 text-sm text-slate-300 sm:grid-cols-3">
             <div className="flex items-center gap-3"><FaShieldAlt className="text-[#d7e85b]" /> Installation IRVE certifiee</div>
             <div className="flex items-center gap-3"><FaTools className="text-[#d7e85b]" /> Etude technique incluse</div>
-            <div className="flex items-center gap-3"><FaTruck className="text-[#d7e85b]" /> Livraison dans les Hauts-de-France</div>
+            <div className="flex items-center gap-3"><FaTruck className="text-[#d7e85b]" /> Livraison dans toute la France</div>
           </div>
         </div>
       </section>
@@ -152,7 +180,11 @@ export default function BoutiqueConfigurator() {
               <button
                 key={item.id}
                 type="button"
-                onClick={() => setSelectedProductId(item.id)}
+                onClick={() => {
+                  setSelectedProductId(item.id);
+                  setQuantity(1);
+                  setTimeout(() => document.getElementById("product-detail")?.scrollIntoView({ behavior: "smooth" }), 0);
+                }}
                 className={`group text-left transition ${selected ? "-translate-y-1" : ""}`}
                 aria-pressed={selected}
               >
@@ -163,7 +195,7 @@ export default function BoutiqueConfigurator() {
                   </div>
                   <div className="p-6">
                     <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#66828a]">{item.eyebrow}</p>
-                    <div className="mt-2 flex items-baseline justify-between gap-3"><h3 className="text-xl font-semibold">{item.name}</h3><span className="text-sm font-bold">{item.priceLabel}</span></div>
+                    <div className="mt-2 flex items-baseline justify-between gap-3"><h3 className="text-xl font-semibold">{item.name}</h3><span className="text-sm font-bold">{formatPrice(item.price)}</span></div>
                     <p className="mt-3 min-h-12 text-sm leading-6 text-[#66828a]">{item.description}</p>
                     <ul className="mt-5 space-y-2 border-t border-[#e7e5dd] pt-5 text-sm text-[#34484e]">{item.features.map((feature) => <li key={feature} className="flex items-center gap-2"><FaCheck className="text-[#7d9c34]" size={11} /> {feature}</li>)}</ul>
                   </div>
@@ -172,6 +204,54 @@ export default function BoutiqueConfigurator() {
             );
           })}
         </div>
+
+        <section id="product-detail" className="mt-12 border border-[#d8d8ce] bg-white p-5 sm:p-8">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_1.1fr] lg:items-center">
+            <div className="relative h-72 overflow-hidden bg-[#f5f2ec] sm:h-96">
+              <Image src={product.image} alt={product.name} fill className="object-contain p-6" />
+            </div>
+
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#66828a]">Fiche produit</p>
+              <h2 className="mt-2 text-3xl font-semibold">{product.name}</h2>
+              <p className="mt-3 text-sm leading-6 text-[#66828a]">{product.description}</p>
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {product.features.map((feature) => (
+                  <div key={feature} className="flex items-start gap-2 text-sm text-[#34484e]">
+                    <FaCheck className="mt-1 shrink-0 text-[#7d9c34]" size={12} />
+                    <span>{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-end justify-between gap-5 border-t border-[#e7e5dd] pt-6">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.16em] text-[#66828a]">Prix unitaire</p>
+                  <p className="mt-1 text-sm text-[#66828a]">{formatPrice(product.price)}</p>
+                  <p className="mt-1 text-2xl font-semibold">{formatPrice(productSubtotal)}</p>
+                  <p className="text-xs text-[#66828a]">Total pour {quantity} article{quantity > 1 ? "s" : ""}</p>
+                </div>
+                <label className="text-sm font-semibold text-[#34484e]">
+                  Quantité
+                  <input
+                    type="number"
+                    min="1"
+                    max="99"
+                    value={quantity}
+                    onChange={(event) => setQuantity(Math.max(1, Number(event.target.value) || 1))}
+                    className="ml-3 w-20 border border-[#d8d8ce] px-3 py-2 text-center outline-none focus:border-[#102d35]"
+                  />
+                </label>
+              </div>
+
+              <p className="mt-6 border-t border-[#e7e5dd] pt-4 text-sm leading-6 text-[#66828a]">
+                Votre sélection est prête. Choisissez votre installation ci-dessous,
+                puis utilisez le bouton « Commander » pour accéder au paiement sécurisé.
+              </p>
+            </div>
+          </div>
+        </section>
 
         <div className="mt-10 flex flex-col gap-6 bg-[#102d35] p-7 text-white sm:flex-row sm:items-center sm:justify-between sm:p-9">
           <div className="max-w-2xl">
@@ -191,7 +271,7 @@ export default function BoutiqueConfigurator() {
           </a>
         </div>
 
-        <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_360px]">
+        <div id="installation" className="mt-16 grid gap-10 lg:grid-cols-[1fr_360px]">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#66828a]">02 / Choisir votre installation</p>
             <h2 className="mt-2 text-3xl font-semibold">Une mise en service sans mauvaise surprise</h2>
@@ -207,7 +287,8 @@ export default function BoutiqueConfigurator() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#66828a]">Votre selection</p>
             <div className="mt-5 border-b border-[#e7e5dd] pb-5"><p className="font-semibold">{product.name}</p><p className="mt-1 text-sm text-[#66828a]">{product.power} · {installation.label}</p></div>
             <div className="flex items-center justify-between py-5"><span className="text-sm text-[#66828a]">Total indicatif</span><strong className="text-right text-2xl">{formatPrice(total)}</strong></div>
-            <button type="button" onClick={() => { setShowRequest(true); setTimeout(() => document.getElementById("request")?.scrollIntoView({ behavior: "smooth" }), 0); }} className="flex w-full items-center justify-center gap-3 bg-[#d7e85b] px-5 py-4 text-sm font-bold text-[#102d35] transition hover:bg-[#c8dc4b]">Demander cette configuration <FaChevronRight size={12} /></button>
+            <button type="button" onClick={handleCheckout} disabled={status === "loading"} className="flex w-full items-center justify-center gap-3 bg-[#d7e85b] px-5 py-4 text-sm font-bold text-[#102d35] transition hover:bg-[#c8dc4b] disabled:opacity-60">{status === "loading" ? "Redirection vers le paiement..." : "Commander"} <FaChevronRight size={12} /></button>
+            {status === "error" && <p className="mt-3 text-sm text-red-600">Le paiement n&apos;a pas pu être lancé. Vérifiez la configuration Stripe.</p>}
             <p className="mt-4 text-center text-xs leading-5 text-[#66828a]">Le prix final est confirme apres validation de votre installation electrique.</p>
           </aside>
         </div>

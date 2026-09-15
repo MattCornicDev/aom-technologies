@@ -4,7 +4,7 @@ import Logo from "@/components/Logo";
 const boutiqueLinks = [
   { href: "#products", label: "Nos bornes" },
   { href: "#installation", label: "Installation IRVE" },
-  { href: "#request", label: "Demander un devis" },
+  { href: "/irve#devis", label: "Demander un devis" },
 ];
 
 export default function BoutiqueFooter() {
@@ -12,7 +12,7 @@ export default function BoutiqueFooter() {
     <footer className="border-t border-[#d8d8ce] bg-[#102d35] text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-10 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:px-16">
         <div>
-          <a href="/" aria-label="Retour à l'accueil" className="inline-flex rounded bg-white px-3 py-2">
+          <a href="/" aria-label="Retour à l'accueil" className="inline-flex">
             <Logo size="lg" />
           </a>
           <p className="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-[#d7e85b]">La boutique AOM</p>
@@ -42,9 +42,17 @@ export default function BoutiqueFooter() {
             Services
           </h3>
           <ul className="mt-4 space-y-3 text-sm text-slate-300">
-            <li className="flex gap-2"><FaTruck className="mt-1 shrink-0 text-[#d7e85b]" /> Livraison dans les Hauts-de-France</li>
-            <li className="flex gap-2"><FaShieldAlt className="mt-1 shrink-0 text-[#d7e85b]" /> Installation certifiée IRVE</li>
-            <li className="flex gap-2"><FaCheckCircle className="mt-1 shrink-0 text-[#d7e85b]" /> Garantie et assistance</li>
+            <li className="flex gap-2"><FaTruck className="mt-1 shrink-0 text-[#d7e85b]" /> Livraison dans toute la France</li>
+            <li>
+              <a href="/boutique/informations#certification-irve" className="flex gap-2 transition hover:text-[#d7e85b]">
+                <FaShieldAlt className="mt-1 shrink-0 text-[#d7e85b]" /> Installation certifiée IRVE
+              </a>
+            </li>
+            <li>
+              <a href="/boutique/informations" className="flex gap-2 transition hover:text-[#d7e85b]">
+                <FaCheckCircle className="mt-1 shrink-0 text-[#d7e85b]" /> Garantie et assurance
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -53,7 +61,12 @@ export default function BoutiqueFooter() {
             Besoin d&apos;aide ?
           </h3>
           <ul className="mt-4 space-y-3 text-sm text-slate-300">
-            <li className="flex gap-2"><FaQuestionCircle className="mt-1 shrink-0 text-[#d7e85b]" /> FAQ et accompagnement</li>
+            <li>
+              <a href="/boutique/faq" className="flex gap-2 transition hover:text-[#d7e85b]">
+                <FaQuestionCircle className="mt-1 shrink-0 text-[#d7e85b]" /> FAQ et accompagnement
+              </a>
+            </li>
+            <li><a href="/boutique/suivi-commande" className="transition hover:text-[#d7e85b]">Suivre ma commande</a></li>
             <li><a href="mailto:contact@aomtechnologies.com" className="transition hover:text-[#d7e85b]">contact@aomtechnologies.com</a></li>
             <li><a href="tel:+33767859581" className="transition hover:text-[#d7e85b]">+33 (0)7 67 85 95 81</a></li>
           </ul>
