@@ -20,16 +20,6 @@ type Product = {
 
 const products: Product[] = [
   {
-    id: "home-7",
-    name: "Cable de recharge GONEO",
-    eyebrow: "Maison individuelle",
-    description: "Câble de recharge connecté GONEO pour prise renforcée – 3,7 kW ",
-    price: 69.99,
-    power: "7,4 kW",
-    image: "/images/boutique/cable-recharge-goneo-prise-domestique-connecte.webp",
-    features: ["Pilotage par application", "Cable T2 inclus", "Installation murale"],
-  },
-  {
     id: "schneider-93857572",
     name: "AOM Link",
     eyebrow: "Borne de recharge 7,4 a 22 kW",
@@ -48,6 +38,16 @@ const products: Product[] = [
     power: "22 kW",
     image: "/images/boutique/borne-aom-pro.png",
     features: ["Acces RFID", "Supervision a distance", "Usage intensif"],
+  },
+  {
+    id: "home-7",
+    name: "Cable de recharge GONEO",
+    eyebrow: "Maison individuelle",
+    description: "Câble de recharge connecté GONEO pour prise renforcée – 3,7 kW ",
+    price: 69.99,
+    power: "7,4 kW",
+    image: "/images/boutique/cable-recharge-goneo-prise-domestique-connecte.webp",
+    features: ["Pilotage par application", "Cable T2 inclus", "Installation murale"],
   },
 ];
 

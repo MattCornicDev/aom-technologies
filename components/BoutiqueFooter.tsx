@@ -50,7 +50,7 @@ export default function BoutiqueFooter() {
             </li>
             <li>
               <a href="/boutique/informations" className="flex gap-2 transition hover:text-[#d7e85b]">
-                <FaCheckCircle className="mt-1 shrink-0 text-[#d7e85b]" /> Garantie et assurance
+                <FaCheckCircle className="mt-1 shrink-0 text-[#d7e85b]" /> garantie et SAV
               </a>
             </li>
           </ul>
@@ -68,7 +68,13 @@ export default function BoutiqueFooter() {
             </li>
             <li><a href="/boutique/suivi-commande" className="transition hover:text-[#d7e85b]">Suivre ma commande</a></li>
             <li><a href="mailto:contact@aomtechnologies.com" className="transition hover:text-[#d7e85b]">contact@aomtechnologies.com</a></li>
-            <li><a href="tel:+33767859581" className="transition hover:text-[#d7e85b]">+33 (0)7 67 85 95 81</a></li>
+            <li><a href="tel:+33327436418" className="transition hover:text-[#d7e85b]">+33 (0)3 27 43 64 18</a></li>
+            <li className="pt-2 text-xs leading-5 text-slate-400">
+              <span className="font-semibold text-slate-300">Horaires</span><br />
+              Lundi à vendredi : 08:00–12:00, 13:00–18:00<br />
+              Samedi : 08:00–12:00, 13:00–18:00<br />
+              Dimanche : fermé
+            </li>
           </ul>
         </div>
       </div>
