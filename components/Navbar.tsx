@@ -8,16 +8,17 @@ import { FaBars, FaTimes } from "react-icons/fa";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const lightTextPages = pathname === "/irve" || pathname === "/formation";
+  const lightTextPages = pathname === "/irve" || pathname === "/formation" || pathname === "/boutique";
 
   const navItems = [
     { label: "Accueil", href: "/" },
     { label: "À propos", href: "#about" },
     { label: "Services", href: "#features" },
-    { label: "irve", href: "/irve" },
-    { label: "Formation", href: "/formation" },
     { label: "Clients", href: "#clients" },
     { label: "Contact", href: "#contact" },
+     { label: "irve", href: "/irve" },
+     { label: "Formation", href: "/formation" },
+     { label: "Boutique", href: "/boutique" },
   ];
 
   return (
