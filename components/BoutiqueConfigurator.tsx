@@ -44,13 +44,13 @@ const products: Product[] = [
   },
   {
     id: "pro-22",
-    name: "AOM Pro",
+    name: "AOM Link",
     eyebrow: "Entreprise & flotte",
     description: "Une solution robuste pour les parkings qui veulent rester evolutifs.",
     price: 1290,
     priceLabel: "790 €",
     power: "22 kW",
-    image: "/images/boutique/schneider-charge-pro-borne-de-recharge-parametrable-jusqu-a-22kw-1p3p-t2s-4g-ref-evb4s22n40mg.jpg",
+    image: "/images/boutique/borne-aom.png",
     features: ["Acces RFID", "Supervision a distance", "Usage intensif"],
   },
 ];
@@ -105,7 +105,7 @@ export default function BoutiqueConfigurator() {
 
   return (
     <main className="min-h-screen bg-[#f5f2ec] text-[#18242b]">
-      <header className="bg-[#102d35] px-6 py-5 sm:px-10 lg:px-16">
+      <header className="bg-[#102d35] px-4 py-5 sm:px-10 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <a href="/" aria-label="Retour à l'accueil" className="inline-flex rounded bg-white px-3 py-2">
             <Logo size="lg" />
@@ -113,7 +113,7 @@ export default function BoutiqueConfigurator() {
         </div>
       </header>
 
-      <section className="relative overflow-hidden bg-[#102d35] px-6 pb-16 pt-32 text-white sm:px-10 lg:px-16">
+      <section className="relative overflow-hidden bg-[#102d35] px-4 pb-16 pt-32 text-white sm:px-10 lg:px-16">
         <div className="pointer-events-none absolute right-[4rem] top-1/2 z-0 -translate-y-1/2 opacity-[0.16] scale-[14] blur-[1px]">
           <LogoWithRings />
         </div>
@@ -136,7 +136,7 @@ export default function BoutiqueConfigurator() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-14 sm:px-10 lg:px-16">
+      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-10 lg:px-16">
         <div className="mb-8 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#66828a]">01 / Choisir une borne</p>

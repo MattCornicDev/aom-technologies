@@ -10,7 +10,7 @@ const boutiqueLinks = [
 export default function BoutiqueFooter() {
   return (
     <footer className="border-t border-[#d8d8ce] bg-[#102d35] text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:px-10 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:px-16">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-10 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:px-16">
         <div>
           <a href="/" aria-label="Retour à l'accueil" className="inline-flex rounded bg-white px-3 py-2">
             <Logo size="lg" />
@@ -61,7 +61,7 @@ export default function BoutiqueFooter() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-5 text-xs text-slate-400 sm:px-10 md:flex-row md:items-center md:justify-between lg:px-16">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-xs text-slate-400 sm:px-10 md:flex-row md:items-center md:justify-between lg:px-16">
           <p>Paiement sécurisé et devis confirmé après étude de votre installation.</p>
           <div className="flex gap-4">
             <a href="/mentions-legales" className="transition hover:text-white">Mentions légales</a>
