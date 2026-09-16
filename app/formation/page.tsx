@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FormationFooter from "@/components/FormationFooter";
 import LogoWithRings from "@/components/LogoWithRings";
 import {
   FaCode,
@@ -239,6 +240,7 @@ export default function FormationPage() {
           </Link>
         </div>
       </section>
+      <FormationFooter />
     </main>
   );
 }

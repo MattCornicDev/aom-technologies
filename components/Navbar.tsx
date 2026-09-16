@@ -9,15 +9,16 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const lightTextPages = pathname === "/irve" || pathname === "/formation";
+  const sectionPath = pathname === "/" ? "" : "/";
 
   const navItems = [
     { label: "Accueil", href: "/" },
-    { label: "À propos", href: "#about" },
-    { label: "Services", href: "#features" },
+    { label: "À propos", href: `${sectionPath}#about` },
+    { label: "Services", href: `${sectionPath}#features` },
     { label: "irve", href: "/irve" },
     { label: "Formation", href: "/formation" },
-    { label: "Clients", href: "#clients" },
-    { label: "Contact", href: "#contact" },
+    { label: "Clients", href: `${sectionPath}#clients` },
+    { label: "Contact", href: `${sectionPath}#contact` },
   ];
 
   return (
