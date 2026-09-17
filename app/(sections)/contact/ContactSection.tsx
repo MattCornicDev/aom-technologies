@@ -137,6 +137,7 @@ export default function ContactSection() {
                   <option>E.N.R.</option>
                   <option>Réseaux Télécom / Fibre Optique</option>
                   <option>Formations</option>
+                  <option>Autres</option>
                 </select>
               </div>
 
