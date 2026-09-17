@@ -131,7 +131,7 @@ export default function Footer() {
                   aria-haspopup="dialog"
                   aria-label="Choisir une application pour ouvrir l'adresse"
                 >
-                  Zone d'activité des six Mariannes<br />
+                  Parc d'Activités des six Mariannes<br />
                   9 rue des entrepreneurs<br />
                   59124 Escaudain
                 </button>
