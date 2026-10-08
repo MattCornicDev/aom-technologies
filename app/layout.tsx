@@ -27,14 +27,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AOM Technologies – Fibre, Électricité, IRVE & Réseaux Professionnels",
+  title: "AOM TECHNOLOGIES & SERVICES Travaux d'Installation Electrique.",
   description:
-    "AOM Technologies installe fibre optique, électricité, réseaux informatiques, domotique et bornes de recharge IRVE certifiées Qualifelec dans les Hauts-de-France.",
+    "AOM TECHNOLOGIES & SERVICES, travaux d'installation electrique, électricité générale, réseaux informatiques, domotique,  bornes de recharge pour véhicules électriques, certifié IRVE Qualifelec, réseaux de telecommunications, fibre optique",
   keywords: [
     "AOM Technologies",
-    "installation fibre optique",
-    "technicien fibre",
-    "réseaux informatiques",
     "installation électrique",
     "domotique",
     "IRVE",
@@ -46,7 +43,9 @@ export const metadata: Metadata = {
     "installation borne électrique",
     "Hauts-de-France",
     "Nord 59",
-    "Pas-de-Calais 62"
+    "Pas-de-Calais 62",
+    "installation fibre optique reseaux télécom",
+     "réseaux informatiques",
   ],
   authors: [{ name: "AOM Technologies" }],
   creator: "Codexium",
