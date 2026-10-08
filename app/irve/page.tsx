@@ -21,7 +21,7 @@ export default function IrvePage() {
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 lg:flex-row lg:items-center">
           <div className="flex-1 space-y-6">
             <p className="text-sm uppercase tracking-[0.2em] text-sky-100">
-              Installateur certifié IRVE & Qualifelec
+              Installateur certifié IRVE et agrée Qualifelec
             </p>
             <h1 className="text-3xl font-semibold sm:text-4xl lg:text-5xl">
               Installation de bornes de recharge électriques
@@ -30,8 +30,8 @@ export default function IrvePage() {
               </span>
             </h1>
             <p className="max-w-xl text-sm sm:text-base text-sky-100/90">
-              AOM Technologies conçoit et installe des solutions de recharge
-              sur‑mesure, conformes aux normes NF C 15‑100, éligible sur les aides financières (prime ADVENIR, crédit d&apos;impôt,
+              AOM TECHNOLOGIES & SERVICES conçoit et installe des solutions de recharge
+              sur‑mesure, conformes aux normes NF C 15‑100, éligible aux aides (prime ADVENIR, crédit d&apos;impôt,
               TVA réduite).
             </p>
 
@@ -55,7 +55,6 @@ export default function IrvePage() {
               <span>•</span>
               <span>Intervention rapide dans les Hauts‑de‑France</span>
               <span>•</span>
-              <span>Installateur IRVE certifié</span>
             </div>
           </div>
 
@@ -107,7 +106,7 @@ export default function IrvePage() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr,1fr] lg:items-start">
           <div>
             <h2 className="text-2xl font-semibold sm:text-3xl">
-              Pourquoi choisir AOM Technologies pour votre borne de recharge ?
+              Pourquoi choisir AOM TECHNOLOGIES & SERVICES pour votre borne de recharge ?
             </h2>
             <p className="mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
               Nous accompagnons les particuliers, entreprises, copropriétés et
@@ -190,7 +189,7 @@ export default function IrvePage() {
             Nos solutions de recharge
           </h2>
           <p className="mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
-            AOM Technologies installe des bornes adaptées à chaque usage :
+            AOM TECHNOLOGIES & SERVICES installe des bornes adaptées à chaque usage :
             domicile, parking d&apos;entreprise, copropriété ou site public.
           </p>
 
@@ -259,7 +258,7 @@ export default function IrvePage() {
         </h2>
         <p className="mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
           Nous gérons l&apos;ensemble du projet : étude, installation, mise en
-          service, conformité et suivi dans le temps.
+          service, conformité, maintenance et suivi dans le temps.
         </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -326,7 +325,7 @@ export default function IrvePage() {
               </h2>
               <p className="mt-2 max-w-md text-xs sm:text-sm text-slate-300">
                 Nous travaillons avec des fabricants reconnus et des partenaires
-                nationaux pour garantir fiabilité, sécurité et disponibilité des
+                nationaux et internationaux pour garantir fiabilité, sécurité et disponibilité des
                 pièces.
               </p>
             </div>
@@ -346,10 +345,10 @@ export default function IrvePage() {
               Zone d&apos;intervention
             </p>
             <h3 className="mt-2 text-lg font-semibold text-slate-900">
-              Intervention dans les Hauts‑de‑France et secteurs limitrophes
+              Intervention sur tout le terrtoire national.
             </h3>
             <p className="mt-2 text-xs sm:text-sm text-slate-600">
-              Nous intervenons principalement dans le Nord, le Pas‑de‑Calais et
+              Nous intervenons principalement dans les hauts-de-France le Nord et
               les départements limitrophes. Pour les projets hors zone, une
               étude spécifique est possible.
             </p>
@@ -359,13 +358,6 @@ export default function IrvePage() {
               <li>• Pas‑de‑Calais (62)</li>
               <li>• Étude possible sur autres départements selon le projet</li>
             </ul>
-
-            <div id="contact" className="mt-6 space-y-2 text-sm text-slate-700">
-              <p className="font-semibold">Contact direct</p>
-              <p>Tél. : 03 27 43 64 18s</p>
-              <p>Tél. : 07 67 85 95 81</p>
-              <p>Email : contact@aomtechnologies.fr</p>
-            </div>
           </aside>
         </div>
       </section>

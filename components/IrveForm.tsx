@@ -55,7 +55,7 @@ export default function IrveForm() {
       </h2>
 
       <p className="mt-3 max-w-2xl text-sm sm:text-base text-slate-600">
-        Remplissez ce formulaire, un expert AOM Technologies vous recontacte rapidement
+        Remplissez ce formulaire, un expert AOM TECHNOLOGIES & SERVICES vous recontacte rapidement
         pour une étude gratuite et un devis personnalisé, sans engagement.
       </p>
 
@@ -166,7 +166,7 @@ export default function IrveForm() {
         )}
 
         <p className="mt-2 text-xs text-slate-500">
-          En envoyant ce formulaire, vous acceptez d&apos;être recontacté par AOM Technologies.
+          En envoyant ce formulaire, vous acceptez d&apos;être recontacté par AOM TECHNOLOGIES & SERVICES.
         </p>
       </form>
     </div>
