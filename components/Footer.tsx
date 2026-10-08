@@ -30,7 +30,7 @@ export default function Footer() {
             </div>
 
             <p className="text-[14px] text-gray-600 mt-4 max-w-xs">
-              AOM Technologies & Services. <br />
+              AOM TECHNOLOGIES & SERVICES <br />
               Votre partenaire agréé. 
               
             </p>
@@ -161,7 +161,7 @@ export default function Footer() {
         {/* BOTTOM */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="text-[#9a9a9a] text-[12px] tracking-wide">
-            © {new Date().getFullYear()} AOM Technologies & Services — Tous droits réservés.
+            © {new Date().getFullYear()} AOM TECHNOLOGIES & SERVICES — Tous droits réservés.
           </p>
 
           <button

@@ -367,7 +367,7 @@ export default function IrvePage() {
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-6 text-xs text-slate-400">
           <div className="space-y-1">
             <p className="font-semibold text-slate-200">
-              AOM Technologies — Installateur IRVE certifié
+              AOM TECHNOLOGIES & SERVICES — Installateur IRVE certifié
             </p>
             <p>
               Installation de bornes de recharge électriques pour particuliers,
