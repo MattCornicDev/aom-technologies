@@ -31,8 +31,7 @@ export default function IrvePage() {
             </h1>
             <p className="max-w-xl text-sm sm:text-base text-sky-100/90">
               AOM TECHNOLOGIES & SERVICES conçoit et installe des solutions de recharge
-              sur‑mesure, conformes aux normes NF C 15‑100, éligible aux aides (prime ADVENIR, crédit d&apos;impôt,
-              TVA réduite).
+              sur‑mesure, conformes aux normes en vigueur (NF C 15‑100), éligible aux aides : <br />• Crédit d&apos;impôt <br />• Réduction TVA <br />• Prime ADVENIR
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -51,10 +50,7 @@ export default function IrvePage() {
             </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-sky-100/80">
-              <span>⚡ Devis sous 48h</span>
-              <span>•</span>
-              <span>Intervention rapide dans les Hauts‑de‑France</span>
-              <span>•</span>
+              <span>• Devis sous 48h</span>
             </div>
           </div>
 
