@@ -197,7 +197,7 @@ export default function ContactSection() {
             </p>
 
             <h4 className="text-xl font-semibold text-gray-800 mt-2">
-              AOM Technologies & Services
+              AOM TECHNOLOGIES & SERVICES 
             </h4>
 
             <div className="mt-5 w-full h-[260px] rounded-lg overflow-hidden border border-gray-300">
