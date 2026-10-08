@@ -23,8 +23,8 @@ const products: Product[] = [
     id: "schneider-93857572",
     name: "AOM Link",
     eyebrow: "Borne de recharge 7,4 a 22 kW",
-    description: "La borne Schneider Electric de la fiche produit Leroy Merlin, configuree selon la puissance de votre installation.",
-    price: 899,
+    description: "La borne AOM Link, se configure selon la puissance de votre installation.",
+    price: 399,
     power: "7,4 a 22 kW",
     image: "/images/boutique/aom-link.png",
     features: ["Puissance de 7,4 a 22 kW", "Marque Schneider Electric", "Installation IRVE sur demande"],
@@ -33,28 +33,39 @@ const products: Product[] = [
     id: "pro-22",
     name: "AOM Link Pro",
     eyebrow: "Entreprise & flotte",
-    description: "Une solution robuste pour les parkings qui veulent rester evolutifs.",
-    price: 1290,
+    description: "Une solution robuste pour les parkings qui veulent rester évolutifs.",
+    price: 799,
     power: "22 kW",
     image: "/images/boutique/borne-aom-pro.png",
     features: ["Acces RFID", "Supervision a distance", "Usage intensif"],
   },
   {
     id: "home-7",
-    name: "Cable de recharge GONEO",
+    name: "Cable de recharge AOM Link",
     eyebrow: "Maison individuelle",
-    description: "Câble de recharge connecté GONEO pour prise renforcée – 3,7 kW ",
+    description: "Câble de recharge connecté AOM Link pour prise renforcée – 3,7 kW (4 mètres)",
     price: 69.99,
     power: "7,4 kW",
     image: "/images/boutique/cable-recharge-goneo-prise-domestique-connecte.webp",
-    features: ["Pilotage par application", "Cable T2 inclus", "Installation murale"],
+    features: ["Possibilité de pilotage par application"],
   },
+  {
+    id: "home-7",
+    name: "Cable de recharge AOM Link type 2",
+    eyebrow: "Maison individuelle",
+    description: "Câble de recharge connecté AOM Link TYPE 2, compatible avec toutes les bornes jusqu'à 22 kW, (4 mètres)",
+    price: 99.99,
+    power: "7,4 kW",
+    image: "/images/boutique/goneo-type-2.jpg",
+    features: ["Possibilité de pilotage par application", "Cable T2"],
+  },
+
 ];
 
 const installationOptions = [
   { id: "none", label: "Borne seule", price: 0, description: "Livraison de la borne, installation par vos soins." },
-  { id: "standard", label: "Installation standard", price: 590, description: "Pose, raccordement, essais et mise en service par un technicien IRVE." },
-  { id: "complete", label: "Installation complete", price: 890, description: "Installation avec etude technique, protection adaptee et accompagnement aides." },
+  { id: "standard", label: "Installation standard", price: 299, description: "Pose, raccordement et mise en service. (sous reserve de visite technique)" },
+  { id: "complete", label: "Installation complete", price: 499, description: "Etude technique, protection adaptee. (sous reserve de visite technique)" },
 ];
 
 function formatPrice(value: number) {
@@ -148,16 +159,16 @@ export default function BoutiqueConfigurator() {
         <div className="absolute -right-24 -top-32 h-80 w-80 rounded-full border-[48px] border-[#d7e85b]/20" />
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-[#d7e85b]">La boutique AOM</p>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.25em] text-[#d7e85b]">La boutique AOM TECHNOLOGIES & SERVICES</p>
             <h1 className="max-w-2xl font-[var(--font-geist-sans)] text-4xl font-semibold leading-tight sm:text-6xl">
               Votre recharge commence ici.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-slate-300 sm:text-lg">
-              Choisissez une borne fiable, ajoutez l&apos;installation certifiee qui vous convient et recevez une proposition adaptee a votre logement ou votre entreprise.
+              Faites le choix d'équipements fiables et conformes, ajoutez l&apos;installation certifiée qui vous convient et recevez une proposition adaptée à vos besoins.
             </p>
           </div>
           <div className="mt-10 grid max-w-3xl grid-cols-1 gap-5 text-sm text-slate-300 sm:grid-cols-3">
-            <div className="flex items-center gap-3"><FaShieldAlt className="text-[#d7e85b]" /> Installation IRVE certifiee</div>
+            <div className="flex items-center gap-3"><FaShieldAlt className="text-[#d7e85b]" /> Installation IRVE certifiée</div>
             <div className="flex items-center gap-3"><FaTools className="text-[#d7e85b]" /> Etude technique incluse</div>
             <div className="flex items-center gap-3"><FaTruck className="text-[#d7e85b]" /> Livraison dans toute la France</div>
           </div>
@@ -170,7 +181,7 @@ export default function BoutiqueConfigurator() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#66828a]">01 / Choisir une borne</p>
             <h2 className="mt-2 text-3xl font-semibold">Des solutions pour chaque usage</h2>
           </div>
-          <p className="text-sm text-[#66828a]">Prix indicatifs TTC, installation a confirmer apres etude.</p>
+          <p className="text-sm text-[#66828a]"></p>
         </div>
 
         <div className="grid gap-5 lg:grid-cols-3">
@@ -256,7 +267,7 @@ export default function BoutiqueConfigurator() {
         <div className="mt-10 flex flex-col gap-6 bg-[#102d35] p-7 text-white sm:flex-row sm:items-center sm:justify-between sm:p-9">
           <div className="max-w-2xl">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d7e85b]">Accessoire recommande</p>
-            <h2 className="mt-2 text-2xl font-semibold">Câble de recharge Type 2 GONEO</h2>
+            <h2 className="mt-2 text-2xl font-semibold">Câble de recharge Type 2 AOM Link</h2>
             <p className="mt-3 text-sm leading-6 text-slate-300">
               Découvrez en vidéo ce câble compatible avec les recharges jusqu&apos;à 22 kW, pratique à conserver dans le coffre avec votre borne.
             </p>
@@ -289,7 +300,7 @@ export default function BoutiqueConfigurator() {
             <div className="flex items-center justify-between py-5"><span className="text-sm text-[#66828a]">Total indicatif</span><strong className="text-right text-2xl">{formatPrice(total)}</strong></div>
             <button type="button" onClick={handleCheckout} disabled={status === "loading"} className="flex w-full items-center justify-center gap-3 bg-[#d7e85b] px-5 py-4 text-sm font-bold text-[#102d35] transition hover:bg-[#c8dc4b] disabled:opacity-60">{status === "loading" ? "Redirection vers le paiement..." : "Commander"} <FaChevronRight size={12} /></button>
             {status === "error" && <p className="mt-3 text-sm text-red-600">Le paiement n&apos;a pas pu être lancé. Vérifiez la configuration Stripe.</p>}
-            <p className="mt-4 text-center text-xs leading-5 text-[#66828a]">Le prix final est confirme apres validation de votre installation electrique.</p>
+            <p className="mt-4 text-center text-xs leading-5 text-[#66828a]"></p>
           </aside>
         </div>
 

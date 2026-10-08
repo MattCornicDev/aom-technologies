@@ -15,7 +15,7 @@ export default function BoutiqueFooter() {
           <a href="/" aria-label="Retour à l'accueil" className="inline-flex">
             <Logo size="lg" />
           </a>
-          <p className="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-[#d7e85b]">La boutique AOM</p>
+          <p className="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-[#d7e85b]">La boutique AOM TECHNOLOGIES & SERVICES</p>
           <h2 className="mt-3 text-2xl font-semibold">Rechargez en toute confiance.</h2>
           <p className="mt-4 max-w-sm text-sm leading-6 text-slate-300">
             Des équipements sélectionnés et une installation IRVE adaptée à votre projet.
