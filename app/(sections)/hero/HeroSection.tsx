@@ -11,10 +11,17 @@ const orbitron = Orbitron({
 
 const animatedPhrase = "La technologie à votre service";
 
-function StyledAom() {
+function StyledAom() {      
   return (
     <span aria-label="AOM">
       AOM
+    <div className="flex justify-center">
+  <img 
+    src="/images/logos/ruban-rose.png" 
+    alt="SFR" 
+    className="h-20 w-50 object-contain" 
+  />
+</div> 
     </span>
   );
 }
