@@ -85,7 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             alt="Ruban rose"
             width={200}
             height={80}
-            className="h-20 w-50 object-contain"
+            className="h-10 w-20 object-contain"
           />
         </div>
       </body>
