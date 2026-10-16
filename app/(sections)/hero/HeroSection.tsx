@@ -164,6 +164,13 @@ export default function HeroSection() {
             </p>
             
           </div>
+          <div className="flex justify-center mt-6">
+  <img 
+    src="/images/logos/ruban-rose.png" 
+    alt="SFR" 
+    className="h-20 w-50 object-contain" 
+  />
+</div>
 
         </div>
       </div>
