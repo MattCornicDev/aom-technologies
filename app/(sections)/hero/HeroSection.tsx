@@ -115,14 +115,6 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
-  <img 
-    src="/images/logos/ruban-rose.png" 
-    alt="SFR" 
-    className="h-20 w-50 object-contain" 
-  />
-</div>
-
         <p className="absolute bottom-16 left-6 min-h-6 text-left text-xs font-semibold uppercase tracking-[0.16em] text-[#000000] sm:left-10 lg:left-16 lg:text-base">
           {typedPhrase}
           {cursorVisible && <span className="ml-1 inline-block">|</span>}
@@ -164,14 +156,6 @@ export default function HeroSection() {
             </p>
             
           </div>
-          <div className="flex justify-center mt-6">
-  <img 
-    src="/images/logos/ruban-rose.png" 
-    alt="SFR" 
-    className="h-20 w-50 object-contain" 
-  />
-</div>
-
         </div>
       </div>
 
