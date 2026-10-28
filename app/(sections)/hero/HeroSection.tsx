@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import LogoWithRings from "@/components/LogoWithRings";
+import citrouille from "@/components/citrouille.svg";
+import toileAraignee from "@/components/toile-araignee.svg";
 import { Orbitron } from "next/font/google";
 
 const orbitron = Orbitron({
@@ -73,6 +76,26 @@ export default function HeroSection() {
       <div className="absolute top-6 left-6 z-50">
         <LogoWithRings />
       </div>
+
+      <Image
+        src={toileAraignee}
+        alt=""
+        aria-hidden="true"
+        width={1280}
+        height={1173}
+        unoptimized
+        className="pointer-events-none absolute right-0 top-0 z-0 w-56 opacity-10 sm:w-72 lg:w-[28rem]"
+      />
+
+      <Image
+        src={citrouille}
+        alt=""
+        aria-hidden="true"
+        width={1280}
+        height={1064}
+        unoptimized
+        className="pointer-events-none absolute bottom-0 left-0 z-0 w-40 opacity-10 sm:w-56 lg:w-72"
+      />
 
       {/* Glow électrique bleu */}
       <div
