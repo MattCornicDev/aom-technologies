@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import ConditionalFooter from "@/components/ConditionalFooter";
 import { Inter } from "next/font/google";
 import { Archivo_Narrow } from "next/font/google";
-import Image from "next/image";
 
 const archivo = Archivo_Narrow({
   subsets: ["latin"],
@@ -80,13 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <ConditionalFooter />
         <div className="pointer-events-none fixed bottom-4 right-4 z-40">
-          <Image
-            src="/images/logos/ruban-rose.png"
-            alt="Ruban rose"
-            width={200}
-            height={80}
-            className="h-10 w-20 object-contain"
-          />
+          
         </div>
       </body>
     </html>

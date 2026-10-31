@@ -4,7 +4,6 @@ import FormationFooter from "@/components/FormationFooter";
 import LogoWithRings from "@/components/LogoWithRings";
 import {
   FaCode,
-  FaGithub,
   FaGitAlt,
   FaDocker,
   FaShieldAlt,
