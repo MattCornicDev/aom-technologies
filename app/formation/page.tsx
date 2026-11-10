@@ -100,10 +100,10 @@ export default function FormationPage() {
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 md:px-12 md:pb-28 md:pt-40">
           <div className="max-w-3xl">
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#1C4694]">
-              AOM Formation
+              Digital Solution
             </p>
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl md:text-6xl">
-              Passez de l&apos;idée au projet web.
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl md:text-3xl text-[#1C4694]">
+             AOM FORMATION
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-slate-900 sm:text-lg">
               Une formation pratique pour apprendre à créer, versionner, déployer
