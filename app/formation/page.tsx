@@ -99,7 +99,7 @@ export default function FormationPage() {
 
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 md:px-12 md:pb-28 md:pt-40">
           <div className="max-w-3xl">
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#1C4694]">
               AOM Formation
             </p>
             <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl md:text-6xl">
@@ -113,13 +113,13 @@ export default function FormationPage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="#programme"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#1C4694] px-5 py-3 text-sm font-semibold text-slate-200 transition hover:bg-blue-500"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#1C4694] px-5 py-3 text-sm font-semibold text-slate-200 transition hover:bg-[#AABE48] hover:text-slate-950"
               >
                 Découvrir le programme <FaArrowRight />
               </Link>
               <Link
                 href="#contact-formation"
-                className="inline-flex items-center justify-center rounded-lg border border-slate-600 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-cyan-300 hover:text-cyan-300"
+                className="inline-flex items-center justify-center rounded-lg border border-slate-600 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:border-[#AABE48] hover:text-[#1C4694] hover:bg-[#AABE48]"
               >
                 Demander des informations
               </Link>
@@ -171,7 +171,7 @@ export default function FormationPage() {
                 className="flex flex-col border border-slate-800 bg-[#1C4694] p-6 transition hover:border-cyan-400/70"
               >
                 <div className="flex items-start justify-between">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#1C4694] text-cyan-300">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#1C4694] text-[#AABE48]">
                     <Icon className="text-xl" />
                   </div>
                   <span className="text-xs font-semibold tracking-[0.16em] text-slate-600">
@@ -199,7 +199,7 @@ export default function FormationPage() {
       <section className="border-y border-slate-800 bg-[#1C4694]">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-[0.9fr,1.1fr] md:px-12 md:py-20">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#AABE48]">
               À la fin du parcours
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight">
@@ -209,7 +209,7 @@ export default function FormationPage() {
           <ul className="grid gap-4 sm:grid-cols-2">
             {outcomes.map((outcome) => (
               <li key={outcome} className="flex gap-3 text-sm leading-6 text-slate-300">
-                <FaCheck className="mt-1 shrink-0 text-cyan-300" />
+                <FaCheck className="mt-1 shrink-0 text-[#AABE48]" />
                 <span>{outcome}</span>
               </li>
             ))}
@@ -220,7 +220,7 @@ export default function FormationPage() {
       <section id="contact-formation" className="mx-auto max-w-6xl px-6 py-16 md:px-12 md:py-24">
         <div className="flex flex-col justify-between gap-8 border border-cyan-400/30 bg-[#1C4694] p-6 sm:p-10 md:flex-row md:items-center">
           <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#AABE48]">
               Construisons votre parcours
             </p>
             <h2 className="mt-3 text-2xl font-semibold sm:text-3xl text-slate-100">
