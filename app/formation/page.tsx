@@ -103,7 +103,7 @@ export default function FormationPage() {
               Digital Solution
             </p>
             <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl md:text-3xl text-[#1C4694]">
-             AOM FORMATION
+             Notre Centre de Formation Agréé   
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-slate-900 sm:text-lg">
               En ce moment on vous propose une formation pratique pour apprendre à créer, versionner, déployer
