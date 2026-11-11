@@ -106,7 +106,7 @@ export default function FormationPage() {
              AOM FORMATION
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-slate-900 sm:text-lg">
-              Une formation pratique pour apprendre à créer, versionner, déployer
+              En ce moment on vous propose une formation pratique pour apprendre à créer, versionner, déployer
               et sécuriser des projets web et web mobile avec les outils utilisés
               par les équipes techniques.
             </p>
@@ -125,7 +125,7 @@ export default function FormationPage() {
               </Link>
             </div>
           </div>
-
+{/*
           <div className="mt-16 grid max-w-3xl grid-cols-2 gap-4 border-t border-slate-700 pt-6 sm:grid-cols-4">
             <div>
               <p className="text-2xl font-semibold text-[#1C4694]">5</p>
@@ -144,7 +144,9 @@ export default function FormationPage() {
               <p className="mt-1 text-xs text-slate-900">méthodes professionnelles</p>
             </div>
           </div>
+          */}
         </div>
+        
       </section>
 
       <section id="programme" className="mx-auto max-w-6xl px-6 py-16 md:px-12 md:py-24">
